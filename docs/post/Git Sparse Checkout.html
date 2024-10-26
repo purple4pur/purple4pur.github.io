@@ -156,7 +156,7 @@ git checkout
 
 [Reference](https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/#sparse-checkout-and-partial-clones)。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://purple4pur.github.io/post/4.html">
+<meta property="og:url" content="https://purple4pur.github.io/post/Git%20Sparse%20Checkout.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/49893724?v=4">
 <title>Git Sparse Checkout</title>
 <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
@@ -325,7 +325,11 @@ console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
-
+cmButton=document.getElementById("cmButton");
+    span=document.createElement("span");
+    span.setAttribute("class","Counter");
+    span.innerHTML="1";
+    cmButton.appendChild(span);
 
 
 function openComments(){
