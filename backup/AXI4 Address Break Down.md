@@ -12,7 +12,7 @@
 
 What an AXI address in memory looks like:
 
-- xDATA width: 32 bits
+- *xDATA* width: 32 bits
 
 ```
        Bit# |31    24|23    16|15     8|7      0|
@@ -29,12 +29,12 @@ AXI Address |  0x03  |  0x02  |  0x01  |  0x00  |
 
 > Reference: AXI Spec $$A4.1.6
 
-A burst INCR request can start from an **aligned addr** or **unaligned addr**. For both cases, the 2nd address is always the next aligned address. Each transfer will step forward 1 `Size` space, making the whole burst INCR request writing to or reading from a continuous memory space.
+A burst INCR request can start from an **aligned address** or **unaligned address**. For both cases, the 2nd address is always the next aligned address. Each transfer will step forward 1 `Size` space, making the whole burst INCR request writing to or reading from a continuous memory space.
 
-- Example function to get the start address of the Nth transfer (Nth starts from 1):
+- Example function to calculate the start address of the Nth transfer (Nth starts from 1):
 
 ```systemverilog
-function AXI_Address calc_Nth_addr(AXI_Address start_addr, int axsize, int Nth);
+function AXI_Address calc_Nth_start_addr(AXI_Address start_addr, int axsize, int Nth);
     int size = 2 ** axsize; // num of bytes per transfer
     AXI_Address aligned_addr = start_addr / size * size; // round down to aligned address
     // Nth starts from 1
@@ -44,7 +44,7 @@ function AXI_Address calc_Nth_addr(AXI_Address start_addr, int axsize, int Nth);
 endfunction
 ```
 
-- Example function to get the last address of the whole burst INCR request:
+- Example function to calculate the last address of the whole burst INCR request:
 
 ```systemverilog
 function AXI_Address calc_end_addr(AXI_Address start_addr, int axsize, int axlen);
