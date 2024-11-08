@@ -6,7 +6,7 @@
 - **Aligned address** means `Address % Size == 0`.
     - where `Size` is num of bytes per transfer: `2 ** AxSIZE` or `1 << AxSIZE`.
 - **Narrow transfer** means a transfer not using all WDATA, and selected by WSTRB.
-- AWSIZE should match WSTRB.
+- WSTRB should match AWSIZE.
 
 ### Schematic diagram
 

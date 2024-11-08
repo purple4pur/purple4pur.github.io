@@ -18,7 +18,7 @@
 - **Aligned address** means `Address % Size == 0`.
     - where `Size` is num of bytes per transfer: `2 ** AxSIZE` or `1 << AxSIZE`.
 - **Narrow transfer** means a transfer not using all WDATA, and selected by WSTRB.
-- AWSIZE should match WSTRB.
+- WSTRB should match AWSIZE.
 
 ### Schematic diagram
 
@@ -65,7 +65,7 @@ endfunction
 - **Aligned address** means `Address % Size == 0`.
     - where `Size` is num of bytes per transfer: `2 ** AxSIZE` or `1 << AxSIZE`.
 - **Narrow transfer** means a transfer not using all WDATA, and selected by WSTRB.
-- AWSIZE should match WSTRB.
+- WSTRB should match AWSIZE.
 
 ### Schematic diagram
 
@@ -187,7 +187,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </ul>
 </li>
 <li><strong>Narrow transfer</strong> means a transfer not using all WDATA, and selected by WSTRB.</li>
-<li>AWSIZE should match WSTRB.</li>
+<li>WSTRB should match AWSIZE.</li>
 </ul>
 <h3>Schematic diagram</h3>
 <p>What the memory looks like:</p>
