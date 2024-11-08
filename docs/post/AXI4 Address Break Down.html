@@ -70,7 +70,7 @@ endfunction
 
 ### 4K boundary
 
-*4K* basically refers to a 4K-Byte space in memory, which is also called a *Page*. In AXI it means a 4096 (0x1000) wide address space. An AXI request is not allowed to cross the addresses that start a new *Page*, a.k.a. all accessed address should only be within one *Page*.
+*4K* basically refers to a 4K-Byte space in memory, which is also called a *Page*. In AXI it means a 4096 (0x1000) wide address space. An AXI request is not allowed to cross the addresses that start a new *Page*. In other words, all accessed address should only be within one *Page*, E.g. `[0x3000, 0x3FFF]`.
 
 - Example function to check if an address space has crossed 4K boundary:
 
@@ -140,7 +140,7 @@ endfunction
 
 ### 4K boundary
 
-*4K* basically refers to a 4K-Byte space in memory, which is also called a *Page*. In AXI it means a 4096 (0x1000) wide address space. An AXI request is not allowed to cross the addresses that start a new *Page*, a.k.a. all accessed address should only be within one *Page*.
+*4K* basically refers to a 4K-Byte space in memory, which is also called a *Page*. In AXI it means a 4096 (0x1000) wide address space. An AXI request is not allowed to cross the addresses that start a new *Page*. In other words, all accessed address should only be within one *Page*, E.g. `[0x3000, 0x3FFF]`.
 
 - Example function to check if an address space has crossed 4K boundary:
 
@@ -276,7 +276,7 @@ AXI Address |  0x03  |  0x02  |  0x01  |  0x00  |
     <span class="pl-k">return</span> end_addr;
 <span class="pl-k">endfunction</span></pre></div>
 <h3>4K boundary</h3>
-<p><em>4K</em> basically refers to a 4K-Byte space in memory, which is also called a <em>Page</em>. In AXI it means a 4096 (0x1000) wide address space. An AXI request is not allowed to cross the addresses that start a new <em>Page</em>, a.k.a. all accessed address should only be within one <em>Page</em>.</p>
+<p><em>4K</em> basically refers to a 4K-Byte space in memory, which is also called a <em>Page</em>. In AXI it means a 4096 (0x1000) wide address space. An AXI request is not allowed to cross the addresses that start a new <em>Page</em>. In other words, all accessed address should only be within one <em>Page</em>, E.g. <code class="notranslate">[0x3000, 0x3FFF]</code>.</p>
 <ul>
 <li>Example function to check if an address space has crossed 4K boundary:</li>
 </ul>

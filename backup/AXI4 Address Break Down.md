@@ -58,7 +58,7 @@ endfunction
 
 ### 4K boundary
 
-*4K* basically refers to a 4K-Byte space in memory, which is also called a *Page*. In AXI it means a 4096 (0x1000) wide address space. An AXI request is not allowed to cross the addresses that start a new *Page*, a.k.a. all accessed address should only be within one *Page*.
+*4K* basically refers to a 4K-Byte space in memory, which is also called a *Page*. In AXI it means a 4096 (0x1000) wide address space. An AXI request is not allowed to cross the addresses that start a new *Page*. In other words, all accessed address should only be within one *Page*, E.g. `[0x3000, 0x3FFF]`.
 
 - Example function to check if an address space has crossed 4K boundary:
 
