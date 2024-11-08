@@ -38,9 +38,9 @@ function AXI_Address calc_Nth_start_addr(AXI_Address start_addr, int axsize, int
     int size = 2 ** axsize; // num of bytes per transfer
     AXI_Address aligned_addr = start_addr / size * size; // round down to aligned address
     // Nth starts from 1
-    AXI_Address Nth_addr = (Nth == 1) ? (start_addr)                      :
-                                        (aligned_addr + (Nth - 1) * size) ;
-    return Nth_addr;
+    AXI_Address Nth_start_addr = (Nth == 1) ? (start_addr)                      :
+                                              (aligned_addr + (Nth - 1) * size) ;
+    return Nth_start_addr;
 endfunction
 ```
 
@@ -53,5 +53,17 @@ function AXI_Address calc_end_addr(AXI_Address start_addr, int axsize, int axlen
     AXI_Address aligned_addr = start_addr / size * size; // round down to aligned address
     AXI_Address end_addr = aligned_addr + total_len * size - 1;
     return end_addr;
+endfunction
+```
+
+### 4K boundary
+
+*4K* basically refers to a 4K-Byte space in memory, which is also called a *Page*. In AXI it means a 4096 (0x1000) wide address space. An AXI request is not allowed to cross the addresses that start a new *Page*, a.k.a. all accessed address should only be within one *Page*.
+
+- Example function to check if an address space has crossed 4K boundary:
+
+```systemverilog
+function bit has_crossed_4k_boundary(AXI_Address start_addr, AXI_Address end_addr);
+    return ((start_addr >> 12) != (end_addr >> 12));
 endfunction
 ```

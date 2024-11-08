@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>https://purple4pur.github.io</link><description>YOLO everything.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724?v=4</url><title>avatar</title><link>https://purple4pur.github.io</link></image><lastBuildDate>Fri, 08 Nov 2024 14:26:42 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>AXI4 Address Break Down</title><link>https://purple4pur.github.io/post/AXI4%20Address%20Break%20Down.html</link><description>### Must know&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>https://purple4pur.github.io</link><description>YOLO everything.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724?v=4</url><title>avatar</title><link>https://purple4pur.github.io</link></image><lastBuildDate>Fri, 08 Nov 2024 15:07:49 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>AXI4 Address Break Down</title><link>https://purple4pur.github.io/post/AXI4%20Address%20Break%20Down.html</link><description>### Must know&#13;
 &#13;
 - Unit of address is **Byte**.&#13;
     - 0x00 maps to a 1-byte space in memory.&#13;
@@ -39,9 +39,9 @@ function AXI_Address calc_Nth_start_addr(AXI_Address start_addr, int axsize, int
     int size = 2 ** axsize; // num of bytes per transfer&#13;
     AXI_Address aligned_addr = start_addr / size * size; // round down to aligned address&#13;
     // Nth starts from 1&#13;
-    AXI_Address Nth_addr = (Nth == 1) ? (start_addr)                      :&#13;
-                                        (aligned_addr + (Nth - 1) * size) ;&#13;
-    return Nth_addr;&#13;
+    AXI_Address Nth_start_addr = (Nth == 1) ? (start_addr)                      :&#13;
+                                              (aligned_addr + (Nth - 1) * size) ;&#13;
+    return Nth_start_addr;&#13;
 endfunction&#13;
 ```&#13;
 &#13;
@@ -54,6 +54,18 @@ function AXI_Address calc_end_addr(AXI_Address start_addr, int axsize, int axlen
     AXI_Address aligned_addr = start_addr / size * size; // round down to aligned address&#13;
     AXI_Address end_addr = aligned_addr + total_len * size - 1;&#13;
     return end_addr;&#13;
+endfunction&#13;
+```&#13;
+&#13;
+### 4K boundary&#13;
+&#13;
+*4K* basically refers to a 4K-Byte space in memory, which is also called a *Page*. In AXI it means a 4096 (0x1000) wide address space. An AXI request is not allowed to cross the addresses that start a new *Page*, a.k.a. all accessed address should only be within one *Page*.&#13;
+&#13;
+- Example function to check if an address space has crossed 4K boundary:&#13;
+&#13;
+```systemverilog&#13;
+function bit has_crossed_4k_boundary(AXI_Address start_addr, AXI_Address end_addr);&#13;
+    return ((start_addr &gt;&gt; 12) != (end_addr &gt;&gt; 12));&#13;
 endfunction&#13;
 ```。</description><guid isPermaLink="true">https://purple4pur.github.io/post/AXI4%20Address%20Break%20Down.html</guid><pubDate>Fri, 08 Nov 2024 10:00:46 +0000</pubDate></item><item><title>Example Git Config File</title><link>https://purple4pur.github.io/post/Example%20Git%20Config%20File.html</link><description>## File Path&#13;
 &#13;
