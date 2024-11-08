@@ -29,7 +29,7 @@ AXI Address |  0x03  |  0x02  |  0x01  |  0x00  |
 
 > Reference: AXI Spec $$A4.1.6
 
-A burst INCR request can start from an **aligned address** or **unaligned address**. For both cases, the 2nd address is always the next aligned address. Each transfer will step forward 1 `Size` space, making the whole burst INCR request writing to or reading from a continuous memory space.
+A burst INCR request can start from an **aligned address** or **unaligned address**. For both cases, the 2nd address is always the next aligned address. Each transfer will step forward 1 `Size` space, making the whole burst INCR request write to or read from a consecutive memory space.
 
 - Example function to calculate the start address of the Nth transfer (Nth starts from 1):
 
