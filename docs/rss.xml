@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>https://purple4pur.github.io</link><description>YOLO everything.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724?v=4</url><title>avatar</title><link>https://purple4pur.github.io</link></image><lastBuildDate>Fri, 08 Nov 2024 15:15:10 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>AXI4 Address Break Down</title><link>https://purple4pur.github.io/post/AXI4%20Address%20Break%20Down.html</link><description>### Must know&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>https://purple4pur.github.io</link><description>YOLO everything.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724?v=4</url><title>avatar</title><link>https://purple4pur.github.io</link></image><lastBuildDate>Fri, 08 Nov 2024 15:39:42 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>AXI4 Address Break Down</title><link>https://purple4pur.github.io/post/AXI4%20Address%20Break%20Down.html</link><description>### Must know&#13;
 &#13;
 - Unit of address is **Byte**.&#13;
     - 0x00 maps to a 1-byte space in memory.&#13;
@@ -96,7 +96,9 @@ git config --global --list&#13;
            --local  --get&#13;
                     --set   user.email 'xxx@yyy.zzz'&#13;
                     --unset&#13;
-```。</description><guid isPermaLink="true">https://purple4pur.github.io/post/Example%20Git%20Config%20File.html</guid><pubDate>Tue, 05 Nov 2024 14:57:56 +0000</pubDate></item><item><title>2024 年各类 Live 及展会参战记录 (WIP)</title><link>https://purple4pur.github.io/post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu-%20%28WIP%29.html</link><description>### Live&#13;
+```。</description><guid isPermaLink="true">https://purple4pur.github.io/post/Example%20Git%20Config%20File.html</guid><pubDate>Tue, 05 Nov 2024 14:57:56 +0000</pubDate></item><item><title>2024 年各类 Live 及展会参战记录</title><link>https://purple4pur.github.io/post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu.html</link><description>&gt; WIP&#13;
+&#13;
+### Live&#13;
 &#13;
 | No. | 日期  | Live                                           | 场地      | 主题     | 城市 | 票价       |&#13;
 | --- | ---   | ---                                            | ---       | ---      | ---  | ---        |&#13;
@@ -128,7 +130,7 @@ git config --global --list&#13;
 | No. | 日期  | 展会                             | 城市 | 票价 |&#13;
 | --- | ---   | ---                              | ---  | ---  |&#13;
 | 1   | 7/27  | Chinajoy 2024                    | 上海 | 188  |&#13;
-| 2   | 11/30 | 创作连锁 2024 日厂 Vocaloid Only | 上海 | 139  |。</description><guid isPermaLink="true">https://purple4pur.github.io/post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu-%20%28WIP%29.html</guid><pubDate>Sun, 03 Nov 2024 14:27:38 +0000</pubDate></item><item><title>A Practical Guide to Git Submodule</title><link>https://purple4pur.github.io/post/A%20Practical%20Guide%20to%20Git%20Submodule.html</link><description>## Clone a Repository With Its Submodules&#13;
+| 2   | 11/30 | 创作连锁 2024 日厂 Vocaloid Only | 上海 | 139  |。</description><guid isPermaLink="true">https://purple4pur.github.io/post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu.html</guid><pubDate>Sun, 03 Nov 2024 14:27:38 +0000</pubDate></item><item><title>A Practical Guide to Git Submodule</title><link>https://purple4pur.github.io/post/A%20Practical%20Guide%20to%20Git%20Submodule.html</link><description>## Clone a Repository With Its Submodules&#13;
 &#13;
 If is a first-time clone:&#13;
 &#13;
