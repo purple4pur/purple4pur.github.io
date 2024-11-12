@@ -34,7 +34,7 @@ H△G 的现场演出相当精彩，保持了日本艺人一贯的高现场水�
 
 最后，请 H△G 再多来中国开 Live 吧！期待明年再见！
 
-### 附：Day2 (11.10) Set List
+### 附：Day2 (2024/11/10) Set List
 
 [[Playlist on Apple Music JP]](https://music.apple.com/jp/playlist/hag-1st-live-in-guangzhou/pl.u-JPAZE6PsLjYXxxM)
 
