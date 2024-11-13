@@ -41,15 +41,15 @@ H△G 的现场演出相当精彩，保持了日本艺人一贯的高现场水�
 1. [地球最後の告白を](https://music.apple.com/jp/song/%E5%9C%B0%E7%90%83%E6%9C%80%E5%BE%8C%E3%81%AE%E5%91%8A%E7%99%BD%E3%82%92/1442967185)
 2. [カラフル](https://music.apple.com/jp/song/%E3%82%AB%E3%83%A9%E3%83%95%E3%83%AB-best-album-version/1637417568)
 3. [瞬きもせずに](https://music.apple.com/jp/song/%E7%9E%AC%E3%81%8D%E3%82%82%E3%81%9B%E3%81%9A%E3%81%AB/1551761271)
-4. [アイロニ](https://music.apple.com/jp/song/%E3%82%A2%E3%82%A4%E3%83%AD%E3%83%8B/1442967313)
+4. [アイロニ](https://music.apple.com/jp/song/%E3%82%A2%E3%82%A4%E3%83%AD%E3%83%8B/1442967313) *(preview only)*
 5. [ハローハロー](https://music.apple.com/jp/song/%E3%83%8F%E3%83%AD%E3%83%BC%E3%83%8F%E3%83%AD%E3%83%BC/1442967316)
 6. [心拍数#0822](https://music.apple.com/jp/song/%E5%BF%83%E6%8B%8D%E6%95%B0-0822/1442967174)
 7. [from Y to Y](https://music.apple.com/jp/song/from-y-to-y/1442967189)
 8. [星屑オーケストラ](https://music.apple.com/jp/song/%E6%98%9F%E5%B1%91%E3%82%AA%E3%83%BC%E3%82%B1%E3%82%B9%E3%83%88%E3%83%A9/1442967323)
 9. [星のパンフレット](https://music.apple.com/jp/song/%E6%98%9F%E3%81%AE%E3%83%91%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88/1257679496)
-10. [glow](https://music.apple.com/jp/song/glow/1442967183)
+10. [glow](https://music.apple.com/jp/song/glow/1442967183) *(preview only)*
 11. [5センチ先の夢](https://music.apple.com/jp/song/5%E3%82%BB%E3%83%B3%E3%83%81%E5%85%88%E3%81%AE%E5%A4%A2/1551761276)
 12. [星見る頃を過ぎても](https://music.apple.com/jp/song/%E6%98%9F%E8%A6%8B%E3%82%8B%E9%A0%83%E3%82%92%E9%81%8E%E3%81%8E%E3%81%A6%E3%82%82-best-album-version/1637417566)
 13. [声](https://music.apple.com/jp/song/%E5%A3%B0/1442967340)
 14. *[ENCORE1]* [夏の在りか](https://music.apple.com/jp/song/%E5%A4%8F%E3%81%AE%E5%9C%A8%E3%82%8A%E3%81%8B/1341570980)
-15. *[ENCORE2]* [インタビュア](https://music.apple.com/jp/song/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%93%E3%83%A5%E3%82%A2/1442967181)
+15. *[ENCORE2]* [インタビュア](https://music.apple.com/jp/song/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%93%E3%83%A5%E3%82%A2/1442967181) *(preview only)*
