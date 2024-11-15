@@ -6,7 +6,7 @@ In a word, goto repetition describe a sequence of a boolean value `b` becoming T
 
 Given property `a |=> b[->2] ##1 c`:
 
-```systemverilog
+```
        a: 1 - - - - - - -
        b: - 0 1 0 0 0 1 -
        c: - - - - - - - 1

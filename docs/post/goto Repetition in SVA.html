@@ -18,7 +18,7 @@ In a word, goto repetition describe a sequence of a boolean value `b` becoming T
 
 Given property `a |=> b[->2] ##1 c`:
 
-```systemverilog
+```
        a: 1 - - - - - - -
        b: - 0 1 0 0 0 1 -
        c: - - - - - - - 1
@@ -126,7 +126,7 @@ In a word, goto repetition describe a sequence of a boolean value `b` becoming T
 
 Given property `a |=> b[->2] ##1 c`:
 
-```systemverilog
+```
        a: 1 - - - - - - -
        b: - 0 1 0 0 0 1 -
        c: - - - - - - - 1
@@ -299,10 +299,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h3>Basic usage and live demo</h3>
 <p>In a word, goto repetition describe a sequence of a boolean value <code class="notranslate">b</code> becoming True for <code class="notranslate">n</code> times in following cycles, and <strong>don't care when or continuously or not</strong>.</p>
 <p>Given property <code class="notranslate">a |=&gt; b[-&gt;2] ##1 c</code>:</p>
-<div class="highlight highlight-source-systemverilog"><pre class="notranslate">       a<span class="pl-k">:</span> <span class="pl-c1">1</span> <span class="pl-k">-</span> <span class="pl-k">-</span> <span class="pl-k">-</span> <span class="pl-k">-</span> <span class="pl-k">-</span> <span class="pl-k">-</span> <span class="pl-k">-</span>
-       b<span class="pl-k">:</span> <span class="pl-k">-</span> <span class="pl-c1">0</span> <span class="pl-c1">1</span> <span class="pl-c1">0</span> <span class="pl-c1">0</span> <span class="pl-c1">0</span> <span class="pl-c1">1</span> <span class="pl-k">-</span>
-       c<span class="pl-k">:</span> <span class="pl-k">-</span> <span class="pl-k">-</span> <span class="pl-k">-</span> <span class="pl-k">-</span> <span class="pl-k">-</span> <span class="pl-k">-</span> <span class="pl-k">-</span> <span class="pl-c1">1</span>
-<span class="pl-k">property</span><span class="pl-k">:</span> <span class="pl-k">|</span><span class="pl-k">---</span><span class="pl-k">^</span><span class="pl-k">-------</span><span class="pl-k">^</span><span class="pl-k">-</span><span class="pl-k">!</span> <span class="pl-c"><span class="pl-c">//</span> match</span></pre></div>
+<pre class="notranslate"><code class="notranslate">       a: 1 - - - - - - -
+       b: - 0 1 0 0 0 1 -
+       c: - - - - - - - 1
+property: |---^-------^-! // match
+</code></pre>
 <p>Let's say here's a counter of range 0 to max value 2. I want a property to trace the counter from 0 to 2 then back to 0, and the other values are all not-care.</p>
 <pre class="notranslate"><code class="notranslate">   counter: 0 -&gt; 1 -&gt; 0 -&gt; 0 -&gt; 1 -&gt; 2 -&gt; 1 -&gt; 2 -&gt; 1 -&gt; 0
  fail case: |---------! // fail
