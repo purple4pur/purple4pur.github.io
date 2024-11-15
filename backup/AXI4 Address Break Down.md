@@ -67,3 +67,7 @@ function bit has_crossed_4k_boundary(AXI_Address start_addr, AXI_Address end_add
     return ((start_addr >> 12) != (end_addr >> 12));
 endfunction
 ```
+
+### Appendix: AXI Spec
+
+[[AMBA AXI Protocol Specification]](https://developer.arm.com/documentation/ihi0022/latest/)

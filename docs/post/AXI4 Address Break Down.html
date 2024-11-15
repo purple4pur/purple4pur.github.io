@@ -78,7 +78,11 @@ endfunction
 function bit has_crossed_4k_boundary(AXI_Address start_addr, AXI_Address end_addr);
     return ((start_addr >> 12) != (end_addr >> 12));
 endfunction
-```。">
+```
+
+### Appendix: AXI Spec
+
+[[AMBA AXI Protocol Specification]](https://developer.arm.com/documentation/ihi0022/latest/)。">
 <meta property="og:title" content="AXI4 Address Break Down">
 <meta property="og:description" content="### Must know
 
@@ -148,7 +152,11 @@ endfunction
 function bit has_crossed_4k_boundary(AXI_Address start_addr, AXI_Address end_addr);
     return ((start_addr >> 12) != (end_addr >> 12));
 endfunction
-```。">
+```
+
+### Appendix: AXI Spec
+
+[[AMBA AXI Protocol Specification]](https://developer.arm.com/documentation/ihi0022/latest/)。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://purple4pur.github.io/post/AXI4%20Address%20Break%20Down.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/49893724?v=4">
@@ -282,7 +290,9 @@ AXI Address |  0x03  |  0x02  |  0x01  |  0x00  |
 </ul>
 <div class="highlight highlight-source-systemverilog"><pre class="notranslate"><span class="pl-k">function</span><span class="pl-k"> bit</span> <span class="pl-en">has_crossed_4k_boundary</span>(AXI_Address start_addr, AXI_Address end_addr);
     <span class="pl-k">return</span> ((start_addr <span class="pl-k">&gt;&gt;</span> <span class="pl-c1">12</span>) <span class="pl-k">!=</span> (end_addr <span class="pl-k">&gt;&gt;</span> <span class="pl-c1">12</span>));
-<span class="pl-k">endfunction</span></pre></div></div>
+<span class="pl-k">endfunction</span></pre></div>
+<h3>Appendix: AXI Spec</h3>
+<p><a href="https://developer.arm.com/documentation/ihi0022/latest/" rel="nofollow">[AMBA AXI Protocol Specification]</a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;">Published under Creative Commons Attribution-ShareAlike (CC-BY-SA) license. Feel free to comment or share :)</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
