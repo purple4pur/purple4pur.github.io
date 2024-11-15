@@ -78,12 +78,12 @@ To fix that, replace `(cnt == 2)[->1]` with a restriction of not seeing 0 before
 (cnt == 0) |=> (cnt != 0)[*0:$] ##1 (cnt == 2) ##1 (cnt == 0)[->1];
 ```
 
-Second issue is it will start a property once it sees 0, which is definitely not necessary:
+Second issue is it will start a new thread once it sees 0, which is definitely unnecessary:
 
 ```
  counter: 0 -> 0 -> 0 -> 1 -> 2
-property: |-------------------^ // not necessary
-               |--------------^ // not necessary
+property: |-------------------^ // unnecessary
+               |--------------^ // unnecessary
                     |---------^ // I want only this
 ```
 
@@ -187,12 +187,12 @@ To fix that, replace `(cnt == 2)[->1]` with a restriction of not seeing 0 before
 (cnt == 0) |=> (cnt != 0)[*0:$] ##1 (cnt == 2) ##1 (cnt == 0)[->1];
 ```
 
-Second issue is it will start a property once it sees 0, which is definitely not necessary:
+Second issue is it will start a new thread once it sees 0, which is definitely unnecessary:
 
 ```
  counter: 0 -> 0 -> 0 -> 1 -> 2
-property: |-------------------^ // not necessary
-               |--------------^ // not necessary
+property: |-------------------^ // unnecessary
+               |--------------^ // unnecessary
                     |---------^ // I want only this
 ```
 
@@ -337,10 +337,10 @@ property: |---------?----^---------! // match
 </code></pre>
 <p>To fix that, replace <code class="notranslate">(cnt == 2)[-&gt;1]</code> with a restriction of not seeing 0 before:</p>
 <div class="highlight highlight-source-systemverilog"><pre class="notranslate">(cnt <span class="pl-k">==</span> <span class="pl-c1">0</span>) <span class="pl-k">|</span><span class="pl-k">=&gt;</span> (cnt <span class="pl-k">!=</span> <span class="pl-c1">0</span>)[<span class="pl-k">*</span><span class="pl-c1">0</span><span class="pl-k">:</span>$] <span class="pl-k">##</span><span class="pl-c1">1</span> (cnt <span class="pl-k">==</span> <span class="pl-c1">2</span>) <span class="pl-k">##</span><span class="pl-c1">1</span> (cnt <span class="pl-k">==</span> <span class="pl-c1">0</span>)[<span class="pl-k">-</span><span class="pl-k">&gt;</span><span class="pl-c1">1</span>];</pre></div>
-<p>Second issue is it will start a property once it sees 0, which is definitely not necessary:</p>
+<p>Second issue is it will start a new thread once it sees 0, which is definitely unnecessary:</p>
 <pre class="notranslate"><code class="notranslate"> counter: 0 -&gt; 0 -&gt; 0 -&gt; 1 -&gt; 2
-property: |-------------------^ // not necessary
-               |--------------^ // not necessary
+property: |-------------------^ // unnecessary
+               |--------------^ // unnecessary
                     |---------^ // I want only this
 </code></pre>
 <p>To fix that, replace the antecedent with a short sequence of seeing 0 then 1:</p>

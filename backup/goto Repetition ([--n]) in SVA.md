@@ -66,12 +66,12 @@ To fix that, replace `(cnt == 2)[->1]` with a restriction of not seeing 0 before
 (cnt == 0) |=> (cnt != 0)[*0:$] ##1 (cnt == 2) ##1 (cnt == 0)[->1];
 ```
 
-Second issue is it will start a property once it sees 0, which is definitely not necessary:
+Second issue is it will start a new thread once it sees 0, which is definitely unnecessary:
 
 ```
  counter: 0 -> 0 -> 0 -> 1 -> 2
-property: |-------------------^ // not necessary
-               |--------------^ // not necessary
+property: |-------------------^ // unnecessary
+               |--------------^ // unnecessary
                     |---------^ // I want only this
 ```
 

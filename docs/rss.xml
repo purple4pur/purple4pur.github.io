@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>https://purple4pur.github.io</link><description>YOLO everything.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724?v=4</url><title>avatar</title><link>https://purple4pur.github.io</link></image><lastBuildDate>Fri, 15 Nov 2024 10:32:02 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>goto Repetition ([-&gt;n]) in SVA</title><link>https://purple4pur.github.io/post/goto%20Repetition%20%28%5B--n%5D%29%20in%20SVA.html</link><description>This article is basically a dev memo of [Ben Cohen's amazing tutorial on this topic](https://systemverilog.us/vf/goto_conseq.pdf) , followed by a practical live demo in my work.&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>https://purple4pur.github.io</link><description>YOLO everything.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724?v=4</url><title>avatar</title><link>https://purple4pur.github.io</link></image><lastBuildDate>Fri, 15 Nov 2024 10:39:43 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>goto Repetition ([-&gt;n]) in SVA</title><link>https://purple4pur.github.io/post/goto%20Repetition%20%28%5B--n%5D%29%20in%20SVA.html</link><description>This article is basically a dev memo of [Ben Cohen's amazing tutorial on this topic](https://systemverilog.us/vf/goto_conseq.pdf) , followed by a practical live demo in my work.&#13;
 &#13;
 ### Basic usage and live demo&#13;
 &#13;
@@ -67,12 +67,12 @@ To fix that, replace `(cnt == 2)[-&gt;1]` with a restriction of not seeing 0 bef
 (cnt == 0) |=&gt; (cnt != 0)[*0:$] ##1 (cnt == 2) ##1 (cnt == 0)[-&gt;1];&#13;
 ```&#13;
 &#13;
-Second issue is it will start a property once it sees 0, which is definitely not necessary:&#13;
+Second issue is it will start a new thread once it sees 0, which is definitely unnecessary:&#13;
 &#13;
 ```&#13;
  counter: 0 -&gt; 0 -&gt; 0 -&gt; 1 -&gt; 2&#13;
-property: |-------------------^ // not necessary&#13;
-               |--------------^ // not necessary&#13;
+property: |-------------------^ // unnecessary&#13;
+               |--------------^ // unnecessary&#13;
                     |---------^ // I want only this&#13;
 ```&#13;
 &#13;
