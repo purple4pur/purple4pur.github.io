@@ -91,6 +91,7 @@ To fix that, replace the antecedent with a short sequence of seeing 0 then 1:
 
 ```systemverilog
 (cnt == 0) ##1 (cnt == 1) |=> (cnt != 0)[*0:$] ##1 (cnt == 2) ##1 (cnt == 0)[->1];
+// OR:     $rose(cnt > 0) |=> ...
 ```
 
 Now it works great!
@@ -199,6 +200,7 @@ To fix that, replace the antecedent with a short sequence of seeing 0 then 1:
 
 ```systemverilog
 (cnt == 0) ##1 (cnt == 1) |=> (cnt != 0)[*0:$] ##1 (cnt == 2) ##1 (cnt == 0)[->1];
+// OR:     $rose(cnt > 0) |=> ...
 ```
 
 Now it works great!
@@ -342,7 +344,8 @@ property: |-------------------^ // not necessary
                     |---------^ // I want only this
 </code></pre>
 <p>To fix that, replace the antecedent with a short sequence of seeing 0 then 1:</p>
-<div class="highlight highlight-source-systemverilog"><pre class="notranslate">(cnt <span class="pl-k">==</span> <span class="pl-c1">0</span>) <span class="pl-k">##</span><span class="pl-c1">1</span> (cnt <span class="pl-k">==</span> <span class="pl-c1">1</span>) <span class="pl-k">|</span><span class="pl-k">=&gt;</span> (cnt <span class="pl-k">!=</span> <span class="pl-c1">0</span>)[<span class="pl-k">*</span><span class="pl-c1">0</span><span class="pl-k">:</span>$] <span class="pl-k">##</span><span class="pl-c1">1</span> (cnt <span class="pl-k">==</span> <span class="pl-c1">2</span>) <span class="pl-k">##</span><span class="pl-c1">1</span> (cnt <span class="pl-k">==</span> <span class="pl-c1">0</span>)[<span class="pl-k">-</span><span class="pl-k">&gt;</span><span class="pl-c1">1</span>];</pre></div>
+<div class="highlight highlight-source-systemverilog"><pre class="notranslate">(cnt <span class="pl-k">==</span> <span class="pl-c1">0</span>) <span class="pl-k">##</span><span class="pl-c1">1</span> (cnt <span class="pl-k">==</span> <span class="pl-c1">1</span>) <span class="pl-k">|</span><span class="pl-k">=&gt;</span> (cnt <span class="pl-k">!=</span> <span class="pl-c1">0</span>)[<span class="pl-k">*</span><span class="pl-c1">0</span><span class="pl-k">:</span>$] <span class="pl-k">##</span><span class="pl-c1">1</span> (cnt <span class="pl-k">==</span> <span class="pl-c1">2</span>) <span class="pl-k">##</span><span class="pl-c1">1</span> (cnt <span class="pl-k">==</span> <span class="pl-c1">0</span>)[<span class="pl-k">-</span><span class="pl-k">&gt;</span><span class="pl-c1">1</span>];
+<span class="pl-c"><span class="pl-c">//</span> OR:     $rose(cnt &gt; 0) |=&gt; ...</span></pre></div>
 <p>Now it works great!</p>
 <h3>[-&gt;n] vs [*0:$]</h3>
 <p><code class="notranslate">b[-&gt;n]</code> is equivalent to <code class="notranslate">(!b[*0:$] ##1 b)[*n]</code>, which works like syntactic sugar.</p>

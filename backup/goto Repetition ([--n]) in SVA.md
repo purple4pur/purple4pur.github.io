@@ -79,6 +79,7 @@ To fix that, replace the antecedent with a short sequence of seeing 0 then 1:
 
 ```systemverilog
 (cnt == 0) ##1 (cnt == 1) |=> (cnt != 0)[*0:$] ##1 (cnt == 2) ##1 (cnt == 0)[->1];
+// OR:     $rose(cnt > 0) |=> ...
 ```
 
 Now it works great!
