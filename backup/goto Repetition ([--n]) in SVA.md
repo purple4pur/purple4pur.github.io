@@ -83,11 +83,11 @@ To fix that, replace the antecedent with a short sequence of seeing 0 then 1:
 
 Now it works great!
 
-### goto vs [*0:$]
+### [->n] vs [*0:$]
 
 `b[->n]` is equivalent to `(!b[*0:$] ##1 b)[*n]`, which works like syntactic sugar.
 
-### goto vs first_match()
+### [->n] vs first_match()
 
 `b[->n]` only accepts `b` as a single boolean value without logical operators. So in these cases use `first_match()` instead.
 

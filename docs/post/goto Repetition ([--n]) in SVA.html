@@ -95,11 +95,11 @@ To fix that, replace the antecedent with a short sequence of seeing 0 then 1:
 
 Now it works great!
 
-### goto vs [*0:$]
+### [->n] vs [*0:$]
 
 `b[->n]` is equivalent to `(!b[*0:$] ##1 b)[*n]`, which works like syntactic sugar.
 
-### goto vs first_match()
+### [->n] vs first_match()
 
 `b[->n]` only accepts `b` as a single boolean value without logical operators. So in these cases use `first_match()` instead.
 
@@ -203,11 +203,11 @@ To fix that, replace the antecedent with a short sequence of seeing 0 then 1:
 
 Now it works great!
 
-### goto vs [*0:$]
+### [->n] vs [*0:$]
 
 `b[->n]` is equivalent to `(!b[*0:$] ##1 b)[*n]`, which works like syntactic sugar.
 
-### goto vs first_match()
+### [->n] vs first_match()
 
 `b[->n]` only accepts `b` as a single boolean value without logical operators. So in these cases use `first_match()` instead.
 
@@ -344,9 +344,9 @@ property: |-------------------^ // not necessary
 <p>To fix that, replace the antecedent with a short sequence of seeing 0 then 1:</p>
 <div class="highlight highlight-source-systemverilog"><pre class="notranslate">(cnt <span class="pl-k">==</span> <span class="pl-c1">0</span>) <span class="pl-k">##</span><span class="pl-c1">1</span> (cnt <span class="pl-k">==</span> <span class="pl-c1">1</span>) <span class="pl-k">|</span><span class="pl-k">=&gt;</span> (cnt <span class="pl-k">!=</span> <span class="pl-c1">0</span>)[<span class="pl-k">*</span><span class="pl-c1">0</span><span class="pl-k">:</span>$] <span class="pl-k">##</span><span class="pl-c1">1</span> (cnt <span class="pl-k">==</span> <span class="pl-c1">2</span>) <span class="pl-k">##</span><span class="pl-c1">1</span> (cnt <span class="pl-k">==</span> <span class="pl-c1">0</span>)[<span class="pl-k">-</span><span class="pl-k">&gt;</span><span class="pl-c1">1</span>];</pre></div>
 <p>Now it works great!</p>
-<h3>goto vs [*0:$]</h3>
+<h3>[-&gt;n] vs [*0:$]</h3>
 <p><code class="notranslate">b[-&gt;n]</code> is equivalent to <code class="notranslate">(!b[*0:$] ##1 b)[*n]</code>, which works like syntactic sugar.</p>
-<h3>goto vs first_match()</h3>
+<h3>[-&gt;n] vs first_match()</h3>
 <p><code class="notranslate">b[-&gt;n]</code> only accepts <code class="notranslate">b</code> as a single boolean value without logical operators. So in these cases use <code class="notranslate">first_match()</code> instead.</p>
 <div class="highlight highlight-source-systemverilog"><pre class="notranslate">(<span class="pl-c1">AWREADY</span> <span class="pl-k">&amp;</span> <span class="pl-c1">AWVALID</span>)[<span class="pl-k">-</span><span class="pl-k">&gt;</span><span class="pl-c1">1</span>]        <span class="pl-c"><span class="pl-c">//</span> bit operator: OK</span>
 <span class="pl-k">first_match</span>(<span class="pl-c1">AWREADY</span> <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">AWVALID</span>) <span class="pl-c"><span class="pl-c">//</span> logical operator: use first_match()</span></pre></div>
