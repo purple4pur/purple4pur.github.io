@@ -40,7 +40,7 @@ sh -c '$(curl -fsLS get.chezmoi.io)' # install to $HOME/bin
 ```sh
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 mkdir $HOME/opt
-rm $HOME/opt/nvim-linux64 -rf
+rm $HOME/opt/nvim-linux64 -rf # remove old version
 tar -C $HOME/opt -xzf nvim-linux64.tar.gz # install to $HOME/opt/nvim-linux64/bin
 rm nvim-linux64.tar.gz
 ```。">
@@ -75,7 +75,7 @@ sh -c '$(curl -fsLS get.chezmoi.io)' # install to $HOME/bin
 ```sh
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 mkdir $HOME/opt
-rm $HOME/opt/nvim-linux64 -rf
+rm $HOME/opt/nvim-linux64 -rf # remove old version
 tar -C $HOME/opt -xzf nvim-linux64.tar.gz # install to $HOME/opt/nvim-linux64/bin
 rm nvim-linux64.tar.gz
 ```。">
@@ -162,7 +162,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p><a href="https://github.com/neovim/neovim/blob/master/INSTALL.md#pre-built-archives-1">[Official installation guide]</a></p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 mkdir <span class="pl-smi">$HOME</span>/opt
-rm <span class="pl-smi">$HOME</span>/opt/nvim-linux64 -rf
+rm <span class="pl-smi">$HOME</span>/opt/nvim-linux64 -rf <span class="pl-c"><span class="pl-c">#</span> remove old version</span>
 tar -C <span class="pl-smi">$HOME</span>/opt -xzf nvim-linux64.tar.gz <span class="pl-c"><span class="pl-c">#</span> install to $HOME/opt/nvim-linux64/bin</span>
 rm nvim-linux64.tar.gz</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;">Published under Creative Commons Attribution-ShareAlike (CC-BY-SA) license. Feel free to comment or share :)</div>

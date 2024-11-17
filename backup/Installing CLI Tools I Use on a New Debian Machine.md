@@ -28,7 +28,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" # install to $HOME/bin
 ```sh
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 mkdir $HOME/opt
-rm $HOME/opt/nvim-linux64 -rf
+rm $HOME/opt/nvim-linux64 -rf # remove old version
 tar -C $HOME/opt -xzf nvim-linux64.tar.gz # install to $HOME/opt/nvim-linux64/bin
 rm nvim-linux64.tar.gz
 ```
