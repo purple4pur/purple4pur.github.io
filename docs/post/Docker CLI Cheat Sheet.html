@@ -10,7 +10,12 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="### docker build
+<meta name="description" content="### Dockerfile
+
+- [[Docker 101]](https://dockerlabs.collabnix.com/workshop/docker/)
+- [[Dockerfile reference]](https://docs.docker.com/reference/dockerfile/)
+
+### docker build
 
 ```sh
 docker build -t IMAGE[:TAG] . # build image from in-place Dockerfile
@@ -30,12 +35,20 @@ docker run [OPTIONS] IMAGE[:TAG] [CMD] # run a container from image (and run the
            --rm                        # one-off mode, auto remove from docker ps after exited
 ```
 
-### docker exec
+### docker attach
 
-`CONTAINER` can be container-hash (short-form OK) or container-name.
+```sh
+docker attach [OPTIONS] CONTAINER # attach to a detached container
+              --detach-keys=KEYS  # assign a detach key like ctrl-b
+```
+
+To detach from a running container: press detach keys, default is `ctrl-p`+`ctrl-q`.
+
+### docker exec
 
 ```sh
 docker exec [OPTIONS] CONTAINER CMD # run the command in a running container
+            -t                      # run in tty then exit
             -it                     # run in an interactive tty
 ```
 
@@ -44,7 +57,7 @@ docker exec [OPTIONS] CONTAINER CMD # run the command in a running container
 ```sh
 docker ps [OPTIONS] # list all running containers
           -a        # list all recorded containers (running/paused/exited)
-          -q        # quiet mode, container-id only
+          -q        # quiet mode, container_id only
 ```
 
 ### docker inspect
@@ -57,41 +70,36 @@ docker inspect DOCKER_OBJECT # print object info in json format
                              #  - network
 ```
 
-### Attaching and detaching container
-
-```sh
-docker attach [OPTIONS] CONTAINER # attach to a detached container
-              --detach-keys=KEYS  # assign a detach key like ctrl-b
-```
-
-To detach from a running container: press detach keys, default is `ctrl-p`+`ctrl-q`.
-
-### Managing images
+### docker image
 
 ```sh
 docker build ...                           # build a new image
 docker images [FILTER]                     # list all images, alias of docker image ls
+docker pull IMAGE[:TAG]                    # pull an image from docker hub
 docker tag IMAGE[:TAG] NEW_IMAGE[:NEW_TAG] # rename an image
 docker image rm [-f] IMAGE                 # remove an image
 docker image prune -a                      # remove all unused images
 docker history IMAGE[:TAG]                 # print how the image was built
 ```
 
-### Managing containers
+### docker container
+
+`CONTAINER` can be container_id (short-form OK) or container_name.
 
 ```sh
-docker run ...                   # new a container
-docker ps ...                    # list container status
-docker stop CONTAINER            # SIGINT to container
-docker kill CONTAINER            # SIGKILL to container
-docker start/restart CONTAINER   # as it says
-docker pause/unpause CONTAINER   # as it says
-docker logs [--follow] CONTAINER # print/follow stdout in container
-docker rm [-f] CONTAINER         # remove record from docker ps
-docker rm $(docker ps -aq)       # remove all records from docker ps
+docker run ...                 # new a container
+docker ps ...                  # list container status
+docker stop CONTAINER          # as it says
+docker kill CONTAINER          # as it says
+docker start/restart CONTAINER # as it says
+docker pause/unpause CONTAINER # as it says
+docker logs [-f] CONTAINER     # print/follow stdout of container
+docker port CONTAINER [PORT]   # show port mapping info
+docker rm [-f] CONTAINER       # remove record from docker ps
+docker rm $(docker ps -aq)     # remove all records from docker ps
 ```
 
-### Managing volumes
+### docker volume
 
 ```sh
 docker volume create VOLUME             # create a volume
@@ -100,12 +108,13 @@ docker volume rm [-f] VOLUME            # remove a volume
 docker volume rm $(docker volume ls -q) # remove all volumes
 ```
 
-### Managing networks
+### docker network
 
 Network has multiple types (a.k.a. drivers) [[Reference]](https://docs.docker.com/engine/network/#drivers) :
 
-- **bridge**: communicate among containers only, publish specific ports, default type.
+- **bridge**: communicate among containers only, publish specific ports to docker host, the default type.
 - **host**: directly expose on host machine, publish options are ignored.
+- **null**: no network provided.
 
 ```sh
 docker network create -d DRIVER NETWORK     # create a network of specific type
@@ -113,9 +122,43 @@ docker network ls                           # list all networks
 docker network connect NETWORK CONTAINER    # connect a network to container
 docker network disconnect NETWORK CONTAINER # disconnect a network to container
 docker network rm NETWORK                   # remove a network
+```
+
+### docker compose
+
+- [[Docker compose 101]](https://dockerlabs.collabnix.com/intermediate/workshop/)
+- [[compose.yaml reference]](https://docs.docker.com/reference/compose-file/)
+
+- A `compose.yml` file is wanted in working directory.
+- `service` in compose is equivalent to `container`.
+
+```sh
+docker compose config                       # print info of in-place compose.yaml
+docker compose build                        # build images defined in compose.yaml
+docker compose up [OPTIONS]                 # start current compose
+                  -d                        # detached mode
+                  --build                   # rebuild images (if needed) then restart
+                  --no-start                # create services only but don't start
+docker compose down [OPTIONS]               # the BEST way to stop compose
+                    --volumes               # also remove created volumes
+                    --rmi all               # also remove all images used by current compose
+docker compose images                       # list images used by current compose
+docker compose ps [-a] [-q] [--services]    # list services used by current compose
+docker compose start/stop/restart [SERVICE] # as it says
+docker compose pause/unpause [SERVICE]      # as it says
+docker compose kill [SERVICE]               # as it says
+docker compose logs [-f] [SERVICE]          # print/follow stdout in service
+docker compose run SERVICE CMD              # run a one-time command in a new service, not the running one
+docker compose rm [OPTIONS] [SERVICE]       # remove stopped service from ps
+                  -s                        # stop and remove
 ```。">
 <meta property="og:title" content="Docker CLI Cheat Sheet">
-<meta property="og:description" content="### docker build
+<meta property="og:description" content="### Dockerfile
+
+- [[Docker 101]](https://dockerlabs.collabnix.com/workshop/docker/)
+- [[Dockerfile reference]](https://docs.docker.com/reference/dockerfile/)
+
+### docker build
 
 ```sh
 docker build -t IMAGE[:TAG] . # build image from in-place Dockerfile
@@ -135,12 +178,20 @@ docker run [OPTIONS] IMAGE[:TAG] [CMD] # run a container from image (and run the
            --rm                        # one-off mode, auto remove from docker ps after exited
 ```
 
-### docker exec
+### docker attach
 
-`CONTAINER` can be container-hash (short-form OK) or container-name.
+```sh
+docker attach [OPTIONS] CONTAINER # attach to a detached container
+              --detach-keys=KEYS  # assign a detach key like ctrl-b
+```
+
+To detach from a running container: press detach keys, default is `ctrl-p`+`ctrl-q`.
+
+### docker exec
 
 ```sh
 docker exec [OPTIONS] CONTAINER CMD # run the command in a running container
+            -t                      # run in tty then exit
             -it                     # run in an interactive tty
 ```
 
@@ -149,7 +200,7 @@ docker exec [OPTIONS] CONTAINER CMD # run the command in a running container
 ```sh
 docker ps [OPTIONS] # list all running containers
           -a        # list all recorded containers (running/paused/exited)
-          -q        # quiet mode, container-id only
+          -q        # quiet mode, container_id only
 ```
 
 ### docker inspect
@@ -162,41 +213,36 @@ docker inspect DOCKER_OBJECT # print object info in json format
                              #  - network
 ```
 
-### Attaching and detaching container
-
-```sh
-docker attach [OPTIONS] CONTAINER # attach to a detached container
-              --detach-keys=KEYS  # assign a detach key like ctrl-b
-```
-
-To detach from a running container: press detach keys, default is `ctrl-p`+`ctrl-q`.
-
-### Managing images
+### docker image
 
 ```sh
 docker build ...                           # build a new image
 docker images [FILTER]                     # list all images, alias of docker image ls
+docker pull IMAGE[:TAG]                    # pull an image from docker hub
 docker tag IMAGE[:TAG] NEW_IMAGE[:NEW_TAG] # rename an image
 docker image rm [-f] IMAGE                 # remove an image
 docker image prune -a                      # remove all unused images
 docker history IMAGE[:TAG]                 # print how the image was built
 ```
 
-### Managing containers
+### docker container
+
+`CONTAINER` can be container_id (short-form OK) or container_name.
 
 ```sh
-docker run ...                   # new a container
-docker ps ...                    # list container status
-docker stop CONTAINER            # SIGINT to container
-docker kill CONTAINER            # SIGKILL to container
-docker start/restart CONTAINER   # as it says
-docker pause/unpause CONTAINER   # as it says
-docker logs [--follow] CONTAINER # print/follow stdout in container
-docker rm [-f] CONTAINER         # remove record from docker ps
-docker rm $(docker ps -aq)       # remove all records from docker ps
+docker run ...                 # new a container
+docker ps ...                  # list container status
+docker stop CONTAINER          # as it says
+docker kill CONTAINER          # as it says
+docker start/restart CONTAINER # as it says
+docker pause/unpause CONTAINER # as it says
+docker logs [-f] CONTAINER     # print/follow stdout of container
+docker port CONTAINER [PORT]   # show port mapping info
+docker rm [-f] CONTAINER       # remove record from docker ps
+docker rm $(docker ps -aq)     # remove all records from docker ps
 ```
 
-### Managing volumes
+### docker volume
 
 ```sh
 docker volume create VOLUME             # create a volume
@@ -205,12 +251,13 @@ docker volume rm [-f] VOLUME            # remove a volume
 docker volume rm $(docker volume ls -q) # remove all volumes
 ```
 
-### Managing networks
+### docker network
 
 Network has multiple types (a.k.a. drivers) [[Reference]](https://docs.docker.com/engine/network/#drivers) :
 
-- **bridge**: communicate among containers only, publish specific ports, default type.
+- **bridge**: communicate among containers only, publish specific ports to docker host, the default type.
 - **host**: directly expose on host machine, publish options are ignored.
+- **null**: no network provided.
 
 ```sh
 docker network create -d DRIVER NETWORK     # create a network of specific type
@@ -218,6 +265,35 @@ docker network ls                           # list all networks
 docker network connect NETWORK CONTAINER    # connect a network to container
 docker network disconnect NETWORK CONTAINER # disconnect a network to container
 docker network rm NETWORK                   # remove a network
+```
+
+### docker compose
+
+- [[Docker compose 101]](https://dockerlabs.collabnix.com/intermediate/workshop/)
+- [[compose.yaml reference]](https://docs.docker.com/reference/compose-file/)
+
+- A `compose.yml` file is wanted in working directory.
+- `service` in compose is equivalent to `container`.
+
+```sh
+docker compose config                       # print info of in-place compose.yaml
+docker compose build                        # build images defined in compose.yaml
+docker compose up [OPTIONS]                 # start current compose
+                  -d                        # detached mode
+                  --build                   # rebuild images (if needed) then restart
+                  --no-start                # create services only but don't start
+docker compose down [OPTIONS]               # the BEST way to stop compose
+                    --volumes               # also remove created volumes
+                    --rmi all               # also remove all images used by current compose
+docker compose images                       # list images used by current compose
+docker compose ps [-a] [-q] [--services]    # list services used by current compose
+docker compose start/stop/restart [SERVICE] # as it says
+docker compose pause/unpause [SERVICE]      # as it says
+docker compose kill [SERVICE]               # as it says
+docker compose logs [-f] [SERVICE]          # print/follow stdout in service
+docker compose run SERVICE CMD              # run a one-time command in a new service, not the running one
+docker compose rm [OPTIONS] [SERVICE]       # remove stopped service from ps
+                  -s                        # stop and remove
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://purple4pur.github.io/post/Docker%20CLI%20Cheat%20Sheet.html">
@@ -289,7 +365,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h3>docker build</h3>
+<div class="markdown-body" id="postBody"><h3>Dockerfile</h3>
+<ul>
+<li><a href="https://dockerlabs.collabnix.com/workshop/docker/" rel="nofollow">[Docker 101]</a></li>
+<li><a href="https://docs.docker.com/reference/dockerfile/" rel="nofollow">[Dockerfile reference]</a></li>
+</ul>
+<h3>docker build</h3>
 <div class="highlight highlight-source-shell"><pre class="notranslate">docker build -t IMAGE[:TAG] <span class="pl-c1">.</span> <span class="pl-c"><span class="pl-c">#</span> build image from in-place Dockerfile</span></pre></div>
 <h3>docker run</h3>
 <div class="highlight highlight-source-shell"><pre class="notranslate">docker run [OPTIONS] IMAGE[:TAG] [CMD] <span class="pl-c"><span class="pl-c">#</span> run a container from image (and run the command)</span>
@@ -301,57 +382,94 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
            --network NETWORK           <span class="pl-c"><span class="pl-c">#</span> connect to a network</span>
            --name CONTAINER            <span class="pl-c"><span class="pl-c">#</span> name the container</span>
            --rm                        <span class="pl-c"><span class="pl-c">#</span> one-off mode, auto remove from docker ps after exited</span></pre></div>
+<h3>docker attach</h3>
+<div class="highlight highlight-source-shell"><pre class="notranslate">docker attach [OPTIONS] CONTAINER <span class="pl-c"><span class="pl-c">#</span> attach to a detached container</span>
+              --detach-keys=KEYS  <span class="pl-c"><span class="pl-c">#</span> assign a detach key like ctrl-b</span></pre></div>
+<p>To detach from a running container: press detach keys, default is <code class="notranslate">ctrl-p</code>+<code class="notranslate">ctrl-q</code>.</p>
 <h3>docker exec</h3>
-<p><code class="notranslate">CONTAINER</code> can be container-hash (short-form OK) or container-name.</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">docker <span class="pl-c1">exec</span> [OPTIONS] CONTAINER CMD <span class="pl-c"><span class="pl-c">#</span> run the command in a running container</span>
+            -t                      <span class="pl-c"><span class="pl-c">#</span> run in tty then exit</span>
             -it                     <span class="pl-c"><span class="pl-c">#</span> run in an interactive tty</span></pre></div>
 <h3>docker ps</h3>
 <div class="highlight highlight-source-shell"><pre class="notranslate">docker ps [OPTIONS] <span class="pl-c"><span class="pl-c">#</span> list all running containers</span>
           -a        <span class="pl-c"><span class="pl-c">#</span> list all recorded containers (running/paused/exited)</span>
-          -q        <span class="pl-c"><span class="pl-c">#</span> quiet mode, container-id only</span></pre></div>
+          -q        <span class="pl-c"><span class="pl-c">#</span> quiet mode, container_id only</span></pre></div>
 <h3>docker inspect</h3>
 <div class="highlight highlight-source-shell"><pre class="notranslate">docker inspect DOCKER_OBJECT <span class="pl-c"><span class="pl-c">#</span> print object info in json format</span>
                              <span class="pl-c"><span class="pl-c">#</span>  - image</span>
                              <span class="pl-c"><span class="pl-c">#</span>  - container</span>
                              <span class="pl-c"><span class="pl-c">#</span>  - volume</span>
                              <span class="pl-c"><span class="pl-c">#</span>  - network</span></pre></div>
-<h3>Attaching and detaching container</h3>
-<div class="highlight highlight-source-shell"><pre class="notranslate">docker attach [OPTIONS] CONTAINER <span class="pl-c"><span class="pl-c">#</span> attach to a detached container</span>
-              --detach-keys=KEYS  <span class="pl-c"><span class="pl-c">#</span> assign a detach key like ctrl-b</span></pre></div>
-<p>To detach from a running container: press detach keys, default is <code class="notranslate">ctrl-p</code>+<code class="notranslate">ctrl-q</code>.</p>
-<h3>Managing images</h3>
+<h3>docker image</h3>
 <div class="highlight highlight-source-shell"><pre class="notranslate">docker build ...                           <span class="pl-c"><span class="pl-c">#</span> build a new image</span>
 docker images [FILTER]                     <span class="pl-c"><span class="pl-c">#</span> list all images, alias of docker image ls</span>
+docker pull IMAGE[:TAG]                    <span class="pl-c"><span class="pl-c">#</span> pull an image from docker hub</span>
 docker tag IMAGE[:TAG] NEW_IMAGE[:NEW_TAG] <span class="pl-c"><span class="pl-c">#</span> rename an image</span>
 docker image rm [-f] IMAGE                 <span class="pl-c"><span class="pl-c">#</span> remove an image</span>
 docker image prune -a                      <span class="pl-c"><span class="pl-c">#</span> remove all unused images</span>
 docker <span class="pl-c1">history</span> IMAGE[:TAG]                 <span class="pl-c"><span class="pl-c">#</span> print how the image was built</span></pre></div>
-<h3>Managing containers</h3>
-<div class="highlight highlight-source-shell"><pre class="notranslate">docker run ...                   <span class="pl-c"><span class="pl-c">#</span> new a container</span>
-docker ps ...                    <span class="pl-c"><span class="pl-c">#</span> list container status</span>
-docker stop CONTAINER            <span class="pl-c"><span class="pl-c">#</span> SIGINT to container</span>
-docker <span class="pl-c1">kill</span> CONTAINER            <span class="pl-c"><span class="pl-c">#</span> SIGKILL to container</span>
-docker start/restart CONTAINER   <span class="pl-c"><span class="pl-c">#</span> as it says</span>
-docker pause/unpause CONTAINER   <span class="pl-c"><span class="pl-c">#</span> as it says</span>
-docker logs [--follow] CONTAINER <span class="pl-c"><span class="pl-c">#</span> print/follow stdout in container</span>
-docker rm [-f] CONTAINER         <span class="pl-c"><span class="pl-c">#</span> remove record from docker ps</span>
-docker rm <span class="pl-s"><span class="pl-pds">$(</span>docker ps -aq<span class="pl-pds">)</span></span>       <span class="pl-c"><span class="pl-c">#</span> remove all records from docker ps</span></pre></div>
-<h3>Managing volumes</h3>
+<h3>docker container</h3>
+<p><code class="notranslate">CONTAINER</code> can be container_id (short-form OK) or container_name.</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">docker run ...                 <span class="pl-c"><span class="pl-c">#</span> new a container</span>
+docker ps ...                  <span class="pl-c"><span class="pl-c">#</span> list container status</span>
+docker stop CONTAINER          <span class="pl-c"><span class="pl-c">#</span> as it says</span>
+docker <span class="pl-c1">kill</span> CONTAINER          <span class="pl-c"><span class="pl-c">#</span> as it says</span>
+docker start/restart CONTAINER <span class="pl-c"><span class="pl-c">#</span> as it says</span>
+docker pause/unpause CONTAINER <span class="pl-c"><span class="pl-c">#</span> as it says</span>
+docker logs [-f] CONTAINER     <span class="pl-c"><span class="pl-c">#</span> print/follow stdout of container</span>
+docker port CONTAINER [PORT]   <span class="pl-c"><span class="pl-c">#</span> show port mapping info</span>
+docker rm [-f] CONTAINER       <span class="pl-c"><span class="pl-c">#</span> remove record from docker ps</span>
+docker rm <span class="pl-s"><span class="pl-pds">$(</span>docker ps -aq<span class="pl-pds">)</span></span>     <span class="pl-c"><span class="pl-c">#</span> remove all records from docker ps</span></pre></div>
+<h3>docker volume</h3>
 <div class="highlight highlight-source-shell"><pre class="notranslate">docker volume create VOLUME             <span class="pl-c"><span class="pl-c">#</span> create a volume</span>
 docker volume ls                        <span class="pl-c"><span class="pl-c">#</span> list all volumes</span>
 docker volume rm [-f] VOLUME            <span class="pl-c"><span class="pl-c">#</span> remove a volume</span>
 docker volume rm <span class="pl-s"><span class="pl-pds">$(</span>docker volume ls -q<span class="pl-pds">)</span></span> <span class="pl-c"><span class="pl-c">#</span> remove all volumes</span></pre></div>
-<h3>Managing networks</h3>
+<h3>docker network</h3>
 <p>Network has multiple types (a.k.a. drivers) <a href="https://docs.docker.com/engine/network/#drivers" rel="nofollow">[Reference]</a> :</p>
 <ul>
-<li><strong>bridge</strong>: communicate among containers only, publish specific ports, default type.</li>
+<li><strong>bridge</strong>: communicate among containers only, publish specific ports to docker host, the default type.</li>
 <li><strong>host</strong>: directly expose on host machine, publish options are ignored.</li>
+<li><strong>null</strong>: no network provided.</li>
 </ul>
 <div class="highlight highlight-source-shell"><pre class="notranslate">docker network create -d DRIVER NETWORK     <span class="pl-c"><span class="pl-c">#</span> create a network of specific type</span>
 docker network ls                           <span class="pl-c"><span class="pl-c">#</span> list all networks</span>
 docker network connect NETWORK CONTAINER    <span class="pl-c"><span class="pl-c">#</span> connect a network to container</span>
 docker network disconnect NETWORK CONTAINER <span class="pl-c"><span class="pl-c">#</span> disconnect a network to container</span>
-docker network rm NETWORK                   <span class="pl-c"><span class="pl-c">#</span> remove a network</span></pre></div></div>
+docker network rm NETWORK                   <span class="pl-c"><span class="pl-c">#</span> remove a network</span></pre></div>
+<h3>docker compose</h3>
+<ul>
+<li>
+<p><a href="https://dockerlabs.collabnix.com/intermediate/workshop/" rel="nofollow">[Docker compose 101]</a></p>
+</li>
+<li>
+<p><a href="https://docs.docker.com/reference/compose-file/" rel="nofollow">[compose.yaml reference]</a></p>
+</li>
+<li>
+<p>A <code class="notranslate">compose.yml</code> file is wanted in working directory.</p>
+</li>
+<li>
+<p><code class="notranslate">service</code> in compose is equivalent to <code class="notranslate">container</code>.</p>
+</li>
+</ul>
+<div class="highlight highlight-source-shell"><pre class="notranslate">docker compose config                       <span class="pl-c"><span class="pl-c">#</span> print info of in-place compose.yaml</span>
+docker compose build                        <span class="pl-c"><span class="pl-c">#</span> build images defined in compose.yaml</span>
+docker compose up [OPTIONS]                 <span class="pl-c"><span class="pl-c">#</span> start current compose</span>
+                  -d                        <span class="pl-c"><span class="pl-c">#</span> detached mode</span>
+                  --build                   <span class="pl-c"><span class="pl-c">#</span> rebuild images (if needed) then restart</span>
+                  --no-start                <span class="pl-c"><span class="pl-c">#</span> create services only but don't start</span>
+docker compose down [OPTIONS]               <span class="pl-c"><span class="pl-c">#</span> the BEST way to stop compose</span>
+                    --volumes               <span class="pl-c"><span class="pl-c">#</span> also remove created volumes</span>
+                    --rmi all               <span class="pl-c"><span class="pl-c">#</span> also remove all images used by current compose</span>
+docker compose images                       <span class="pl-c"><span class="pl-c">#</span> list images used by current compose</span>
+docker compose ps [-a] [-q] [--services]    <span class="pl-c"><span class="pl-c">#</span> list services used by current compose</span>
+docker compose start/stop/restart [SERVICE] <span class="pl-c"><span class="pl-c">#</span> as it says</span>
+docker compose pause/unpause [SERVICE]      <span class="pl-c"><span class="pl-c">#</span> as it says</span>
+docker compose <span class="pl-c1">kill</span> [SERVICE]               <span class="pl-c"><span class="pl-c">#</span> as it says</span>
+docker compose logs [-f] [SERVICE]          <span class="pl-c"><span class="pl-c">#</span> print/follow stdout in service</span>
+docker compose run SERVICE CMD              <span class="pl-c"><span class="pl-c">#</span> run a one-time command in a new service, not the running one</span>
+docker compose rm [OPTIONS] [SERVICE]       <span class="pl-c"><span class="pl-c">#</span> remove stopped service from ps</span>
+                  -s                        <span class="pl-c"><span class="pl-c">#</span> stop and remove</span></pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;">Published under Creative Commons Attribution-ShareAlike (CC-BY-SA) license. Feel free to comment or share :)</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
