@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>https://purple4pur.github.io</link><description>YOLO everything.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724?v=4</url><title>avatar</title><link>https://purple4pur.github.io</link></image><lastBuildDate>Tue, 19 Nov 2024 14:41:40 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>Welcome, My New VPS!</title><link>https://purple4pur.github.io/post/Welcome%2C%20My%20New%20VPS%21.html</link><description>### General info&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>https://purple4pur.github.io</link><description>YOLO everything.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724?v=4</url><title>avatar</title><link>https://purple4pur.github.io</link></image><lastBuildDate>Tue, 19 Nov 2024 14:43:57 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>Welcome, My New VPS!</title><link>https://purple4pur.github.io/post/Welcome%2C%20My%20New%20VPS%21.html</link><description>### General info&#13;
 &#13;
 - Vendor: Tencent Cloud&#13;
 - 地域和可用区: 东京 | 东京一区&#13;
@@ -387,7 +387,7 @@ Network has multiple types (a.k.a. drivers) [[Reference]](https://docs.docker.co
 &#13;
 - **bridge**: communicate among containers only, publish specific ports to docker host, the default type.&#13;
 - **host**: directly expose on host machine, publish options are ignored.&#13;
-- **null**: no network provided.&#13;
+- **none**: no network provided.&#13;
 &#13;
 ```sh&#13;
 docker network create -d DRIVER NETWORK     # create a network of specific type&#13;

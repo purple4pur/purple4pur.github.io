@@ -102,7 +102,7 @@ Network has multiple types (a.k.a. drivers) [[Reference]](https://docs.docker.co
 
 - **bridge**: communicate among containers only, publish specific ports to docker host, the default type.
 - **host**: directly expose on host machine, publish options are ignored.
-- **null**: no network provided.
+- **none**: no network provided.
 
 ```sh
 docker network create -d DRIVER NETWORK     # create a network of specific type
