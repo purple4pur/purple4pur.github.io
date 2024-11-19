@@ -262,7 +262,7 @@ getent group njupt
 
 - Install tools:
 
-[[Installing CLI Tools I Use on a New Debian Machine]](https://purple4pur.github.io/post/Installing%20CLI%20Tools%20I%20Use%20on%20a%20New%20Debian%20Machine.html)
+[[Installing CLI Tools I Use on Debian/Linux]](https://purple4pur.github.io/post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html)
 
 - Initialize dotfiles:
 
