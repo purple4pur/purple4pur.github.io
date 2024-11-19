@@ -43,6 +43,36 @@ mkdir $HOME/opt
 rm $HOME/opt/nvim-linux64 -rf # remove old version
 tar -C $HOME/opt -xzf nvim-linux64.tar.gz # install to $HOME/opt/nvim-linux64/bin
 rm nvim-linux64.tar.gz
+```
+
+### docker
+
+[[Official installing guide]](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
+
+```sh
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  'deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+  $(. /etc/os-release && echo '$VERSION_CODENAME') stable' | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+# Install
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Hello world
+sudo docker run hello-world
+
+# Add user to docker group to grant him privileges
+# WARNING: Do with caution! docker group has the same permissions of root!
+sudo usermod -aG docker USERNAME
 ```。">
 <meta property="og:title" content="Installing CLI Tools I Use on a New Debian Machine">
 <meta property="og:description" content="### git
@@ -78,6 +108,36 @@ mkdir $HOME/opt
 rm $HOME/opt/nvim-linux64 -rf # remove old version
 tar -C $HOME/opt -xzf nvim-linux64.tar.gz # install to $HOME/opt/nvim-linux64/bin
 rm nvim-linux64.tar.gz
+```
+
+### docker
+
+[[Official installing guide]](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
+
+```sh
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  'deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+  $(. /etc/os-release && echo '$VERSION_CODENAME') stable' | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+# Install
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Hello world
+sudo docker run hello-world
+
+# Add user to docker group to grant him privileges
+# WARNING: Do with caution! docker group has the same permissions of root!
+sudo usermod -aG docker USERNAME
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://purple4pur.github.io/post/Installing%20CLI%20Tools%20I%20Use%20on%20a%20New%20Debian%20Machine.html">
@@ -164,7 +224,32 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 mkdir <span class="pl-smi">$HOME</span>/opt
 rm <span class="pl-smi">$HOME</span>/opt/nvim-linux64 -rf <span class="pl-c"><span class="pl-c">#</span> remove old version</span>
 tar -C <span class="pl-smi">$HOME</span>/opt -xzf nvim-linux64.tar.gz <span class="pl-c"><span class="pl-c">#</span> install to $HOME/opt/nvim-linux64/bin</span>
-rm nvim-linux64.tar.gz</pre></div></div>
+rm nvim-linux64.tar.gz</pre></div>
+<h3>docker</h3>
+<p><a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository" rel="nofollow">[Official installing guide]</a></p>
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> Add Docker's official GPG key:</span>
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+<span class="pl-c"><span class="pl-c">#</span> Add the repository to Apt sources:</span>
+<span class="pl-c1">echo</span> \
+  <span class="pl-s"><span class="pl-pds">"</span>deb [arch=<span class="pl-s"><span class="pl-pds">$(</span>dpkg --print-architecture<span class="pl-pds">)</span></span> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian <span class="pl-cce">\</span></span>
+<span class="pl-s">  <span class="pl-s"><span class="pl-pds">$(</span>. /etc/os-release <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$VERSION_CODENAME</span><span class="pl-pds">"</span></span><span class="pl-pds">)</span></span> stable<span class="pl-pds">"</span></span> <span class="pl-k">|</span> \
+  sudo tee /etc/apt/sources.list.d/docker.list <span class="pl-k">&gt;</span> /dev/null
+sudo apt-get update
+
+<span class="pl-c"><span class="pl-c">#</span> Install</span>
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+<span class="pl-c"><span class="pl-c">#</span> Hello world</span>
+sudo docker run hello-world
+
+<span class="pl-c"><span class="pl-c">#</span> Add user to docker group to grant him privileges</span>
+<span class="pl-c"><span class="pl-c">#</span> WARNING: Do with caution! docker group has the same permissions of root!</span>
+sudo usermod -aG docker USERNAME</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;">Published under Creative Commons Attribution-ShareAlike (CC-BY-SA) license. Feel free to comment or share :)</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
