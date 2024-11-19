@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>https://purple4pur.github.io</link><description>YOLO everything.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724?v=4</url><title>avatar</title><link>https://purple4pur.github.io</link></image><lastBuildDate>Tue, 19 Nov 2024 14:58:48 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>Welcome, My New VPS!</title><link>https://purple4pur.github.io/post/Welcome%2C%20My%20New%20VPS%21.html</link><description>### General info&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>https://purple4pur.github.io</link><description>YOLO everything.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724?v=4</url><title>avatar</title><link>https://purple4pur.github.io</link></image><lastBuildDate>Tue, 19 Nov 2024 14:59:36 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>Welcome, My New VPS!</title><link>https://purple4pur.github.io/post/Welcome%2C%20My%20New%20VPS%21.html</link><description>### General info&#13;
 &#13;
 - Vendor: Tencent Cloud&#13;
 - 地域和可用区: 东京 | 东京一区&#13;
@@ -424,7 +424,7 @@ docker compose logs [-f] [SERVICE]          # print/follow stdout in service&#13
 docker compose run SERVICE CMD              # run a one-time command in a new service, not the running one&#13;
 docker compose rm [OPTIONS] [SERVICE]       # remove stopped service from ps&#13;
                   -s                        # stop and remove&#13;
-```。</description><guid isPermaLink="true">https://purple4pur.github.io/post/Docker%20CLI%20Cheat%20Sheet.html</guid><pubDate>Mon, 18 Nov 2024 17:17:14 +0000</pubDate></item><item><title>Installing CLI Tools I Use on a New Debian Machine</title><link>https://purple4pur.github.io/post/Installing%20CLI%20Tools%20I%20Use%20on%20a%20New%20Debian%20Machine.html</link><description>### git&#13;
+```。</description><guid isPermaLink="true">https://purple4pur.github.io/post/Docker%20CLI%20Cheat%20Sheet.html</guid><pubDate>Mon, 18 Nov 2024 17:17:14 +0000</pubDate></item><item><title>Installing CLI Tools I Use on Debian/Linux</title><link>https://purple4pur.github.io/post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html</link><description>### git&#13;
 &#13;
 ```sh&#13;
 (root) apt update&#13;
@@ -487,7 +487,7 @@ sudo docker run hello-world&#13;
 # Add user to docker group to grant him privileges&#13;
 # WARNING: Do with caution! docker group has the same permissions of root!&#13;
 sudo usermod -aG docker USERNAME&#13;
-```。</description><guid isPermaLink="true">https://purple4pur.github.io/post/Installing%20CLI%20Tools%20I%20Use%20on%20a%20New%20Debian%20Machine.html</guid><pubDate>Sun, 17 Nov 2024 17:09:19 +0000</pubDate></item><item><title>goto Repetition ([-&gt;n]) in SVA</title><link>https://purple4pur.github.io/post/goto%20Repetition%20%28%5B--n%5D%29%20in%20SVA.html</link><description>This article is basically a dev memo of [Ben Cohen's amazing tutorial on this topic](https://systemverilog.us/vf/goto_conseq.pdf) , followed by a practical live demo in my work.&#13;
+```。</description><guid isPermaLink="true">https://purple4pur.github.io/post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html</guid><pubDate>Sun, 17 Nov 2024 17:09:19 +0000</pubDate></item><item><title>goto Repetition ([-&gt;n]) in SVA</title><link>https://purple4pur.github.io/post/goto%20Repetition%20%28%5B--n%5D%29%20in%20SVA.html</link><description>This article is basically a dev memo of [Ben Cohen's amazing tutorial on this topic](https://systemverilog.us/vf/goto_conseq.pdf) , followed by a practical live demo in my work.&#13;
 &#13;
 ### Basic usage and live demo&#13;
 &#13;
