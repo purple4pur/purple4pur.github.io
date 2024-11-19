@@ -117,7 +117,7 @@ docker network rm NETWORK                   # remove a network
 - [[Docker compose 101]](https://dockerlabs.collabnix.com/intermediate/workshop/)
 - [[compose.yaml reference]](https://docs.docker.com/reference/compose-file/)
 
-- A `compose.yml` file is wanted in working directory.
+- A `compose.yaml` file is wanted in working directory.
 - `service` in compose is equivalent to `container`.
 
 ```sh
