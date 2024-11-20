@@ -75,16 +75,18 @@ docker history IMAGE[:TAG]                 # print how the image was built
 `CONTAINER` can be container_id (short-form OK) or container_name.
 
 ```sh
-docker run ...                 # new a container
-docker ps ...                  # list container status
-docker stop CONTAINER          # as it says
-docker kill CONTAINER          # as it says
-docker start/restart CONTAINER # as it says
-docker pause/unpause CONTAINER # as it says
-docker logs [-f] CONTAINER     # print/follow stdout of container
-docker port CONTAINER [PORT]   # show port mapping info
-docker rm [-f] CONTAINER       # remove record from docker ps
-docker rm $(docker ps -aq)     # remove all records from docker ps
+docker run ...                  # new a container
+docker ps ...                   # list container status
+docker stop CONTAINER           # as it says
+docker kill CONTAINER           # as it says
+docker start/restart CONTAINER  # as it says
+docker pause/unpause CONTAINER  # as it says
+docker logs [OPTIONS] CONTAINER # print stdout of container
+            -f                  # follow mode
+            -n N                # only tail N lines
+docker port CONTAINER [PORT]    # show port mapping info
+docker rm [-f] CONTAINER        # remove record from docker ps
+docker rm $(docker ps -aq)      # remove all records from docker ps
 ```
 
 ### docker volume
@@ -129,13 +131,13 @@ docker compose up [OPTIONS]                 # start current compose
                   --no-start                # create services only but don't start
 docker compose down [OPTIONS]               # the BEST way to stop compose
                     --volumes               # also remove created volumes
-                    --rmi all               # also remove all images used by current compose
+                    --rmi local             # also remove local built images by current compose
 docker compose images                       # list images used by current compose
 docker compose ps [-a] [-q] [--services]    # list services used by current compose
 docker compose start/stop/restart [SERVICE] # as it says
 docker compose pause/unpause [SERVICE]      # as it says
 docker compose kill [SERVICE]               # as it says
-docker compose logs [-f] [SERVICE]          # print/follow stdout in service
+docker compose logs [-f] [-n N] [SERVICE]   # print/follow stdout in service
 docker compose run SERVICE CMD              # run a one-time command in a new service, not the running one
 docker compose rm [OPTIONS] [SERVICE]       # remove stopped service from ps
                   -s                        # stop and remove

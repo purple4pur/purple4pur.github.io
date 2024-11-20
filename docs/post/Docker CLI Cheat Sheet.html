@@ -87,16 +87,18 @@ docker history IMAGE[:TAG]                 # print how the image was built
 `CONTAINER` can be container_id (short-form OK) or container_name.
 
 ```sh
-docker run ...                 # new a container
-docker ps ...                  # list container status
-docker stop CONTAINER          # as it says
-docker kill CONTAINER          # as it says
-docker start/restart CONTAINER # as it says
-docker pause/unpause CONTAINER # as it says
-docker logs [-f] CONTAINER     # print/follow stdout of container
-docker port CONTAINER [PORT]   # show port mapping info
-docker rm [-f] CONTAINER       # remove record from docker ps
-docker rm $(docker ps -aq)     # remove all records from docker ps
+docker run ...                  # new a container
+docker ps ...                   # list container status
+docker stop CONTAINER           # as it says
+docker kill CONTAINER           # as it says
+docker start/restart CONTAINER  # as it says
+docker pause/unpause CONTAINER  # as it says
+docker logs [OPTIONS] CONTAINER # print stdout of container
+            -f                  # follow mode
+            -n N                # only tail N lines
+docker port CONTAINER [PORT]    # show port mapping info
+docker rm [-f] CONTAINER        # remove record from docker ps
+docker rm $(docker ps -aq)      # remove all records from docker ps
 ```
 
 ### docker volume
@@ -141,13 +143,13 @@ docker compose up [OPTIONS]                 # start current compose
                   --no-start                # create services only but don't start
 docker compose down [OPTIONS]               # the BEST way to stop compose
                     --volumes               # also remove created volumes
-                    --rmi all               # also remove all images used by current compose
+                    --rmi local             # also remove local built images by current compose
 docker compose images                       # list images used by current compose
 docker compose ps [-a] [-q] [--services]    # list services used by current compose
 docker compose start/stop/restart [SERVICE] # as it says
 docker compose pause/unpause [SERVICE]      # as it says
 docker compose kill [SERVICE]               # as it says
-docker compose logs [-f] [SERVICE]          # print/follow stdout in service
+docker compose logs [-f] [-n N] [SERVICE]   # print/follow stdout in service
 docker compose run SERVICE CMD              # run a one-time command in a new service, not the running one
 docker compose rm [OPTIONS] [SERVICE]       # remove stopped service from ps
                   -s                        # stop and remove
@@ -230,16 +232,18 @@ docker history IMAGE[:TAG]                 # print how the image was built
 `CONTAINER` can be container_id (short-form OK) or container_name.
 
 ```sh
-docker run ...                 # new a container
-docker ps ...                  # list container status
-docker stop CONTAINER          # as it says
-docker kill CONTAINER          # as it says
-docker start/restart CONTAINER # as it says
-docker pause/unpause CONTAINER # as it says
-docker logs [-f] CONTAINER     # print/follow stdout of container
-docker port CONTAINER [PORT]   # show port mapping info
-docker rm [-f] CONTAINER       # remove record from docker ps
-docker rm $(docker ps -aq)     # remove all records from docker ps
+docker run ...                  # new a container
+docker ps ...                   # list container status
+docker stop CONTAINER           # as it says
+docker kill CONTAINER           # as it says
+docker start/restart CONTAINER  # as it says
+docker pause/unpause CONTAINER  # as it says
+docker logs [OPTIONS] CONTAINER # print stdout of container
+            -f                  # follow mode
+            -n N                # only tail N lines
+docker port CONTAINER [PORT]    # show port mapping info
+docker rm [-f] CONTAINER        # remove record from docker ps
+docker rm $(docker ps -aq)      # remove all records from docker ps
 ```
 
 ### docker volume
@@ -284,13 +288,13 @@ docker compose up [OPTIONS]                 # start current compose
                   --no-start                # create services only but don't start
 docker compose down [OPTIONS]               # the BEST way to stop compose
                     --volumes               # also remove created volumes
-                    --rmi all               # also remove all images used by current compose
+                    --rmi local             # also remove local built images by current compose
 docker compose images                       # list images used by current compose
 docker compose ps [-a] [-q] [--services]    # list services used by current compose
 docker compose start/stop/restart [SERVICE] # as it says
 docker compose pause/unpause [SERVICE]      # as it says
 docker compose kill [SERVICE]               # as it says
-docker compose logs [-f] [SERVICE]          # print/follow stdout in service
+docker compose logs [-f] [-n N] [SERVICE]   # print/follow stdout in service
 docker compose run SERVICE CMD              # run a one-time command in a new service, not the running one
 docker compose rm [OPTIONS] [SERVICE]       # remove stopped service from ps
                   -s                        # stop and remove
@@ -410,16 +414,18 @@ docker image prune -a                      <span class="pl-c"><span class="pl-c"
 docker <span class="pl-c1">history</span> IMAGE[:TAG]                 <span class="pl-c"><span class="pl-c">#</span> print how the image was built</span></pre></div>
 <h3>docker container</h3>
 <p><code class="notranslate">CONTAINER</code> can be container_id (short-form OK) or container_name.</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">docker run ...                 <span class="pl-c"><span class="pl-c">#</span> new a container</span>
-docker ps ...                  <span class="pl-c"><span class="pl-c">#</span> list container status</span>
-docker stop CONTAINER          <span class="pl-c"><span class="pl-c">#</span> as it says</span>
-docker <span class="pl-c1">kill</span> CONTAINER          <span class="pl-c"><span class="pl-c">#</span> as it says</span>
-docker start/restart CONTAINER <span class="pl-c"><span class="pl-c">#</span> as it says</span>
-docker pause/unpause CONTAINER <span class="pl-c"><span class="pl-c">#</span> as it says</span>
-docker logs [-f] CONTAINER     <span class="pl-c"><span class="pl-c">#</span> print/follow stdout of container</span>
-docker port CONTAINER [PORT]   <span class="pl-c"><span class="pl-c">#</span> show port mapping info</span>
-docker rm [-f] CONTAINER       <span class="pl-c"><span class="pl-c">#</span> remove record from docker ps</span>
-docker rm <span class="pl-s"><span class="pl-pds">$(</span>docker ps -aq<span class="pl-pds">)</span></span>     <span class="pl-c"><span class="pl-c">#</span> remove all records from docker ps</span></pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">docker run ...                  <span class="pl-c"><span class="pl-c">#</span> new a container</span>
+docker ps ...                   <span class="pl-c"><span class="pl-c">#</span> list container status</span>
+docker stop CONTAINER           <span class="pl-c"><span class="pl-c">#</span> as it says</span>
+docker <span class="pl-c1">kill</span> CONTAINER           <span class="pl-c"><span class="pl-c">#</span> as it says</span>
+docker start/restart CONTAINER  <span class="pl-c"><span class="pl-c">#</span> as it says</span>
+docker pause/unpause CONTAINER  <span class="pl-c"><span class="pl-c">#</span> as it says</span>
+docker logs [OPTIONS] CONTAINER <span class="pl-c"><span class="pl-c">#</span> print stdout of container</span>
+            -f                  <span class="pl-c"><span class="pl-c">#</span> follow mode</span>
+            -n N                <span class="pl-c"><span class="pl-c">#</span> only tail N lines</span>
+docker port CONTAINER [PORT]    <span class="pl-c"><span class="pl-c">#</span> show port mapping info</span>
+docker rm [-f] CONTAINER        <span class="pl-c"><span class="pl-c">#</span> remove record from docker ps</span>
+docker rm <span class="pl-s"><span class="pl-pds">$(</span>docker ps -aq<span class="pl-pds">)</span></span>      <span class="pl-c"><span class="pl-c">#</span> remove all records from docker ps</span></pre></div>
 <h3>docker volume</h3>
 <div class="highlight highlight-source-shell"><pre class="notranslate">docker volume create VOLUME             <span class="pl-c"><span class="pl-c">#</span> create a volume</span>
 docker volume ls                        <span class="pl-c"><span class="pl-c">#</span> list all volumes</span>
@@ -460,13 +466,13 @@ docker compose up [OPTIONS]                 <span class="pl-c"><span class="pl-c
                   --no-start                <span class="pl-c"><span class="pl-c">#</span> create services only but don't start</span>
 docker compose down [OPTIONS]               <span class="pl-c"><span class="pl-c">#</span> the BEST way to stop compose</span>
                     --volumes               <span class="pl-c"><span class="pl-c">#</span> also remove created volumes</span>
-                    --rmi all               <span class="pl-c"><span class="pl-c">#</span> also remove all images used by current compose</span>
+                    --rmi <span class="pl-k">local</span>             <span class="pl-c"><span class="pl-c">#</span> also remove local built images by current compose</span>
 docker compose images                       <span class="pl-c"><span class="pl-c">#</span> list images used by current compose</span>
 docker compose ps [-a] [-q] [--services]    <span class="pl-c"><span class="pl-c">#</span> list services used by current compose</span>
 docker compose start/stop/restart [SERVICE] <span class="pl-c"><span class="pl-c">#</span> as it says</span>
 docker compose pause/unpause [SERVICE]      <span class="pl-c"><span class="pl-c">#</span> as it says</span>
 docker compose <span class="pl-c1">kill</span> [SERVICE]               <span class="pl-c"><span class="pl-c">#</span> as it says</span>
-docker compose logs [-f] [SERVICE]          <span class="pl-c"><span class="pl-c">#</span> print/follow stdout in service</span>
+docker compose logs [-f] [-n N] [SERVICE]   <span class="pl-c"><span class="pl-c">#</span> print/follow stdout in service</span>
 docker compose run SERVICE CMD              <span class="pl-c"><span class="pl-c">#</span> run a one-time command in a new service, not the running one</span>
 docker compose rm [OPTIONS] [SERVICE]       <span class="pl-c"><span class="pl-c">#</span> remove stopped service from ps</span>
                   -s                        <span class="pl-c"><span class="pl-c">#</span> stop and remove</span></pre></div></div>
