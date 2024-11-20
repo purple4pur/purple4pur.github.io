@@ -33,9 +33,28 @@ tar -C $HOME/opt -xzf nvim-linux64.tar.gz # install to $HOME/opt/nvim-linux64/bi
 rm nvim-linux64.tar.gz
 ```
 
+### fd
+
+[[Github]](https://github.com/sharkdp/fd)
+
+```sh
+(root) apt update
+(root) apt install fd-find
+(root) ln -sf /usr/bin/fdfind /usr/bin/fd
+```
+
+### rg
+
+[[Github]](https://github.com/BurntSushi/ripgrep)
+
+```sh
+(root) apt update
+(root) apt install ripgrep
+```
+
 ### docker
 
-[[Official installing guide]](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
+[[Official installation guide]](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
 
 ```sh
 # Add Docker's official GPG key:

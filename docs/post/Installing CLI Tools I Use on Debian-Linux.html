@@ -45,9 +45,28 @@ tar -C $HOME/opt -xzf nvim-linux64.tar.gz # install to $HOME/opt/nvim-linux64/bi
 rm nvim-linux64.tar.gz
 ```
 
+### fd
+
+[[Github]](https://github.com/sharkdp/fd)
+
+```sh
+(root) apt update
+(root) apt install fd-find
+(root) ln -sf /usr/bin/fdfind /usr/bin/fd
+```
+
+### rg
+
+[[Github]](https://github.com/BurntSushi/ripgrep)
+
+```sh
+(root) apt update
+(root) apt install ripgrep
+```
+
 ### docker
 
-[[Official installing guide]](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
+[[Official installation guide]](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
 
 ```sh
 # Add Docker's official GPG key:
@@ -110,9 +129,28 @@ tar -C $HOME/opt -xzf nvim-linux64.tar.gz # install to $HOME/opt/nvim-linux64/bi
 rm nvim-linux64.tar.gz
 ```
 
+### fd
+
+[[Github]](https://github.com/sharkdp/fd)
+
+```sh
+(root) apt update
+(root) apt install fd-find
+(root) ln -sf /usr/bin/fdfind /usr/bin/fd
+```
+
+### rg
+
+[[Github]](https://github.com/BurntSushi/ripgrep)
+
+```sh
+(root) apt update
+(root) apt install ripgrep
+```
+
 ### docker
 
-[[Official installing guide]](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
+[[Official installation guide]](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
 
 ```sh
 # Add Docker's official GPG key:
@@ -225,8 +263,17 @@ mkdir <span class="pl-smi">$HOME</span>/opt
 rm <span class="pl-smi">$HOME</span>/opt/nvim-linux64 -rf <span class="pl-c"><span class="pl-c">#</span> remove old version</span>
 tar -C <span class="pl-smi">$HOME</span>/opt -xzf nvim-linux64.tar.gz <span class="pl-c"><span class="pl-c">#</span> install to $HOME/opt/nvim-linux64/bin</span>
 rm nvim-linux64.tar.gz</pre></div>
+<h3>fd</h3>
+<p><a href="https://github.com/sharkdp/fd">[Github]</a></p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">(root) apt update
+(root) apt install fd-find
+(root) ln -sf /usr/bin/fdfind /usr/bin/fd</pre></div>
+<h3>rg</h3>
+<p><a href="https://github.com/BurntSushi/ripgrep">[Github]</a></p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">(root) apt update
+(root) apt install ripgrep</pre></div>
 <h3>docker</h3>
-<p><a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository" rel="nofollow">[Official installing guide]</a></p>
+<p><a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository" rel="nofollow">[Official installation guide]</a></p>
 <div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> Add Docker's official GPG key:</span>
 sudo apt-get update
 sudo apt-get install ca-certificates curl
