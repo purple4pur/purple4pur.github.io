@@ -33,7 +33,7 @@ Will be executed **as the file owner**.
 
 > `stat = 2---`
 
-Files/Directories created within the folder or by the file will have the **same group ownership** as it, and inherit this SGID bit.
+Files/Directories created within the folder or by the file will **have the same group ownership** as it, and inherit this SGID bit.
 
 ### Sticky
 
