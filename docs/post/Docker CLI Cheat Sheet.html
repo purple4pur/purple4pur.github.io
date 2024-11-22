@@ -116,7 +116,7 @@ Network has multiple types (a.k.a. drivers) [[Reference]](https://docs.docker.co
 
 - **bridge**: communicate among containers only, publish specific ports to docker host, the default type.
 - **host**: directly expose on host machine, publish options are ignored.
-- **none**: no network provided.
+- **null**: no network provided.
 
 ```sh
 docker network create -d DRIVER NETWORK     # create a network of specific type
@@ -261,7 +261,7 @@ Network has multiple types (a.k.a. drivers) [[Reference]](https://docs.docker.co
 
 - **bridge**: communicate among containers only, publish specific ports to docker host, the default type.
 - **host**: directly expose on host machine, publish options are ignored.
-- **none**: no network provided.
+- **null**: no network provided.
 
 ```sh
 docker network create -d DRIVER NETWORK     # create a network of specific type
@@ -436,7 +436,7 @@ docker volume rm <span class="pl-s"><span class="pl-pds">$(</span>docker volume 
 <ul>
 <li><strong>bridge</strong>: communicate among containers only, publish specific ports to docker host, the default type.</li>
 <li><strong>host</strong>: directly expose on host machine, publish options are ignored.</li>
-<li><strong>none</strong>: no network provided.</li>
+<li><strong>null</strong>: no network provided.</li>
 </ul>
 <div class="highlight highlight-source-shell"><pre class="notranslate">docker network create -d DRIVER NETWORK     <span class="pl-c"><span class="pl-c">#</span> create a network of specific type</span>
 docker network ls                           <span class="pl-c"><span class="pl-c">#</span> list all networks</span>
