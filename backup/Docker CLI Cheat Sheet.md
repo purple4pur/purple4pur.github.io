@@ -130,8 +130,8 @@ docker compose up [OPTIONS]                 # start current compose
                   --build                   # rebuild images (if needed) then restart
                   --no-start                # create services only but don't start
 docker compose down [OPTIONS]               # the BEST way to stop compose
-                    --volumes               # also remove created volumes
-                    --rmi local             # also remove local built images by current compose
+                    -v                      # also remove created volumes
+                    --rmi local|all         # also remove local built images by current compose / all built and pulled images
 docker compose images                       # list images used by current compose
 docker compose ps [-a] [-q] [--services]    # list services used by current compose
 docker compose start/stop/restart [SERVICE] # as it says
