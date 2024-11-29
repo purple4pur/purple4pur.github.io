@@ -25,7 +25,7 @@
 
 > `stat = 4---`
 
-Will be executed **as the file owner**.
+Would be executed **as the file owner**. Useless on shebang scripts (for safety).
 
 - **/usr/bin/passwd**: `-rwsr-xr-x root root`
 

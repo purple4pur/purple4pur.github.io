@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>https://purple4pur.github.io</link><description>YOLO everything.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724?v=4</url><title>avatar</title><link>https://purple4pur.github.io</link></image><lastBuildDate>Fri, 22 Nov 2024 17:18:32 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>Linux File Permissions</title><link>https://purple4pur.github.io/post/Linux%20File%20Permissions.html</link><description>### Quick reference&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>https://purple4pur.github.io</link><description>YOLO everything.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724?v=4</url><title>avatar</title><link>https://purple4pur.github.io</link></image><lastBuildDate>Fri, 29 Nov 2024 16:42:03 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>Linux File Permissions</title><link>https://purple4pur.github.io/post/Linux%20File%20Permissions.html</link><description>### Quick reference&#13;
 &#13;
 ```&#13;
 | type | [u]ser  | [g]roup | [o]thers |&#13;
@@ -26,7 +26,7 @@
 &#13;
 &gt; `stat = 4---`&#13;
 &#13;
-Will be executed **as the file owner**.&#13;
+Would be executed **as the file owner**. Useless on shebang scripts (for safety).&#13;
 &#13;
 - **/usr/bin/passwd**: `-rwsr-xr-x root root`&#13;
 &#13;
