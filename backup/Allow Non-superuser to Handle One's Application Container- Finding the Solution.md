@@ -40,7 +40,7 @@ In this way, I just copy the binaries to friendR's directory and set mode to `47
 
 ### Bonus: complex commands wrapper workaround
 
-One thing I didn't mention in Try#3 is actually the euid mechanism failed when I called `./up.sh` or `bash -c up.sh` with `exec()`. Somehow it might be also a security guard.
+One thing I didn't mention in Try#3 is actually the euid mechanism failed when I called `./up.sh` or `bash ./up.sh` with `exec()`. Somehow it might be also a security guard.
 
 An enhancement to invoke `npm run app` in the container I want to achieve is to check if there's already a running process before starting the app. I wrote this check using shell script and finally realized I could hardly run the whole script in a single `exec()` calling.
 

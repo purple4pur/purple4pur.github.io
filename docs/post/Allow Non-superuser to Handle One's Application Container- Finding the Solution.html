@@ -52,7 +52,7 @@ In this way, I just copy the binaries to friendR's directory and set mode to `47
 
 ### Bonus: complex commands wrapper workaround
 
-One thing I didn't mention in Try#3 is actually the euid mechanism failed when I called `./up.sh` or `bash -c up.sh` with `exec()`. Somehow it might be also a security guard.
+One thing I didn't mention in Try#3 is actually the euid mechanism failed when I called `./up.sh` or `bash ./up.sh` with `exec()`. Somehow it might be also a security guard.
 
 An enhancement to invoke `npm run app` in the container I want to achieve is to check if there's already a running process before starting the app. I wrote this check using shell script and finally realized I could hardly run the whole script in a single `exec()` calling.
 
@@ -150,7 +150,7 @@ In this way, I just copy the binaries to friendR's directory and set mode to `47
 
 ### Bonus: complex commands wrapper workaround
 
-One thing I didn't mention in Try#3 is actually the euid mechanism failed when I called `./up.sh` or `bash -c up.sh` with `exec()`. Somehow it might be also a security guard.
+One thing I didn't mention in Try#3 is actually the euid mechanism failed when I called `./up.sh` or `bash ./up.sh` with `exec()`. Somehow it might be also a security guard.
 
 An enhancement to invoke `npm run app` in the container I want to achieve is to check if there's already a running process before starting the app. I wrote this check using shell script and finally realized I could hardly run the whole script in a single `exec()` calling.
 
@@ -298,7 +298,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>I didn't dive deep into how <code class="notranslate">system()</code> works with UID, because later I found using <code class="notranslate">exec()</code> can get rid of this issue. <code class="notranslate">exec()</code> is to replace current process with its argument command, which inherits process' euid.</p>
 <p>In this way, I just copy the binaries to friendR's directory and set mode to <code class="notranslate">4750 (rwsr-x---)</code>, then friendR can call them to invoke hard-coded docker commands.</p>
 <h3>Bonus: complex commands wrapper workaround</h3>
-<p>One thing I didn't mention in Try#3 is actually the euid mechanism failed when I called <code class="notranslate">./up.sh</code> or <code class="notranslate">bash -c up.sh</code> with <code class="notranslate">exec()</code>. Somehow it might be also a security guard.</p>
+<p>One thing I didn't mention in Try#3 is actually the euid mechanism failed when I called <code class="notranslate">./up.sh</code> or <code class="notranslate">bash ./up.sh</code> with <code class="notranslate">exec()</code>. Somehow it might be also a security guard.</p>
 <p>An enhancement to invoke <code class="notranslate">npm run app</code> in the container I want to achieve is to check if there's already a running process before starting the app. I wrote this check using shell script and finally realized I could hardly run the whole script in a single <code class="notranslate">exec()</code> calling.</p>
 <p>Before my giving up suddenly it hit me that it's way easier to do this check inside the container, instead of using <code class="notranslate">docker compose top</code> outside. So I leave just a script calling to the docker exec command, and finish the rest of jobs inside the container.</p>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-c">// run_app.c</span>
