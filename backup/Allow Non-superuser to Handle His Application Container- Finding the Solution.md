@@ -84,10 +84,10 @@ int main() {
 all: $(patsubst %.c,%,$(wildcard *.c))
 
 %: %.c
-    gcc $< -o $@
-    sudo cp $@ /home/friendR/Miao-Yunzai
-    sudo chown root:friendR /home/friendR/Miao-Yunzai/$@
-    sudo chmod 4750 /home/friendR/Miao-Yunzai/$@
+	gcc $< -o $@
+	sudo cp $@ /home/friendR/Miao-Yunzai
+	sudo chown root:friendR /home/friendR/Miao-Yunzai/$@
+	sudo chmod 4750 /home/friendR/Miao-Yunzai/$@
 ```
 
 ### Conclusion

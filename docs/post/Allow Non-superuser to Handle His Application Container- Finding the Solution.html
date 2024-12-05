@@ -96,10 +96,10 @@ int main() {
 all: $(patsubst %.c,%,$(wildcard *.c))
 
 %: %.c
-    gcc $< -o $@
-    sudo cp $@ /home/friendR/Miao-Yunzai
-    sudo chown root:friendR /home/friendR/Miao-Yunzai/$@
-    sudo chmod 4750 /home/friendR/Miao-Yunzai/$@
+	gcc $< -o $@
+	sudo cp $@ /home/friendR/Miao-Yunzai
+	sudo chown root:friendR /home/friendR/Miao-Yunzai/$@
+	sudo chmod 4750 /home/friendR/Miao-Yunzai/$@
 ```
 
 ### Conclusion
@@ -194,10 +194,10 @@ int main() {
 all: $(patsubst %.c,%,$(wildcard *.c))
 
 %: %.c
-    gcc $< -o $@
-    sudo cp $@ /home/friendR/Miao-Yunzai
-    sudo chown root:friendR /home/friendR/Miao-Yunzai/$@
-    sudo chmod 4750 /home/friendR/Miao-Yunzai/$@
+	gcc $< -o $@
+	sudo cp $@ /home/friendR/Miao-Yunzai
+	sudo chown root:friendR /home/friendR/Miao-Yunzai/$@
+	sudo chmod 4750 /home/friendR/Miao-Yunzai/$@
 ```
 
 ### Conclusion
@@ -326,10 +326,10 @@ npm run app</pre></div>
 <span class="pl-en">all</span>: <span class="pl-s">$(<span class="pl-c1">patsubst</span> <span class="pl-c1">%</span>.c,<span class="pl-c1">%</span>,<span class="pl-s">$(<span class="pl-c1">wildcard</span> <span class="pl-c1">*</span>.c)</span>)</span>
 
 <span class="pl-en"><span class="pl-c1">%</span></span>: <span class="pl-c1">%</span>.c
-    gcc $&lt; -o $@
-    sudo cp $@ /home/friendR/Miao-Yunzai
-    <span class="pl-en">sudo</span> <span class="pl-en">chown</span> <span class="pl-en">root</span>:friendR /home/friendR/Miao-Yunzai/<span class="pl-c1">$@</span>
-    sudo chmod 4750 /home/friendR/Miao-Yunzai/$@</pre></div>
+	gcc <span class="pl-c1">$&lt;</span> -o <span class="pl-c1">$@</span>
+	sudo cp <span class="pl-c1">$@</span> /home/friendR/Miao-Yunzai
+	sudo chown root:friendR /home/friendR/Miao-Yunzai/<span class="pl-c1">$@</span>
+	sudo chmod 4750 /home/friendR/Miao-Yunzai/<span class="pl-c1">$@</span></pre></div>
 <h3>Conclusion</h3>
 <p>After a few days of work finally it's solved. Providing a command wrapper in binary seems the only safe way to support this kinda crazy goal: letting non-superuser to manipulate docker while keep any other thing non-privileged.</p>
 <p>It's hard to say this is a elegant solution but it works and, not too ugly I think? This can also be a useful reference whenever there's a similar scenario.</p></div>
