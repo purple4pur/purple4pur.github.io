@@ -44,7 +44,7 @@ One thing I didn't mention in Try#3 is actually the euid mechanism failed when I
 
 An enhancement to invoke `npm run app` in the container I want to achieve is to check if there's already a running process before starting the app. I wrote this check using shell script and finally realized I could hardly run the whole script in a single `exec()` calling.
 
-Before my giving up suddenly it hit me that it's way easier to do this check inside the container, instead of using `docker compose top` outside. So I leave just a script calling to the docker exec command, and finish the rest of jobs inside the container.
+Before my giving up suddenly it hit me that it's way easier to do this check inside the container, instead of using `docker compose top` outside. So I just leave a script calling to `docker exec`, and finish the rest of jobs inside the container.
 
 ```c
 // run_app.c
