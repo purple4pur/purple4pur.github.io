@@ -2,7 +2,7 @@
 
 A friend of mine is hosting a QQ bot ( [Miao-Yunzai](https://github.com/yoimiya-kokomi/Miao-Yunzai) ) on my VPS, and let's call him friendR here. Recently I'm switching the bot to my new VPS, and trying to host as much as possible services in docker in order to keep the host machine clean.
 
-After some experiments I can use my modified Dockerfile and compose file to invoke the bot in container as I want. The next challenge is to allow friendR to up/down the bot container and run `npm run app` in it, because he might restart the bot anytime he want and does not need my assistance.
+After some experiments I can use my modified Dockerfile and compose file to invoke the bot in container as I want. The next challenge is to allow friendR to up/down the bot container and run `npm run app` in it, because he might restart the bot anytime he want and does not need my involvement.
 
 So my goals are:
 
@@ -18,15 +18,15 @@ But here are two problems. The greatest one is SUID bit will be ignored on sheba
 
 ### Try#2: finite sudo permission
 
-I want to solve the permission issue first. I set the root owned `up.sh` to `0700 (rwx------)`, and allow friendR to sudo on this specific file (via visudo), so that he can call with `sudo ./up.sh`:
+I want to solve the permission issue first. I set the root owned `up.sh` to `0700 (rwx------)`, and allow friendR to sudo on this specific file (via `visudo`), so that he can call with `sudo ./up.sh`:
 
 ```diff
 +friendR ALL=(root) /path/to/up.sh
 ```
 
-Yeah it works, but the security issue is even more obvious: friendR can simply overwrite `up.sh` to run anything as superuser. That is crazy and never be acceptable.
+Yeah it works, but the security issue is even more obvious: friendR can simply overwrite `up.sh` to run anything as superuser. That is crazy and is definitely not acceptable.
 
-A possible fix is to store the file hash instead of the file path in `sudoers`, while I think it's way too inflexible.
+A possible fix is to prepend the file hash to the file path in `sudoers`, while I think it's way too inflexible.
 
 ### Try#3: binary command wrapper w/ SUID (This works!)
 

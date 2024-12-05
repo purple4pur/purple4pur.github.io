@@ -14,7 +14,7 @@
 
 A friend of mine is hosting a QQ bot ( [Miao-Yunzai](https://github.com/yoimiya-kokomi/Miao-Yunzai) ) on my VPS, and let's call him friendR here. Recently I'm switching the bot to my new VPS, and trying to host as much as possible services in docker in order to keep the host machine clean.
 
-After some experiments I can use my modified Dockerfile and compose file to invoke the bot in container as I want. The next challenge is to allow friendR to up/down the bot container and run `npm run app` in it, because he might restart the bot anytime he want and does not need my assistance.
+After some experiments I can use my modified Dockerfile and compose file to invoke the bot in container as I want. The next challenge is to allow friendR to up/down the bot container and run `npm run app` in it, because he might restart the bot anytime he want and does not need my involvement.
 
 So my goals are:
 
@@ -30,15 +30,15 @@ But here are two problems. The greatest one is SUID bit will be ignored on sheba
 
 ### Try#2: finite sudo permission
 
-I want to solve the permission issue first. I set the root owned `up.sh` to `0700 (rwx------)`, and allow friendR to sudo on this specific file (via visudo), so that he can call with `sudo ./up.sh`:
+I want to solve the permission issue first. I set the root owned `up.sh` to `0700 (rwx------)`, and allow friendR to sudo on this specific file (via `visudo`), so that he can call with `sudo ./up.sh`:
 
 ```diff
 +friendR ALL=(root) /path/to/up.sh
 ```
 
-Yeah it works, but the security issue is even more obvious: friendR can simply overwrite `up.sh` to run anything as superuser. That is crazy and never be acceptable.
+Yeah it works, but the security issue is even more obvious: friendR can simply overwrite `up.sh` to run anything as superuser. That is crazy and is definitely not acceptable.
 
-A possible fix is to store the file hash instead of the file path in `sudoers`, while I think it's way too inflexible.
+A possible fix is to prepend the file hash to the file path in `sudoers`, while I think it's way too inflexible.
 
 ### Try#3: binary command wrapper w/ SUID (This works!)
 
@@ -112,7 +112,7 @@ It's hard to say this is a elegant solution but it works and, not too ugly I thi
 
 A friend of mine is hosting a QQ bot ( [Miao-Yunzai](https://github.com/yoimiya-kokomi/Miao-Yunzai) ) on my VPS, and let's call him friendR here. Recently I'm switching the bot to my new VPS, and trying to host as much as possible services in docker in order to keep the host machine clean.
 
-After some experiments I can use my modified Dockerfile and compose file to invoke the bot in container as I want. The next challenge is to allow friendR to up/down the bot container and run `npm run app` in it, because he might restart the bot anytime he want and does not need my assistance.
+After some experiments I can use my modified Dockerfile and compose file to invoke the bot in container as I want. The next challenge is to allow friendR to up/down the bot container and run `npm run app` in it, because he might restart the bot anytime he want and does not need my involvement.
 
 So my goals are:
 
@@ -128,15 +128,15 @@ But here are two problems. The greatest one is SUID bit will be ignored on sheba
 
 ### Try#2: finite sudo permission
 
-I want to solve the permission issue first. I set the root owned `up.sh` to `0700 (rwx------)`, and allow friendR to sudo on this specific file (via visudo), so that he can call with `sudo ./up.sh`:
+I want to solve the permission issue first. I set the root owned `up.sh` to `0700 (rwx------)`, and allow friendR to sudo on this specific file (via `visudo`), so that he can call with `sudo ./up.sh`:
 
 ```diff
 +friendR ALL=(root) /path/to/up.sh
 ```
 
-Yeah it works, but the security issue is even more obvious: friendR can simply overwrite `up.sh` to run anything as superuser. That is crazy and never be acceptable.
+Yeah it works, but the security issue is even more obvious: friendR can simply overwrite `up.sh` to run anything as superuser. That is crazy and is definitely not acceptable.
 
-A possible fix is to store the file hash instead of the file path in `sudoers`, while I think it's way too inflexible.
+A possible fix is to prepend the file hash to the file path in `sudoers`, while I think it's way too inflexible.
 
 ### Try#3: binary command wrapper w/ SUID (This works!)
 
@@ -277,7 +277,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div class="markdown-body" id="postBody"><h3>Background</h3>
 <p>A friend of mine is hosting a QQ bot ( <a href="https://github.com/yoimiya-kokomi/Miao-Yunzai">Miao-Yunzai</a> ) on my VPS, and let's call him friendR here. Recently I'm switching the bot to my new VPS, and trying to host as much as possible services in docker in order to keep the host machine clean.</p>
-<p>After some experiments I can use my modified Dockerfile and compose file to invoke the bot in container as I want. The next challenge is to allow friendR to up/down the bot container and run <code class="notranslate">npm run app</code> in it, because he might restart the bot anytime he want and does not need my assistance.</p>
+<p>After some experiments I can use my modified Dockerfile and compose file to invoke the bot in container as I want. The next challenge is to allow friendR to up/down the bot container and run <code class="notranslate">npm run app</code> in it, because he might restart the bot anytime he want and does not need my involvement.</p>
 <p>So my goals are:</p>
 <ul>
 <li><strong>Security</strong>: friendR should never be a superuser or in the docker group, or have any change to run arbitrary codes.</li>
@@ -288,10 +288,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>With SUID bit one can run the executable as the owner. So my basic thinking is to place a simple shell script like <code class="notranslate">docker compose -f /path/to/compose.yaml up -d</code> into friendR's path, set its owner to superuser, and set file mode to <code class="notranslate">5750 (rwsr-x--T)</code>.</p>
 <p>But here are two problems. The greatest one is SUID bit will be ignored on shebang script, which means friendR still has no permission to call docker commands. The other one is also very critical to security, that is friendR can overwrite docker related files (Dockerfile, compose.yaml, etc.) because they are in his controlled directory.</p>
 <h3>Try#2: finite sudo permission</h3>
-<p>I want to solve the permission issue first. I set the root owned <code class="notranslate">up.sh</code> to <code class="notranslate">0700 (rwx------)</code>, and allow friendR to sudo on this specific file (via visudo), so that he can call with <code class="notranslate">sudo ./up.sh</code>:</p>
+<p>I want to solve the permission issue first. I set the root owned <code class="notranslate">up.sh</code> to <code class="notranslate">0700 (rwx------)</code>, and allow friendR to sudo on this specific file (via <code class="notranslate">visudo</code>), so that he can call with <code class="notranslate">sudo ./up.sh</code>:</p>
 <div class="highlight highlight-source-diff"><pre class="notranslate"><span class="pl-mi1"><span class="pl-mi1">+</span>friendR ALL=(root) /path/to/up.sh</span></pre></div>
-<p>Yeah it works, but the security issue is even more obvious: friendR can simply overwrite <code class="notranslate">up.sh</code> to run anything as superuser. That is crazy and never be acceptable.</p>
-<p>A possible fix is to store the file hash instead of the file path in <code class="notranslate">sudoers</code>, while I think it's way too inflexible.</p>
+<p>Yeah it works, but the security issue is even more obvious: friendR can simply overwrite <code class="notranslate">up.sh</code> to run anything as superuser. That is crazy and is definitely not acceptable.</p>
+<p>A possible fix is to prepend the file hash to the file path in <code class="notranslate">sudoers</code>, while I think it's way too inflexible.</p>
 <h3>Try#3: binary command wrapper w/ SUID (This works!)</h3>
 <p>During the research of Try#1, I noticed a <a href="https://unix.stackexchange.com/a/369" rel="nofollow">Stack Overflow answer</a> saying that one may write a script wrapper to call the shell to grant other user the superuser permission.</p>
 <p>I tried the c programming and quickly found the first issue: <code class="notranslate">system()</code> is to start a new process to run the following command, but not using the euid (Effective UID, influenced by SUID). That means friendR will not have permissions to call docker commands when he invokes the compiled binary.</p>
