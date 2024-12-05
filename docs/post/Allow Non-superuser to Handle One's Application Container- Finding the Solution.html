@@ -44,7 +44,7 @@ A possible fix is to prepend the file hash to the file path in `sudoers`, while 
 
 During the research of Try#1, I noticed a [Stack Overflow answer](https://unix.stackexchange.com/a/369) saying that one may write a script wrapper to call the shell to grant other user the superuser permission.
 
-I tried the c programming and quickly found the first issue: `system()` is to start a new process to run the following command, but not using the euid (Effective UID, influenced by SUID). That means friendR will not have permissions to call docker commands when he invokes the compiled binary.
+I tried the C programming and quickly found the first issue: `system()` is to start a new process to run the following command, but not using the euid (Effective UID, influenced by SUID). That means friendR will not have permissions to call docker commands when he invokes the compiled binary.
 
 I didn't dive deep into how `system()` works with UID, because later I found using `exec()` can get rid of this issue. `exec()` is to replace current process with its argument command, which inherits process' euid.
 
@@ -142,7 +142,7 @@ A possible fix is to prepend the file hash to the file path in `sudoers`, while 
 
 During the research of Try#1, I noticed a [Stack Overflow answer](https://unix.stackexchange.com/a/369) saying that one may write a script wrapper to call the shell to grant other user the superuser permission.
 
-I tried the c programming and quickly found the first issue: `system()` is to start a new process to run the following command, but not using the euid (Effective UID, influenced by SUID). That means friendR will not have permissions to call docker commands when he invokes the compiled binary.
+I tried the C programming and quickly found the first issue: `system()` is to start a new process to run the following command, but not using the euid (Effective UID, influenced by SUID). That means friendR will not have permissions to call docker commands when he invokes the compiled binary.
 
 I didn't dive deep into how `system()` works with UID, because later I found using `exec()` can get rid of this issue. `exec()` is to replace current process with its argument command, which inherits process' euid.
 
@@ -294,7 +294,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>A possible fix is to prepend the file hash to the file path in <code class="notranslate">sudoers</code>, while I think it's way too inflexible.</p>
 <h3>Try#3: binary command wrapper w/ SUID (This works!)</h3>
 <p>During the research of Try#1, I noticed a <a href="https://unix.stackexchange.com/a/369" rel="nofollow">Stack Overflow answer</a> saying that one may write a script wrapper to call the shell to grant other user the superuser permission.</p>
-<p>I tried the c programming and quickly found the first issue: <code class="notranslate">system()</code> is to start a new process to run the following command, but not using the euid (Effective UID, influenced by SUID). That means friendR will not have permissions to call docker commands when he invokes the compiled binary.</p>
+<p>I tried the C programming and quickly found the first issue: <code class="notranslate">system()</code> is to start a new process to run the following command, but not using the euid (Effective UID, influenced by SUID). That means friendR will not have permissions to call docker commands when he invokes the compiled binary.</p>
 <p>I didn't dive deep into how <code class="notranslate">system()</code> works with UID, because later I found using <code class="notranslate">exec()</code> can get rid of this issue. <code class="notranslate">exec()</code> is to replace current process with its argument command, which inherits process' euid.</p>
 <p>In this way, I just copy the binaries to friendR's directory and set mode to <code class="notranslate">4750 (rwsr-x---)</code>, then friendR can call them to invoke hard-coded docker commands.</p>
 <h3>Bonus: complex commands wrapper workaround</h3>

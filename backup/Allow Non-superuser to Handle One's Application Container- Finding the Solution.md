@@ -32,7 +32,7 @@ A possible fix is to prepend the file hash to the file path in `sudoers`, while 
 
 During the research of Try#1, I noticed a [Stack Overflow answer](https://unix.stackexchange.com/a/369) saying that one may write a script wrapper to call the shell to grant other user the superuser permission.
 
-I tried the c programming and quickly found the first issue: `system()` is to start a new process to run the following command, but not using the euid (Effective UID, influenced by SUID). That means friendR will not have permissions to call docker commands when he invokes the compiled binary.
+I tried the C programming and quickly found the first issue: `system()` is to start a new process to run the following command, but not using the euid (Effective UID, influenced by SUID). That means friendR will not have permissions to call docker commands when he invokes the compiled binary.
 
 I didn't dive deep into how `system()` works with UID, because later I found using `exec()` can get rid of this issue. `exec()` is to replace current process with its argument command, which inherits process' euid.
 
