@@ -2,15 +2,19 @@ name: Pull from server
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows:
+      - build Gmeek
+    types:
+      - completed
 
 jobs:
   deploy:
     name: git pull from server
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Install curl, jq
         run: |
-          sudo apt update
           sudo apt install curl jq -y
       - name: Trigger predefined git pull action
         run: |
