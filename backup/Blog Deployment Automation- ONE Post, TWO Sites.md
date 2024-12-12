@@ -32,7 +32,7 @@ This post shows the full view of my completely automated workflow of deploying t
 |                    |                  |             | +--------|--------+ |
 |                    |                  | new commits |          v          |
 |                    +------------------------------------->[blog repo]     |
-+  -------------------------------------+             |          |          |
++---------------------------------------+             |          |          |
                                                       | +--------v-------+  |
                                                       | | [F] web server <---- internet access
                                                       | |    (nginx)     |  |
