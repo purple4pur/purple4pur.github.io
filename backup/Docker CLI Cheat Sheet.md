@@ -114,6 +114,15 @@ docker network disconnect NETWORK CONTAINER # disconnect a network to container
 docker network rm NETWORK                   # remove a network
 ```
 
+### docker system
+
+```sh
+docker system df              # list all disk usage
+docker system prune [OPTIONS] # the BEST way to clean up unused resources
+                    -a        # with all unused images
+                    --volumes # with anonymous volumes
+```
+
 ### docker compose
 
 - [[Docker compose 101]](https://dockerlabs.collabnix.com/intermediate/workshop/)

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>https://blog.quitw.org/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>https://blog.quitw.org/</link></image><lastBuildDate>Fri, 13 Dec 2024 17:51:41 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>Blog Deployment Automation: ONE Post, TWO Sites</title><link>https://blog.quitw.org//post/Blog%20Deployment%20Automation-%20ONE%20Post%2C%20TWO%20Sites.html</link><description>### Background&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>https://blog.quitw.org/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>https://blog.quitw.org/</link></image><lastBuildDate>Fri, 13 Dec 2024 18:07:11 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>Blog Deployment Automation: ONE Post, TWO Sites</title><link>https://blog.quitw.org//post/Blog%20Deployment%20Automation-%20ONE%20Post%2C%20TWO%20Sites.html</link><description>### Background&#13;
 &#13;
 Before this post, I was hosting this blog on github.io only, which is quite enough for internet access. But GitHub and github.io are facing connection issues in mainland China these days. What I'm trying to achieve is to deploy the blog to my server as well, which provides relatively easy access for viewers in China, and a customized URL.&#13;
 &#13;
@@ -699,6 +699,15 @@ docker network ls                           # list all networks&#13;
 docker network connect NETWORK CONTAINER    # connect a network to container&#13;
 docker network disconnect NETWORK CONTAINER # disconnect a network to container&#13;
 docker network rm NETWORK                   # remove a network&#13;
+```&#13;
+&#13;
+### docker system&#13;
+&#13;
+```sh&#13;
+docker system df              # list all disk usage&#13;
+docker system prune [OPTIONS] # the BEST way to clean up unused resources&#13;
+                    -a        # with all unused images&#13;
+                    --volumes # with anonymous volumes&#13;
 ```&#13;
 &#13;
 ### docker compose&#13;

@@ -126,6 +126,15 @@ docker network disconnect NETWORK CONTAINER # disconnect a network to container
 docker network rm NETWORK                   # remove a network
 ```
 
+### docker system
+
+```sh
+docker system df              # list all disk usage
+docker system prune [OPTIONS] # the BEST way to clean up unused resources
+                    -a        # with all unused images
+                    --volumes # with anonymous volumes
+```
+
 ### docker compose
 
 - [[Docker compose 101]](https://dockerlabs.collabnix.com/intermediate/workshop/)
@@ -269,6 +278,15 @@ docker network ls                           # list all networks
 docker network connect NETWORK CONTAINER    # connect a network to container
 docker network disconnect NETWORK CONTAINER # disconnect a network to container
 docker network rm NETWORK                   # remove a network
+```
+
+### docker system
+
+```sh
+docker system df              # list all disk usage
+docker system prune [OPTIONS] # the BEST way to clean up unused resources
+                    -a        # with all unused images
+                    --volumes # with anonymous volumes
 ```
 
 ### docker compose
@@ -443,6 +461,11 @@ docker network ls                           <span class="pl-c"><span class="pl-c
 docker network connect NETWORK CONTAINER    <span class="pl-c"><span class="pl-c">#</span> connect a network to container</span>
 docker network disconnect NETWORK CONTAINER <span class="pl-c"><span class="pl-c">#</span> disconnect a network to container</span>
 docker network rm NETWORK                   <span class="pl-c"><span class="pl-c">#</span> remove a network</span></pre></div>
+<h3>docker system</h3>
+<div class="highlight highlight-source-shell"><pre class="notranslate">docker system df              <span class="pl-c"><span class="pl-c">#</span> list all disk usage</span>
+docker system prune [OPTIONS] <span class="pl-c"><span class="pl-c">#</span> the BEST way to clean up unused resources</span>
+                    -a        <span class="pl-c"><span class="pl-c">#</span> with all unused images</span>
+                    --volumes <span class="pl-c"><span class="pl-c">#</span> with anonymous volumes</span></pre></div>
 <h3>docker compose</h3>
 <ul>
 <li>
