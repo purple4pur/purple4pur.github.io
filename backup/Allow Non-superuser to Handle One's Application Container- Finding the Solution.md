@@ -1,6 +1,6 @@
 ### Background
 
-A friend of mine is hosting a QQ bot ( [Miao-Yunzai](https://github.com/yoimiya-kokomi/Miao-Yunzai) ) on my VPS, and let's call him friendR here. Recently I'm switching the bot to my new VPS, and trying to host as much as possible services in docker in order to keep the host machine clean.
+A friend of mine is hosting a QQ bot [(Miao-Yunzai)](https://github.com/yoimiya-kokomi/Miao-Yunzai) on my VPS, and let's call him friendR here. Recently I'm switching the bot to my new VPS, and trying to host as much as possible services in docker in order to keep the host machine clean.
 
 After some experiments I can use my modified Dockerfile and compose file to invoke the bot in container as I want. The next challenge is to allow friendR to up/down the bot container and run `npm run app` in it, because he might restart the bot anytime he want and does not need my involvement.
 
