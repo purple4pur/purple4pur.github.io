@@ -52,7 +52,7 @@ Let's take a closer look of the topology now:
                            +----------------------------------------------+
 ```
 
-So it works... Does it? Yeah technically it works very well, for doing the relay job. But here's an issue that about half of the time I can't hold a stable network connection between my client and the relay server! Again, many thanks to THE FIREWALL. So it comes the bad news that the relay server doesn't do any help of a better connection.
+So it works... Does it? Yeah technically it works very well, for doing the relay job. But here's an issue that about half of the time I can't hold a stable network connection between my client and the relay server! MANY THANKS TO THE FIREWALL. So it comes the bad news that the relay server doesn't do any help of a better connection.
 
 But I would not stop here. Quickly I realized the whole traffic between the client and the server was going through my relay server, which meant that I could monitor anything in it, or even manipulate it as I want.
 
