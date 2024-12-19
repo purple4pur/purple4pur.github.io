@@ -25,12 +25,12 @@ One thing I'd like to mention is how nginx is dealing with SSL/TLS certification
 ```nginx
 server {
   listen 8080;
-  server_name localhost;        # <--
+  server_name localhost;      # <--
   location / {
     resolver 8.8.8.8;
     proxy_pass https://actual.server.com$request_uri;
-    proxy_ssl_server_name on;   # <--
-    proxy_ssl_session_reuse on; # <--
+    proxy_ssl_server_name on; # <--
+    proxy_ssl_session_reuse on;
   }
 }
 ```
