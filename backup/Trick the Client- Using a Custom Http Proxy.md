@@ -2,7 +2,7 @@
 
 ### Background
 
-I really enjoy playing a game, which handles almost everything on client side, and its server side is for ranking, replays, online matches, etc. As always, the server has a bad network connection for players in mainland China like me. So I was thinking if I can setup a relay server on my VPS, to provide a better connection of the game.
+I really enjoy playing a game, which handles almost everything on client side, and its server side is for ranking, replays, online matches, etc. As always, the server has a bad network connection for players in mainland China like me. So I was thinking if I could setup a relay server on my VPS, to provide a better connection of the game.
 
 ### 1. Setup the relay server
 
