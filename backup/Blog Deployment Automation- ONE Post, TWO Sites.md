@@ -58,13 +58,13 @@ Check [`pull_from_server.yaml`](https://github.com/purple4pur/purple4pur.github.
 
 ### Step [E]
 
-Here is a task runner ([OliveTin](https://github.com/OliveTin/OliveTin)) that can run any predefined commands, with REST API provided. I have prepared a git work directory and a git pull command for it. So when this task is triggered, the local blog repository will fetch all changes from GitHub.
+Here is a task runner [(OliveTin)](https://github.com/OliveTin/OliveTin) that can run any predefined commands, with REST API provided. I have prepared a git work directory and a git pull command for it. So when this task is triggered, the local blog repository will fetch all changes from GitHub.
 
 ### Step [F]
 
 A nginx server is hosting the local blog repo to provide internet access. What I didn't mention is the OliveTin instance and the nginx instance are all running in docker. So the tricky part here is they share a common volume to update or access the local repository.
 
-Check [docker compose file](https://github.com/purple4pur/docker_compose/tree/master/blog) for details.
+Check [docker compose file](https://github.com/purple4pur/docker_compose/blob/master/blog/compose.yaml) for details.
 
 ### Conclusion
 

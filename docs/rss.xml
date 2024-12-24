@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>https://blog.quitw.org/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>https://blog.quitw.org/</link></image><lastBuildDate>Tue, 24 Dec 2024 08:59:30 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>Trick the Client: Using a Custom Http Proxy</title><link>https://blog.quitw.org//post/Trick%20the%20Client-%20Using%20a%20Custom%20Http%20Proxy.html</link><description>**DISCLAIMER: This project is for study only, and does nothing with to-server requests. Use with caution and at your own risk.**&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>https://blog.quitw.org/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>https://blog.quitw.org/</link></image><lastBuildDate>Tue, 24 Dec 2024 09:01:06 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>Trick the Client: Using a Custom Http Proxy</title><link>https://blog.quitw.org//post/Trick%20the%20Client-%20Using%20a%20Custom%20Http%20Proxy.html</link><description>**DISCLAIMER: This project is for study only, and does nothing with to-server requests. Use with caution and at your own risk.**&#13;
 &#13;
 ### Background&#13;
 &#13;
@@ -173,13 +173,13 @@ Check [`pull_from_server.yaml`](https://github.com/purple4pur/purple4pur.github.
 &#13;
 ### Step [E]&#13;
 &#13;
-Here is a task runner ([OliveTin](https://github.com/OliveTin/OliveTin)) that can run any predefined commands, with REST API provided. I have prepared a git work directory and a git pull command for it. So when this task is triggered, the local blog repository will fetch all changes from GitHub.&#13;
+Here is a task runner [(OliveTin)](https://github.com/OliveTin/OliveTin) that can run any predefined commands, with REST API provided. I have prepared a git work directory and a git pull command for it. So when this task is triggered, the local blog repository will fetch all changes from GitHub.&#13;
 &#13;
 ### Step [F]&#13;
 &#13;
 A nginx server is hosting the local blog repo to provide internet access. What I didn't mention is the OliveTin instance and the nginx instance are all running in docker. So the tricky part here is they share a common volume to update or access the local repository.&#13;
 &#13;
-Check [docker compose file](https://github.com/purple4pur/docker_compose/tree/master/blog) for details.&#13;
+Check [docker compose file](https://github.com/purple4pur/docker_compose/blob/master/blog/compose.yaml) for details.&#13;
 &#13;
 ### Conclusion&#13;
 &#13;
