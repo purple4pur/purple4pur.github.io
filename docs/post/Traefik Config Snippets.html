@@ -76,8 +76,8 @@ Redirect `dashboard.hostname.com...` to `https://hostname.com/dashboard...`:
       traefik.http.middlewares.MIDDLEWARE_X.redirectregex.replacement: 'https://hostname.com/dashboard$${1}'
       ...
       # use redirectregex
-      traefik.http.routers.ROUTER_X.middlewares: 'MIDDLEWARE_X'
       traefik.http.routers.ROUTER_X.service: 'noop@internal' # avoid auto linking this middleware to other services
+      traefik.http.routers.ROUTER_X.middlewares: 'MIDDLEWARE_X'
 ```
 
 ### middleware: basicAuth
@@ -165,8 +165,8 @@ Redirect `dashboard.hostname.com...` to `https://hostname.com/dashboard...`:
       traefik.http.middlewares.MIDDLEWARE_X.redirectregex.replacement: 'https://hostname.com/dashboard$${1}'
       ...
       # use redirectregex
-      traefik.http.routers.ROUTER_X.middlewares: 'MIDDLEWARE_X'
       traefik.http.routers.ROUTER_X.service: 'noop@internal' # avoid auto linking this middleware to other services
+      traefik.http.routers.ROUTER_X.middlewares: 'MIDDLEWARE_X'
 ```
 
 ### middleware: basicAuth
@@ -311,8 +311,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
       <span class="pl-ent">traefik.http.middlewares.MIDDLEWARE_X.redirectregex.replacement</span>: <span class="pl-s"><span class="pl-pds">"</span>https://hostname.com/dashboard$${1}<span class="pl-pds">"</span></span>
       <span class="pl-s">...</span>
       <span class="pl-c"><span class="pl-c">#</span> use redirectregex</span>
-      <span class="pl-ent">traefik.http.routers.ROUTER_X.middlewares</span>: <span class="pl-s"><span class="pl-pds">"</span>MIDDLEWARE_X<span class="pl-pds">"</span></span>
-      <span class="pl-ent">traefik.http.routers.ROUTER_X.service</span>: <span class="pl-s"><span class="pl-pds">"</span>noop@internal<span class="pl-pds">"</span></span> <span class="pl-c"><span class="pl-c">#</span> avoid auto linking this middleware to other services</span></pre></div>
+      <span class="pl-ent">traefik.http.routers.ROUTER_X.service</span>: <span class="pl-s"><span class="pl-pds">"</span>noop@internal<span class="pl-pds">"</span></span> <span class="pl-c"><span class="pl-c">#</span> avoid auto linking this middleware to other services</span>
+      <span class="pl-ent">traefik.http.routers.ROUTER_X.middlewares</span>: <span class="pl-s"><span class="pl-pds">"</span>MIDDLEWARE_X<span class="pl-pds">"</span></span></pre></div>
 <h3>middleware: basicAuth</h3>
 <div class="highlight highlight-source-yaml"><pre class="notranslate">    <span class="pl-s">...</span>
     <span class="pl-ent">labels</span>:

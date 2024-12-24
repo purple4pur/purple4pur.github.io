@@ -64,8 +64,8 @@ Redirect `dashboard.hostname.com...` to `https://hostname.com/dashboard...`:
       traefik.http.middlewares.MIDDLEWARE_X.redirectregex.replacement: "https://hostname.com/dashboard$${1}"
       ...
       # use redirectregex
-      traefik.http.routers.ROUTER_X.middlewares: "MIDDLEWARE_X"
       traefik.http.routers.ROUTER_X.service: "noop@internal" # avoid auto linking this middleware to other services
+      traefik.http.routers.ROUTER_X.middlewares: "MIDDLEWARE_X"
 ```
 
 ### middleware: basicAuth
