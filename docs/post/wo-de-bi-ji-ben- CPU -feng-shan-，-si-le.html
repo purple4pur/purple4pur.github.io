@@ -81,11 +81,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>晚上下班回来，一进房门，就是本文开头的一幕。检查完两个风扇的转速和 CPU/GPU 温度，结论就相当明显了：CPU 风扇死了。CPU 在正常负载下也高温降频，维持在 90 度上下，直撞 100 度温度墙，GPU 温度正常。</p>
 <p>一开始我想的是，完啦，这相当于 CPU 只剩铜管导热，这可远远不够啊，这下真得修了。但转念一想，要不试试手动降频？经过一些实验，包括待机负载，看番和 osu!，最终我做了这些调整，让电脑在如此状况下继续服役：</p>
 <ul>
-<li>电源计划限制 CPU 最高性能到 90%，此时 CPU 待机温度 60 度上下，osu! 温度 80 度。</li>
+<li>电源计划限制 CPU 最高性能到 85%，此时 CPU 待机温度 60 度上下，osu! 温度 80 度。</li>
 <li>GPU 风扇转速策略恢复到正常：这边风扇没坏，就没必要在静音模式了。</li>
 <li>CPU 风扇转速策略手动调到全 0%：尽可能不要让主板给这个不转的风扇供电。</li>
 </ul>
-<p>限制 CPU 性能后，游戏场景略有些影响，明显感觉到掉帧变多一点点，但可以接受，其余场景暂时没感觉到太大变化。</p></div>
+<p>限制 CPU 性能后，游戏场景略有些影响，明显感觉到掉帧变多一点点，但可以接受，其余场景暂时没感觉到太大变化。</p>
+<p>有点庆幸坏的是 CPU 风扇，假如是 GPU 风扇，那直接跟游戏说拜拜了。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">Published under Creative Commons Attribution-ShareAlike (CC-BY-SA) license. Feel free to comment or share :)</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
