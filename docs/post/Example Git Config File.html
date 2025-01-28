@@ -75,7 +75,7 @@ git config --global --list
 <meta property="og:url" content="https://blog.quitw.org//post/Example%20Git%20Config%20File.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/49893724">
 <title>Example Git Config File</title>
-<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
 
 
 </head>
@@ -161,10 +161,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     tool = meld
 </code></pre>
 <h2>CLI Command</h2>
-<div class="highlight highlight-source-shell"><pre class="notranslate">git config --global --list
+<pre lang="sh" class="notranslate"><code class="notranslate">git config --global --list
            --local  --get
-                    --set   user.email <span class="pl-s"><span class="pl-pds">"</span>xxx@yyy.zzz<span class="pl-pds">"</span></span>
-                    --unset</pre></div></div>
+                    --set   user.email "xxx@yyy.zzz"
+                    --unset
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;">Published under Creative Commons Attribution-ShareAlike (CC-BY-SA) license. Feel free to comment or share :)</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
