@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>https://blog.quitw.org/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>https://blog.quitw.org/</link></image><lastBuildDate>Wed, 05 Mar 2025 09:17:55 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>Loop With fork-join_none and Automatic Variables</title><link>https://blog.quitw.org//post/Loop%20With%20fork-join_none%20and%20Automatic%20Variables.html</link><description>### Background
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>https://blog.quitw.org/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>https://blog.quitw.org/</link></image><lastBuildDate>Wed, 05 Mar 2025 09:29:27 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>Loop With fork-join_none and Automatic Variables</title><link>https://blog.quitw.org//post/Loop%20With%20fork-join_none%20and%20Automatic%20Variables.html</link><description>### Background
 
 Very often, we may want to start an individual thread with `fork` block in a loop. And also very often, if we use looped variables in `fork` block, things may not work as expected. In the following example, we will see `do_something()` is always applying to the last looped node in `nodes` array.
 
@@ -17,7 +17,7 @@ To solve this issue, two things we should know and understand: `fork` working me
 
 ### When do `fork` threads start?
 
-It's a kind of tricky must-know. According to [SystemVerilog 1800-2023 LRM](#TBD) *9.3.2 Parallel blocks*:
+It's a kind of tricky must-know. According to [SystemVerilog 1800-2023 LRM](https://ieeexplore.ieee.org/document/10458102) *9.3.2 Parallel blocks*:
 
 &gt; In all cases, processes spawned by a fork-join block shall not start executing **until the parent process is blocked or terminates**.
 
@@ -29,7 +29,7 @@ But `join_none` does not block the parent thread, so in the above example, `do_s
 
 `automatic` and `static` are variable lifetime modifiers.
 
-`automatic` means the variable only lives in current scope, which is the default behavior of many other programming languages. According to [SystemVerilog 1800-2023 LRM](#TBD) *6.21 Scope and lifetime*:
+`automatic` means the variable only lives in current scope, which is the default behavior of many other programming languages. According to [SystemVerilog 1800-2023 LRM](https://ieeexplore.ieee.org/document/10458102) *6.21 Scope and lifetime*:
 
 &gt; Class methods and declared `for` loop variables are by default automatic, regardless of the lifetime attribute of the scope in which they are declared.
 
@@ -61,7 +61,11 @@ end
 
 ### Conclusion
 
-The gap here is the default lifetime is different from other languages like C, and the `fork` block is not as intuitive as it looks like. I suggest to go through the whole *6.21 Scope and lifetime* section to understand the lifetime model.。</description><guid isPermaLink="true">https://blog.quitw.org//post/Loop%20With%20fork-join_none%20and%20Automatic%20Variables.html</guid><pubDate>Wed, 05 Mar 2025 09:17:33 +0000</pubDate></item><item><title>Why My Webdav Playback Is Broken: Cloudflare's in the Middle</title><link>https://blog.quitw.org//post/Why%20My%20Webdav%20Playback%20Is%20Broken-%20Cloudflare%27s%20in%20the%20Middle.html</link><description>The title basically tells everything, which I finally figured it out after an unintentional file uploading.
+The gap here is the default lifetime is different from other languages like C, and the `fork` block is not as intuitive as it looks like. I suggest to go through the whole *6.21 Scope and lifetime* section to understand the lifetime model.
+
+### Read more
+
+- [[Automatic variables in fork - SystemVerilog - Verification Academy]](https://verificationacademy.com/forums/t/automatic-variables-in-fork/31041)。</description><guid isPermaLink="true">https://blog.quitw.org//post/Loop%20With%20fork-join_none%20and%20Automatic%20Variables.html</guid><pubDate>Wed, 05 Mar 2025 09:17:33 +0000</pubDate></item><item><title>Why My Webdav Playback Is Broken: Cloudflare's in the Middle</title><link>https://blog.quitw.org//post/Why%20My%20Webdav%20Playback%20Is%20Broken-%20Cloudflare%27s%20in%20the%20Middle.html</link><description>The title basically tells everything, which I finally figured it out after an unintentional file uploading.
 
 I run a frp server on the VPS to expose the Webdav hosted on my local laptop. As usual I put a Cloudflare proxy on DNS. That's the background.
 

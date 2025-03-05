@@ -16,7 +16,7 @@ To solve this issue, two things we should know and understand: `fork` working me
 
 ### When do `fork` threads start?
 
-It's a kind of tricky must-know. According to [SystemVerilog 1800-2023 LRM](#TBD) *9.3.2 Parallel blocks*:
+It's a kind of tricky must-know. According to [SystemVerilog 1800-2023 LRM](https://ieeexplore.ieee.org/document/10458102) *9.3.2 Parallel blocks*:
 
 > In all cases, processes spawned by a fork-join block shall not start executing **until the parent process is blocked or terminates**.
 
@@ -28,7 +28,7 @@ But `join_none` does not block the parent thread, so in the above example, `do_s
 
 `automatic` and `static` are variable lifetime modifiers.
 
-`automatic` means the variable only lives in current scope, which is the default behavior of many other programming languages. According to [SystemVerilog 1800-2023 LRM](#TBD) *6.21 Scope and lifetime*:
+`automatic` means the variable only lives in current scope, which is the default behavior of many other programming languages. According to [SystemVerilog 1800-2023 LRM](https://ieeexplore.ieee.org/document/10458102) *6.21 Scope and lifetime*:
 
 > Class methods and declared `for` loop variables are by default automatic, regardless of the lifetime attribute of the scope in which they are declared.
 
@@ -61,3 +61,7 @@ end
 ### Conclusion
 
 The gap here is the default lifetime is different from other languages like C, and the `fork` block is not as intuitive as it looks like. I suggest to go through the whole *6.21 Scope and lifetime* section to understand the lifetime model.
+
+### Read more
+
+- [[Automatic variables in fork - SystemVerilog - Verification Academy]](https://verificationacademy.com/forums/t/automatic-variables-in-fork/31041)
