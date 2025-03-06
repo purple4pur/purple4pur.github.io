@@ -28,7 +28,7 @@ To solve this issue, two things we should know and understand: `fork` working me
 
 ### When do `fork` threads start?
 
-It's a kind of tricky must-know. According to [SystemVerilog 1800-2023 LRM](https://ieeexplore.ieee.org/document/10458102) *9.3.2 Parallel blocks*:
+It's a kind of tricky must-know. According to [SystemVerilog LRM (2023)](https://ieeexplore.ieee.org/document/10458102) *9.3.2 Parallel blocks*:
 
 > In all cases, processes spawned by a fork-join block shall not start executing **until the parent process is blocked or terminates**.
 
@@ -40,7 +40,7 @@ But `join_none` does not block the parent thread, so in the above example, `do_s
 
 `automatic` and `static` are variable lifetime modifiers.
 
-`automatic` means the variable only lives in current scope, which is the default behavior of many other programming languages. According to [SystemVerilog 1800-2023 LRM](https://ieeexplore.ieee.org/document/10458102) *6.21 Scope and lifetime*:
+`automatic` means the variable only lives in current scope, which is the default behavior of many other programming languages. According to [SystemVerilog LRM (2023)](https://ieeexplore.ieee.org/document/10458102) *6.21 Scope and lifetime*:
 
 > Class methods and declared `for` loop variables are by default automatic, regardless of the lifetime attribute of the scope in which they are declared.
 
@@ -96,7 +96,7 @@ To solve this issue, two things we should know and understand: `fork` working me
 
 ### When do `fork` threads start?
 
-It's a kind of tricky must-know. According to [SystemVerilog 1800-2023 LRM](https://ieeexplore.ieee.org/document/10458102) *9.3.2 Parallel blocks*:
+It's a kind of tricky must-know. According to [SystemVerilog LRM (2023)](https://ieeexplore.ieee.org/document/10458102) *9.3.2 Parallel blocks*:
 
 > In all cases, processes spawned by a fork-join block shall not start executing **until the parent process is blocked or terminates**.
 
@@ -108,7 +108,7 @@ But `join_none` does not block the parent thread, so in the above example, `do_s
 
 `automatic` and `static` are variable lifetime modifiers.
 
-`automatic` means the variable only lives in current scope, which is the default behavior of many other programming languages. According to [SystemVerilog 1800-2023 LRM](https://ieeexplore.ieee.org/document/10458102) *6.21 Scope and lifetime*:
+`automatic` means the variable only lives in current scope, which is the default behavior of many other programming languages. According to [SystemVerilog LRM (2023)](https://ieeexplore.ieee.org/document/10458102) *6.21 Scope and lifetime*:
 
 > Class methods and declared `for` loop variables are by default automatic, regardless of the lifetime attribute of the scope in which they are declared.
 
@@ -226,7 +226,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-k">end</span></pre></div>
 <p>To solve this issue, two things we should know and understand: <code class="notranslate">fork</code> working mechanism and <code class="notranslate">automatic</code> variable.</p>
 <h3>When do <code class="notranslate">fork</code> threads start?</h3>
-<p>It's a kind of tricky must-know. According to <a href="https://ieeexplore.ieee.org/document/10458102" rel="nofollow">SystemVerilog 1800-2023 LRM</a> <em>9.3.2 Parallel blocks</em>:</p>
+<p>It's a kind of tricky must-know. According to <a href="https://ieeexplore.ieee.org/document/10458102" rel="nofollow">SystemVerilog LRM (2023)</a> <em>9.3.2 Parallel blocks</em>:</p>
 <blockquote>
 <p>In all cases, processes spawned by a fork-join block shall not start executing <strong>until the parent process is blocked or terminates</strong>.</p>
 </blockquote>
@@ -234,7 +234,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>But <code class="notranslate">join_none</code> does not block the parent thread, so in the above example, <code class="notranslate">do_something()</code> would not start in each loop, until they see something blocking after the <code class="notranslate">foreach</code> loop. At that time they starts, the variable <code class="notranslate">node</code> has been assigned to the last looped node for each thread. That's why we see the same results for each thread.</p>
 <h3><code class="notranslate">automatic</code> vs <code class="notranslate">static</code> variable</h3>
 <p><code class="notranslate">automatic</code> and <code class="notranslate">static</code> are variable lifetime modifiers.</p>
-<p><code class="notranslate">automatic</code> means the variable only lives in current scope, which is the default behavior of many other programming languages. According to <a href="https://ieeexplore.ieee.org/document/10458102" rel="nofollow">SystemVerilog 1800-2023 LRM</a> <em>6.21 Scope and lifetime</em>:</p>
+<p><code class="notranslate">automatic</code> means the variable only lives in current scope, which is the default behavior of many other programming languages. According to <a href="https://ieeexplore.ieee.org/document/10458102" rel="nofollow">SystemVerilog LRM (2023)</a> <em>6.21 Scope and lifetime</em>:</p>
 <blockquote>
 <p>Class methods and declared <code class="notranslate">for</code> loop variables are by default automatic, regardless of the lifetime attribute of the scope in which they are declared.</p>
 </blockquote>
