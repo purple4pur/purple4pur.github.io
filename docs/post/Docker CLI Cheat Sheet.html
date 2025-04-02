@@ -33,6 +33,7 @@ docker run [OPTIONS] IMAGE[:TAG] [CMD] # run a container from image (and run the
            --network NETWORK           # connect to a network
            --name CONTAINER            # name the container
            --rm                        # one-off mode, auto remove from docker ps after exited
+           --pull always               # always pull the latest image
 ```
 
 ### docker attach
@@ -150,6 +151,7 @@ docker compose up [OPTIONS]                 # start current compose
                   -d                        # detached mode
                   --build                   # rebuild images (if needed) then restart
                   --no-start                # create services only but don't start
+                  --pull always             # always pull the latest image
 docker compose down [OPTIONS]               # the BEST way to stop compose
                     -v                      # also remove created volumes
                     --rmi local|all         # also remove local built images by current compose / all built and pulled images
@@ -187,6 +189,7 @@ docker run [OPTIONS] IMAGE[:TAG] [CMD] # run a container from image (and run the
            --network NETWORK           # connect to a network
            --name CONTAINER            # name the container
            --rm                        # one-off mode, auto remove from docker ps after exited
+           --pull always               # always pull the latest image
 ```
 
 ### docker attach
@@ -304,6 +307,7 @@ docker compose up [OPTIONS]                 # start current compose
                   -d                        # detached mode
                   --build                   # rebuild images (if needed) then restart
                   --no-start                # create services only but don't start
+                  --pull always             # always pull the latest image
 docker compose down [OPTIONS]               # the BEST way to stop compose
                     -v                      # also remove created volumes
                     --rmi local|all         # also remove local built images by current compose / all built and pulled images
@@ -403,7 +407,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
            -v VOLUME:CONTAINER_PATH    <span class="pl-c"><span class="pl-c">#</span> mount volume on container path</span>
            --network NETWORK           <span class="pl-c"><span class="pl-c">#</span> connect to a network</span>
            --name CONTAINER            <span class="pl-c"><span class="pl-c">#</span> name the container</span>
-           --rm                        <span class="pl-c"><span class="pl-c">#</span> one-off mode, auto remove from docker ps after exited</span></pre></div>
+           --rm                        <span class="pl-c"><span class="pl-c">#</span> one-off mode, auto remove from docker ps after exited</span>
+           --pull always               <span class="pl-c"><span class="pl-c">#</span> always pull the latest image</span></pre></div>
 <h3>docker attach</h3>
 <div class="highlight highlight-source-shell"><pre class="notranslate">docker attach [OPTIONS] CONTAINER <span class="pl-c"><span class="pl-c">#</span> attach to a detached container</span>
               --detach-keys=KEYS  <span class="pl-c"><span class="pl-c">#</span> assign a detach key like ctrl-b</span></pre></div>
@@ -487,6 +492,7 @@ docker compose up [OPTIONS]                 <span class="pl-c"><span class="pl-c
                   -d                        <span class="pl-c"><span class="pl-c">#</span> detached mode</span>
                   --build                   <span class="pl-c"><span class="pl-c">#</span> rebuild images (if needed) then restart</span>
                   --no-start                <span class="pl-c"><span class="pl-c">#</span> create services only but don't start</span>
+                  --pull always             <span class="pl-c"><span class="pl-c">#</span> always pull the latest image</span>
 docker compose down [OPTIONS]               <span class="pl-c"><span class="pl-c">#</span> the BEST way to stop compose</span>
                     -v                      <span class="pl-c"><span class="pl-c">#</span> also remove created volumes</span>
                     --rmi local<span class="pl-k">|</span>all         <span class="pl-c"><span class="pl-c">#</span> also remove local built images by current compose / all built and pulled images</span>

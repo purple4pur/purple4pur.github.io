@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>https://blog.quitw.org</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>https://blog.quitw.org</link></image><lastBuildDate>Mon, 31 Mar 2025 13:33:18 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>YOASOBI Asia Tour in Shanghai Day1 参战回想</title><link>https://blog.quitw.org/post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html</link><description>Live 日是 2025/2/15，这篇回想迟到了一个月，但整场演出都恍如昨日。</description><guid isPermaLink="true">https://blog.quitw.org/post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html</guid><pubDate>Sat, 22 Mar 2025 18:46:37 +0000</pubDate></item><item><title>Loop With fork-join_none and Automatic Variables</title><link>https://blog.quitw.org/post/Loop%20With%20fork-join_none%20and%20Automatic%20Variables.html</link><description>### Background
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>https://blog.quitw.org</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>https://blog.quitw.org</link></image><lastBuildDate>Wed, 02 Apr 2025 15:43:51 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>YOASOBI Asia Tour in Shanghai Day1 参战回想</title><link>https://blog.quitw.org/post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html</link><description>Live 日是 2025/2/15，这篇回想迟到了一个月，但整场演出都恍如昨日。</description><guid isPermaLink="true">https://blog.quitw.org/post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html</guid><pubDate>Sat, 22 Mar 2025 18:46:37 +0000</pubDate></item><item><title>Loop With fork-join_none and Automatic Variables</title><link>https://blog.quitw.org/post/Loop%20With%20fork-join_none%20and%20Automatic%20Variables.html</link><description>### Background
 
 Very often, we may want to start an individual thread with `fork` block in a loop. And also very often, if we use looped variables in `fork` block, things may not work as expected. In the following example, we will see `do_something()` is always applying to the last looped node in `nodes` array.
 
@@ -803,158 +803,160 @@ vim .bashrc&#13;
 source .bashrc&#13;
 ```&#13;
 &#13;
-- Good to go!。</description><guid isPermaLink="true">https://blog.quitw.org/post/Welcome%2C%20My%20New%20VPS%21.html</guid><pubDate>Mon, 18 Nov 2024 17:42:17 +0000</pubDate></item><item><title>Docker CLI Cheat Sheet</title><link>https://blog.quitw.org/post/Docker%20CLI%20Cheat%20Sheet.html</link><description>### Dockerfile&#13;
-&#13;
-- [[Docker 101]](https://dockerlabs.collabnix.com/workshop/docker/)&#13;
-- [[Dockerfile reference]](https://docs.docker.com/reference/dockerfile/)&#13;
-&#13;
-### docker build&#13;
-&#13;
-```sh&#13;
-docker build -t IMAGE[:TAG] . # build image from in-place Dockerfile&#13;
-```&#13;
-&#13;
-### docker run&#13;
-&#13;
-```sh&#13;
-docker run [OPTIONS] IMAGE[:TAG] [CMD] # run a container from image (and run the command)&#13;
-           -d                          # detached mode&#13;
-           -it                         # invoke an interactive tty&#13;
-           -P                          # publish all EXPOSE ports&#13;
-           -p HOST_PORT:CONTAINER_PORT # map a container port to docker host&#13;
-           -v VOLUME:CONTAINER_PATH    # mount volume on container path&#13;
-           --network NETWORK           # connect to a network&#13;
-           --name CONTAINER            # name the container&#13;
-           --rm                        # one-off mode, auto remove from docker ps after exited&#13;
-```&#13;
-&#13;
-### docker attach&#13;
-&#13;
-```sh&#13;
-docker attach [OPTIONS] CONTAINER # attach to a detached container&#13;
-              --detach-keys=KEYS  # assign a detach key like ctrl-b&#13;
-```&#13;
-&#13;
-To detach from a running container: press detach keys, default is `ctrl-p`+`ctrl-q`.&#13;
-&#13;
-### docker exec&#13;
-&#13;
-```sh&#13;
-docker exec [OPTIONS] CONTAINER CMD # run the command in a running container&#13;
-            -t                      # run in tty then exit&#13;
-            -it                     # run in an interactive tty&#13;
-```&#13;
-&#13;
-### docker ps&#13;
-&#13;
-```sh&#13;
-docker ps [OPTIONS] # list all running containers&#13;
-          -a        # list all recorded containers (running/paused/exited)&#13;
-          -q        # quiet mode, container_id only&#13;
-```&#13;
-&#13;
-### docker inspect&#13;
-&#13;
-```sh&#13;
-docker inspect DOCKER_OBJECT # print object info in json format&#13;
-                             #  - image&#13;
-                             #  - container&#13;
-                             #  - volume&#13;
-                             #  - network&#13;
-```&#13;
-&#13;
-### docker image&#13;
-&#13;
-```sh&#13;
-docker build ...                           # build a new image&#13;
-docker images [FILTER]                     # list all images, alias of docker image ls&#13;
-docker pull IMAGE[:TAG]                    # pull an image from docker hub&#13;
-docker tag IMAGE[:TAG] NEW_IMAGE[:NEW_TAG] # rename an image&#13;
-docker image rm [-f] IMAGE                 # remove an image&#13;
-docker image prune -a                      # remove all unused images&#13;
-docker history IMAGE[:TAG]                 # print how the image was built&#13;
-```&#13;
-&#13;
-### docker container&#13;
-&#13;
-`CONTAINER` can be container_id (short-form OK) or container_name.&#13;
-&#13;
-```sh&#13;
-docker run ...                  # new a container&#13;
-docker ps ...                   # list container status&#13;
-docker stop CONTAINER           # as it says&#13;
-docker kill CONTAINER           # as it says&#13;
-docker start/restart CONTAINER  # as it says&#13;
-docker pause/unpause CONTAINER  # as it says&#13;
-docker logs [OPTIONS] CONTAINER # print stdout of container&#13;
-            -f                  # follow mode&#13;
-            -n N                # only tail N lines&#13;
-docker port CONTAINER [PORT]    # show port mapping info&#13;
-docker rm [-f] CONTAINER        # remove record from docker ps&#13;
-docker rm $(docker ps -aq)      # remove all records from docker ps&#13;
-```&#13;
-&#13;
-### docker volume&#13;
-&#13;
-```sh&#13;
-docker volume create VOLUME             # create a volume&#13;
-docker volume ls                        # list all volumes&#13;
-docker volume rm [-f] VOLUME            # remove a volume&#13;
-docker volume rm $(docker volume ls -q) # remove all volumes&#13;
-```&#13;
-&#13;
-### docker network&#13;
-&#13;
-Network has multiple types (a.k.a. drivers) [[Reference]](https://docs.docker.com/engine/network/#drivers) :&#13;
-&#13;
-- **bridge**: communicate among containers only, publish specific ports to docker host, the default type.&#13;
-- **host**: directly expose on host machine, publish options are ignored.&#13;
-- **null**: no network provided.&#13;
-&#13;
-```sh&#13;
-docker network create -d DRIVER NETWORK     # create a network of specific type&#13;
-docker network ls                           # list all networks&#13;
-docker network connect NETWORK CONTAINER    # connect a network to container&#13;
-docker network disconnect NETWORK CONTAINER # disconnect a network to container&#13;
-docker network rm NETWORK                   # remove a network&#13;
-```&#13;
-&#13;
-### docker system&#13;
-&#13;
-```sh&#13;
-docker system df              # list all disk usage&#13;
-docker system prune [OPTIONS] # the BEST way to clean up unused resources&#13;
-                    -a        # with all unused images&#13;
-                    --volumes # with anonymous volumes&#13;
-```&#13;
-&#13;
-### docker compose&#13;
-&#13;
-- [[Docker compose 101]](https://dockerlabs.collabnix.com/intermediate/workshop/)&#13;
-- [[compose.yaml reference]](https://docs.docker.com/reference/compose-file/)&#13;
-&#13;
-- A `compose.yaml` file is wanted in working directory.&#13;
-- `service` in compose is equivalent to `container`.&#13;
-&#13;
-```sh&#13;
-docker compose config                       # print info of in-place compose.yaml&#13;
-docker compose build                        # build images defined in compose.yaml&#13;
-docker compose up [OPTIONS]                 # start current compose&#13;
-                  -d                        # detached mode&#13;
-                  --build                   # rebuild images (if needed) then restart&#13;
-                  --no-start                # create services only but don't start&#13;
-docker compose down [OPTIONS]               # the BEST way to stop compose&#13;
-                    -v                      # also remove created volumes&#13;
-                    --rmi local|all         # also remove local built images by current compose / all built and pulled images&#13;
-docker compose images                       # list images used by current compose&#13;
-docker compose ps [-a] [-q] [--services]    # list services used by current compose&#13;
-docker compose start/stop/restart [SERVICE] # as it says&#13;
-docker compose pause/unpause [SERVICE]      # as it says&#13;
-docker compose kill [SERVICE]               # as it says&#13;
-docker compose logs [-f] [-n N] [SERVICE]   # print/follow stdout in service&#13;
-docker compose run SERVICE CMD              # run a one-time command in a new service, not the running one&#13;
-docker compose rm [OPTIONS] [SERVICE]       # remove stopped service from ps&#13;
-                  -s                        # stop and remove&#13;
+- Good to go!。</description><guid isPermaLink="true">https://blog.quitw.org/post/Welcome%2C%20My%20New%20VPS%21.html</guid><pubDate>Mon, 18 Nov 2024 17:42:17 +0000</pubDate></item><item><title>Docker CLI Cheat Sheet</title><link>https://blog.quitw.org/post/Docker%20CLI%20Cheat%20Sheet.html</link><description>### Dockerfile
+
+- [[Docker 101]](https://dockerlabs.collabnix.com/workshop/docker/)
+- [[Dockerfile reference]](https://docs.docker.com/reference/dockerfile/)
+
+### docker build
+
+```sh
+docker build -t IMAGE[:TAG] . # build image from in-place Dockerfile
+```
+
+### docker run
+
+```sh
+docker run [OPTIONS] IMAGE[:TAG] [CMD] # run a container from image (and run the command)
+           -d                          # detached mode
+           -it                         # invoke an interactive tty
+           -P                          # publish all EXPOSE ports
+           -p HOST_PORT:CONTAINER_PORT # map a container port to docker host
+           -v VOLUME:CONTAINER_PATH    # mount volume on container path
+           --network NETWORK           # connect to a network
+           --name CONTAINER            # name the container
+           --rm                        # one-off mode, auto remove from docker ps after exited
+           --pull always               # always pull the latest image
+```
+
+### docker attach
+
+```sh
+docker attach [OPTIONS] CONTAINER # attach to a detached container
+              --detach-keys=KEYS  # assign a detach key like ctrl-b
+```
+
+To detach from a running container: press detach keys, default is `ctrl-p`+`ctrl-q`.
+
+### docker exec
+
+```sh
+docker exec [OPTIONS] CONTAINER CMD # run the command in a running container
+            -t                      # run in tty then exit
+            -it                     # run in an interactive tty
+```
+
+### docker ps
+
+```sh
+docker ps [OPTIONS] # list all running containers
+          -a        # list all recorded containers (running/paused/exited)
+          -q        # quiet mode, container_id only
+```
+
+### docker inspect
+
+```sh
+docker inspect DOCKER_OBJECT # print object info in json format
+                             #  - image
+                             #  - container
+                             #  - volume
+                             #  - network
+```
+
+### docker image
+
+```sh
+docker build ...                           # build a new image
+docker images [FILTER]                     # list all images, alias of docker image ls
+docker pull IMAGE[:TAG]                    # pull an image from docker hub
+docker tag IMAGE[:TAG] NEW_IMAGE[:NEW_TAG] # rename an image
+docker image rm [-f] IMAGE                 # remove an image
+docker image prune -a                      # remove all unused images
+docker history IMAGE[:TAG]                 # print how the image was built
+```
+
+### docker container
+
+`CONTAINER` can be container_id (short-form OK) or container_name.
+
+```sh
+docker run ...                  # new a container
+docker ps ...                   # list container status
+docker stop CONTAINER           # as it says
+docker kill CONTAINER           # as it says
+docker start/restart CONTAINER  # as it says
+docker pause/unpause CONTAINER  # as it says
+docker logs [OPTIONS] CONTAINER # print stdout of container
+            -f                  # follow mode
+            -n N                # only tail N lines
+docker port CONTAINER [PORT]    # show port mapping info
+docker rm [-f] CONTAINER        # remove record from docker ps
+docker rm $(docker ps -aq)      # remove all records from docker ps
+```
+
+### docker volume
+
+```sh
+docker volume create VOLUME             # create a volume
+docker volume ls                        # list all volumes
+docker volume rm [-f] VOLUME            # remove a volume
+docker volume rm $(docker volume ls -q) # remove all volumes
+```
+
+### docker network
+
+Network has multiple types (a.k.a. drivers) [[Reference]](https://docs.docker.com/engine/network/#drivers) :
+
+- **bridge**: communicate among containers only, publish specific ports to docker host, the default type.
+- **host**: directly expose on host machine, publish options are ignored.
+- **null**: no network provided.
+
+```sh
+docker network create -d DRIVER NETWORK     # create a network of specific type
+docker network ls                           # list all networks
+docker network connect NETWORK CONTAINER    # connect a network to container
+docker network disconnect NETWORK CONTAINER # disconnect a network to container
+docker network rm NETWORK                   # remove a network
+```
+
+### docker system
+
+```sh
+docker system df              # list all disk usage
+docker system prune [OPTIONS] # the BEST way to clean up unused resources
+                    -a        # with all unused images
+                    --volumes # with anonymous volumes
+```
+
+### docker compose
+
+- [[Docker compose 101]](https://dockerlabs.collabnix.com/intermediate/workshop/)
+- [[compose.yaml reference]](https://docs.docker.com/reference/compose-file/)
+
+- A `compose.yaml` file is wanted in working directory.
+- `service` in compose is equivalent to `container`.
+
+```sh
+docker compose config                       # print info of in-place compose.yaml
+docker compose build                        # build images defined in compose.yaml
+docker compose up [OPTIONS]                 # start current compose
+                  -d                        # detached mode
+                  --build                   # rebuild images (if needed) then restart
+                  --no-start                # create services only but don't start
+                  --pull always             # always pull the latest image
+docker compose down [OPTIONS]               # the BEST way to stop compose
+                    -v                      # also remove created volumes
+                    --rmi local|all         # also remove local built images by current compose / all built and pulled images
+docker compose images                       # list images used by current compose
+docker compose ps [-a] [-q] [--services]    # list services used by current compose
+docker compose start/stop/restart [SERVICE] # as it says
+docker compose pause/unpause [SERVICE]      # as it says
+docker compose kill [SERVICE]               # as it says
+docker compose logs [-f] [-n N] [SERVICE]   # print/follow stdout in service
+docker compose run SERVICE CMD              # run a one-time command in a new service, not the running one
+docker compose rm [OPTIONS] [SERVICE]       # remove stopped service from ps
+                  -s                        # stop and remove
 ```。</description><guid isPermaLink="true">https://blog.quitw.org/post/Docker%20CLI%20Cheat%20Sheet.html</guid><pubDate>Mon, 18 Nov 2024 17:17:14 +0000</pubDate></item><item><title>Installing CLI Tools I Use on Debian/Linux</title><link>https://blog.quitw.org/post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html</link><description>### git&#13;
 &#13;
 ```sh&#13;

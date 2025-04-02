@@ -21,6 +21,7 @@ docker run [OPTIONS] IMAGE[:TAG] [CMD] # run a container from image (and run the
            --network NETWORK           # connect to a network
            --name CONTAINER            # name the container
            --rm                        # one-off mode, auto remove from docker ps after exited
+           --pull always               # always pull the latest image
 ```
 
 ### docker attach
@@ -138,6 +139,7 @@ docker compose up [OPTIONS]                 # start current compose
                   -d                        # detached mode
                   --build                   # rebuild images (if needed) then restart
                   --no-start                # create services only but don't start
+                  --pull always             # always pull the latest image
 docker compose down [OPTIONS]               # the BEST way to stop compose
                     -v                      # also remove created volumes
                     --rmi local|all         # also remove local built images by current compose / all built and pulled images
