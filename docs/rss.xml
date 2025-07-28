@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>https://blog.quitw.org</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>https://blog.quitw.org</link></image><lastBuildDate>Mon, 28 Jul 2025 08:40:33 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>607-615 独闯日本全记录</title><link>https://blog.quitw.org/post/607-615%20-du-chuang-ri-ben-quan-ji-lu.html</link><description>这是一次比较临时规划的日本行，也是我的首次日本行。</description><guid isPermaLink="true">https://blog.quitw.org/post/607-615%20-du-chuang-ri-ben-quan-ji-lu.html</guid><pubDate>Fri, 18 Jul 2025 11:16:53 +0000</pubDate></item><item><title>一路走好</title><link>https://blog.quitw.org/post/yi-lu-zou-hao.html</link><description>外公，一路走好！。</description><guid isPermaLink="true">https://blog.quitw.org/post/yi-lu-zou-hao.html</guid><pubDate>Wed, 07 May 2025 15:39:51 +0000</pubDate></item><item><title>YOASOBI Asia Tour in Shanghai Day1 参战回想</title><link>https://blog.quitw.org/post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html</link><description>Live 日是 2025/2/15，这篇回想迟到了一个月，但整场演出都恍如昨日。</description><guid isPermaLink="true">https://blog.quitw.org/post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html</guid><pubDate>Sat, 22 Mar 2025 18:46:37 +0000</pubDate></item><item><title>Loop With fork-join_none and Automatic Variables</title><link>https://blog.quitw.org/post/Loop%20With%20fork-join_none%20and%20Automatic%20Variables.html</link><description>### Background
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>https://blog.quitw.org</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>https://blog.quitw.org</link></image><lastBuildDate>Mon, 28 Jul 2025 09:31:51 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>607-615 独闯日本全记录</title><link>https://blog.quitw.org/post/607-615%20-du-chuang-ri-ben-quan-ji-lu.html</link><description>这是一次比较临时规划的日本行，也是我的首次日本行。</description><guid isPermaLink="true">https://blog.quitw.org/post/607-615%20-du-chuang-ri-ben-quan-ji-lu.html</guid><pubDate>Fri, 18 Jul 2025 11:16:53 +0000</pubDate></item><item><title>一路走好</title><link>https://blog.quitw.org/post/yi-lu-zou-hao.html</link><description>外公，一路走好！。</description><guid isPermaLink="true">https://blog.quitw.org/post/yi-lu-zou-hao.html</guid><pubDate>Wed, 07 May 2025 15:39:51 +0000</pubDate></item><item><title>YOASOBI Asia Tour in Shanghai Day1 参战回想</title><link>https://blog.quitw.org/post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html</link><description>Live 日是 2025/2/15，这篇回想迟到了一个月，但整场演出都恍如昨日。</description><guid isPermaLink="true">https://blog.quitw.org/post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html</guid><pubDate>Sat, 22 Mar 2025 18:46:37 +0000</pubDate></item><item><title>Loop With fork-join_none and Automatic Variables</title><link>https://blog.quitw.org/post/Loop%20With%20fork-join_none%20and%20Automatic%20Variables.html</link><description>### Background
 
 Very often, we may want to start an individual thread with `fork` block in a loop. And also very often, if we use looped variables in `fork` block, things may not work as expected. In the following example, we will see `do_something()` is always applying to the last looped node in `nodes` array.
 
@@ -1156,78 +1156,78 @@ For more detailed use guides please refer to [Ben's article](https://systemveril
 &#13;
 我最早对 H△G 有印象最早应该是在 osu! 里听到了他们的《カラフル》，但也并没有特别关注，处于一个听日音相当杂食的状态。</description><guid isPermaLink="true">https://blog.quitw.org/post/H%E2%96%B3G%201st%20Live%20in%20Guangzhou%20-can-zhan-xiao-ji.html</guid><pubDate>Tue, 12 Nov 2024 16:58:47 +0000</pubDate></item><item><title>避免沟通漏斗，传递完整的信息</title><link>https://blog.quitw.org/post/bi-mian-gou-tong-lou-dou-%EF%BC%8C-chuan-di-wan-zheng-de-xin-xi.html</link><description>### 何谓「漏斗」&#13;
 &#13;
-「沟通漏斗」是一个很形象的概念，形容这样一种场景：A 把一件事告诉给 B，但由于双方的理解偏差或其他原因，导致 B 只接收到 80% 的原意，同样的事情继续发生在 B 告诉 C、C 告诉 D 上，结果整个沟通链上这件事的原意损失得越来越多，如同一个漏斗般。</description><guid isPermaLink="true">https://blog.quitw.org/post/bi-mian-gou-tong-lou-dou-%EF%BC%8C-chuan-di-wan-zheng-de-xin-xi.html</guid><pubDate>Sat, 09 Nov 2024 05:42:48 +0000</pubDate></item><item><title>AXI4 Address Break Down</title><link>https://blog.quitw.org/post/AXI4%20Address%20Break%20Down.html</link><description>### Must know&#13;
-&#13;
-- Unit of address is **Byte**.&#13;
-    - 0x00 maps to a 1-byte space in memory.&#13;
-    - 0x01 maps to the next byte.&#13;
-- **Aligned address** means `Address % Size == 0`.&#13;
-    - where `Size` is num of bytes per transfer: `2 ** AxSIZE` or `1 &lt;&lt; AxSIZE`.&#13;
-- **Narrow transfer** means a transfer not using all *WDATA* bytes, but selected by *WSTRB*.&#13;
-- *WSTRB* valid bits should match `Size`.&#13;
-&#13;
-### Schematic diagram&#13;
-&#13;
-What an AXI address in memory looks like:&#13;
-&#13;
-- *xDATA* width: 32 bits&#13;
-&#13;
-```&#13;
-       Bit# |31    24|23    16|15     8|7      0|&#13;
-            +--------+--------+--------+--------+&#13;
-AXI Address |  0x03  |  0x02  |  0x01  |  0x00  |&#13;
-            +--------+--------+--------+--------+&#13;
-            |  0x07  |  0x06  |  0x05  |  0x04  |&#13;
-            +--------+--------+--------+--------+&#13;
-            |                              ...  |&#13;
-            +-----------------------------------+&#13;
-```&#13;
-&#13;
-### Calculation of burst INCR addresses&#13;
-&#13;
-&gt; Reference: AXI Spec $$A4.1.6&#13;
-&#13;
-A burst INCR request can start from an **aligned address** or **unaligned address**. For both cases, the 2nd address is always the next aligned address. Each transfer will step forward 1 `Size` space, making the whole burst INCR request write to or read from a consecutive memory space.&#13;
-&#13;
-- Example function to calculate the start address of the Nth transfer (Nth starts from 1):&#13;
-&#13;
-```systemverilog&#13;
-function AXI_Address calc_Nth_start_addr(AXI_Address start_addr, int axsize, int Nth);&#13;
-    int size = 2 ** axsize; // num of bytes per transfer&#13;
-    AXI_Address aligned_addr = start_addr / size * size; // round down to aligned address&#13;
-    // Nth starts from 1&#13;
-    AXI_Address Nth_start_addr = (Nth == 1) ? (start_addr)                      :&#13;
-                                              (aligned_addr + (Nth - 1) * size) ;&#13;
-    return Nth_start_addr;&#13;
-endfunction&#13;
-```&#13;
-&#13;
-- Example function to calculate the last address of the whole burst INCR request:&#13;
-&#13;
-```systemverilog&#13;
-function AXI_Address calc_end_addr(AXI_Address start_addr, int axsize, int axlen);&#13;
-    int total_len = axlen + 1;&#13;
-    int size = 2 ** axsize; // num of bytes per transfer&#13;
-    AXI_Address aligned_addr = start_addr / size * size; // round down to aligned address&#13;
-    AXI_Address end_addr = aligned_addr + total_len * size - 1;&#13;
-    return end_addr;&#13;
-endfunction&#13;
-```&#13;
-&#13;
-### 4K boundary&#13;
-&#13;
-*4K* basically refers to a 4K-Byte space in memory, which is also called a *Page*. In AXI it means a 4096 (0x1000) wide address space. An AXI request is not allowed to cross the addresses that start a new *Page*. In other words, all accessed address should only be within one *Page*, E.g. `[0x3000, 0x3FFF]`.&#13;
-&#13;
-- Example function to check if an address space has crossed 4K boundary:&#13;
-&#13;
-```systemverilog&#13;
-function bit has_crossed_4k_boundary(AXI_Address start_addr, AXI_Address end_addr);&#13;
-    return ((start_addr &gt;&gt; 12) != (end_addr &gt;&gt; 12));&#13;
-endfunction&#13;
-```&#13;
-&#13;
-### Appendix: AXI Spec&#13;
-&#13;
+「沟通漏斗」是一个很形象的概念，形容这样一种场景：A 把一件事告诉给 B，但由于双方的理解偏差或其他原因，导致 B 只接收到 80% 的原意，同样的事情继续发生在 B 告诉 C、C 告诉 D 上，结果整个沟通链上这件事的原意损失得越来越多，如同一个漏斗般。</description><guid isPermaLink="true">https://blog.quitw.org/post/bi-mian-gou-tong-lou-dou-%EF%BC%8C-chuan-di-wan-zheng-de-xin-xi.html</guid><pubDate>Sat, 09 Nov 2024 05:42:48 +0000</pubDate></item><item><title>AXI4 Address Break Down</title><link>https://blog.quitw.org/post/AXI4%20Address%20Break%20Down.html</link><description>### Must know
+
+- Unit of address is **Byte**.
+    - 0x00 maps to a 1-byte space in memory.
+    - 0x01 maps to the next byte.
+- **Aligned address** means `Address % Size == 0`.
+    - where `Size` is num of bytes per transfer: `2 ** AxSIZE` or `1 &lt;&lt; AxSIZE`.
+- **Narrow transfer** means a transfer not using all *WDATA* bytes, but selected by *WSTRB*.
+- *WSTRB* valid bits should match `Size`.
+
+### Schematic diagram
+
+What an AXI address in memory looks like:
+
+- *xDATA* width: 32 bits
+
+```
+       Bit# |31    24|23    16|15     8|7      0|
+            +--------+--------+--------+--------+
+AXI Address |  0x03  |  0x02  |  0x01  |  0x00  |
+            +--------+--------+--------+--------+
+            |  0x07  |  0x06  |  0x05  |  0x04  |
+            +--------+--------+--------+--------+
+            |                              ...  |
+            +-----------------------------------+
+```
+
+### Calculation of burst INCR addresses
+
+&gt; Reference: AXI Spec $A4.1.6
+
+A burst INCR request can start from an **aligned address** or **unaligned address**. For both cases, the 2nd address is always the next aligned address. Each transfer will step forward 1 `Size` space, making the whole burst INCR request write to or read from a consecutive memory space.
+
+- Example function to calculate the start address of the Nth transfer (Nth starts from 1):
+
+```systemverilog
+function AXI_Address calc_Nth_start_addr(AXI_Address start_addr, int axsize, int Nth);
+    int size = 2 ** axsize; // num of bytes per transfer
+    AXI_Address aligned_addr = start_addr / size * size; // round down to aligned address
+    // Nth starts from 1
+    AXI_Address Nth_start_addr = (Nth == 1) ? (start_addr)                      :
+                                              (aligned_addr + (Nth - 1) * size) ;
+    return Nth_start_addr;
+endfunction
+```
+
+- Example function to calculate the last address of the whole burst INCR request:
+
+```systemverilog
+function AXI_Address calc_end_addr(AXI_Address start_addr, int axsize, int axlen);
+    int total_len = axlen + 1;
+    int size = 2 ** axsize; // num of bytes per transfer
+    AXI_Address aligned_addr = start_addr / size * size; // round down to aligned address
+    AXI_Address end_addr = aligned_addr + total_len * size - 1;
+    return end_addr;
+endfunction
+```
+
+### 4K boundary
+
+*4K* basically refers to a 4K-Byte space in memory, which is also called a *Page*. In AXI it means a 4096 (0x1000) wide address space. An AXI request is not allowed to cross the addresses that start a new *Page*. In other words, all accessed address should only be within one *Page*, E.g. `[0x3000, 0x3FFF]`.
+
+- Example function to check if an address space has crossed 4K boundary:
+
+```systemverilog
+function bit has_crossed_4k_boundary(AXI_Address start_addr, AXI_Address end_addr);
+    return ((start_addr &gt;&gt; 12) != (end_addr &gt;&gt; 12));
+endfunction
+```
+
+### Appendix: AXI Spec
+
 [[AMBA AXI Protocol Specification]](https://developer.arm.com/documentation/ihi0022/latest/)。</description><guid isPermaLink="true">https://blog.quitw.org/post/AXI4%20Address%20Break%20Down.html</guid><pubDate>Fri, 08 Nov 2024 10:00:46 +0000</pubDate></item><item><title>Example Git Config File</title><link>https://blog.quitw.org/post/Example%20Git%20Config%20File.html</link><description>## File Path&#13;
 &#13;
 * Linux: `~/.gitconfig`&#13;
