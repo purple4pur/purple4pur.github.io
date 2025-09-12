@@ -161,7 +161,7 @@ endfunction
 <meta property="og:url" content="https://blog.quitw.org/post/AXI4%20Address%20Break%20Down.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/49893724">
 <title>AXI4 Address Break Down</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -265,35 +265,32 @@ AXI Address |  0x03  |  0x02  |  0x01  |  0x00  |
 <ul>
 <li>Example function to calculate the start address of the Nth transfer (Nth starts from 1):</li>
 </ul>
-<pre lang="systemverilog" class="notranslate"><code class="notranslate">function AXI_Address calc_Nth_start_addr(AXI_Address start_addr, int axsize, int Nth);
-    int size = 2 ** axsize; // num of bytes per transfer
-    AXI_Address aligned_addr = start_addr / size * size; // round down to aligned address
-    // Nth starts from 1
-    AXI_Address Nth_start_addr = (Nth == 1) ? (start_addr)                      :
-                                              (aligned_addr + (Nth - 1) * size) ;
-    return Nth_start_addr;
-endfunction
-</code></pre>
+<div class="highlight highlight-source-systemverilog"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-k">AXI_Address </span><span class="pl-en">calc_Nth_start_addr</span>(AXI_Address start_addr,<span class="pl-k"> int</span> axsize,<span class="pl-k"> int</span> Nth);
+<span class="pl-k">    int</span> size <span class="pl-k">=</span> <span class="pl-c1">2</span> <span class="pl-k">**</span> axsize; <span class="pl-c"><span class="pl-c">//</span> num of bytes per transfer</span>
+    <span class="pl-k">AXI_Address</span> aligned_addr <span class="pl-k">=</span> start_addr <span class="pl-k">/</span> size <span class="pl-k">*</span> size; <span class="pl-c"><span class="pl-c">//</span> round down to aligned address</span>
+    <span class="pl-c"><span class="pl-c">//</span> Nth starts from 1</span>
+    <span class="pl-k">AXI_Address</span> Nth_start_addr <span class="pl-k">=</span> (Nth <span class="pl-k">==</span> <span class="pl-c1">1</span>) <span class="pl-k">?</span> (start_addr)                      <span class="pl-k">:</span>
+                                              (aligned_addr <span class="pl-k">+</span> (Nth <span class="pl-k">-</span> <span class="pl-c1">1</span>) <span class="pl-k">*</span> size) ;
+    <span class="pl-k">return</span> Nth_start_addr;
+<span class="pl-k">endfunction</span></pre></div>
 <ul>
 <li>Example function to calculate the last address of the whole burst INCR request:</li>
 </ul>
-<pre lang="systemverilog" class="notranslate"><code class="notranslate">function AXI_Address calc_end_addr(AXI_Address start_addr, int axsize, int axlen);
-    int total_len = axlen + 1;
-    int size = 2 ** axsize; // num of bytes per transfer
-    AXI_Address aligned_addr = start_addr / size * size; // round down to aligned address
-    AXI_Address end_addr = aligned_addr + total_len * size - 1;
-    return end_addr;
-endfunction
-</code></pre>
+<div class="highlight highlight-source-systemverilog"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-k">AXI_Address </span><span class="pl-en">calc_end_addr</span>(AXI_Address start_addr,<span class="pl-k"> int</span> axsize,<span class="pl-k"> int</span> axlen);
+<span class="pl-k">    int</span> total_len <span class="pl-k">=</span> axlen <span class="pl-k">+</span> <span class="pl-c1">1</span>;
+<span class="pl-k">    int</span> size <span class="pl-k">=</span> <span class="pl-c1">2</span> <span class="pl-k">**</span> axsize; <span class="pl-c"><span class="pl-c">//</span> num of bytes per transfer</span>
+    <span class="pl-k">AXI_Address</span> aligned_addr <span class="pl-k">=</span> start_addr <span class="pl-k">/</span> size <span class="pl-k">*</span> size; <span class="pl-c"><span class="pl-c">//</span> round down to aligned address</span>
+    <span class="pl-k">AXI_Address</span> end_addr <span class="pl-k">=</span> aligned_addr <span class="pl-k">+</span> total_len <span class="pl-k">*</span> size <span class="pl-k">-</span> <span class="pl-c1">1</span>;
+    <span class="pl-k">return</span> end_addr;
+<span class="pl-k">endfunction</span></pre></div>
 <h3>4K boundary</h3>
 <p><em>4K</em> basically refers to a 4K-Byte space in memory, which is also called a <em>Page</em>. In AXI it means a 4096 (0x1000) wide address space. An AXI request is not allowed to cross the addresses that start a new <em>Page</em>. In other words, all accessed address should only be within one <em>Page</em>, E.g. <code class="notranslate">[0x3000, 0x3FFF]</code>.</p>
 <ul>
 <li>Example function to check if an address space has crossed 4K boundary:</li>
 </ul>
-<pre lang="systemverilog" class="notranslate"><code class="notranslate">function bit has_crossed_4k_boundary(AXI_Address start_addr, AXI_Address end_addr);
-    return ((start_addr &gt;&gt; 12) != (end_addr &gt;&gt; 12));
-endfunction
-</code></pre>
+<div class="highlight highlight-source-systemverilog"><pre class="notranslate"><span class="pl-k">function</span><span class="pl-k"> bit</span> <span class="pl-en">has_crossed_4k_boundary</span>(AXI_Address start_addr, AXI_Address end_addr);
+    <span class="pl-k">return</span> ((start_addr <span class="pl-k">&gt;&gt;</span> <span class="pl-c1">12</span>) <span class="pl-k">!=</span> (end_addr <span class="pl-k">&gt;&gt;</span> <span class="pl-c1">12</span>));
+<span class="pl-k">endfunction</span></pre></div>
 <h3>Appendix: AXI Spec</h3>
 <p><a href="https://developer.arm.com/documentation/ihi0022/latest/" rel="nofollow">[AMBA AXI Protocol Specification]</a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;">Published under Creative Commons Attribution-ShareAlike (CC-BY-SA) license. Feel free to comment or share :)</div>
