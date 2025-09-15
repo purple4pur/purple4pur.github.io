@@ -178,7 +178,7 @@ sudo docker run hello-world
 sudo usermod -aG docker USERNAME
 ```。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.quitw.org/post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html">
+<meta property="og:url" content="/post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/49893724">
 <title>Installing CLI Tools I Use on Debian/Linux</title>
 <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
@@ -361,6 +361,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

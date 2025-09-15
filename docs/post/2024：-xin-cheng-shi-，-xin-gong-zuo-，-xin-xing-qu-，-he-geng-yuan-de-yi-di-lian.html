@@ -14,7 +14,7 @@
 <meta property="og:title" content="2024：新城市，新工作，新兴趣，和更远的异地恋">
 <meta property="og:description" content="其实往年年末也有想着写一篇自己的年终总结，但究竟还是因为懒（主要因素）和平台的考虑，难产于动笔之前。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.quitw.org/post/2024%EF%BC%9A-xin-cheng-shi-%EF%BC%8C-xin-gong-zuo-%EF%BC%8C-xin-xing-qu-%EF%BC%8C-he-geng-yuan-de-yi-di-lian.html">
+<meta property="og:url" content="/post/2024%EF%BC%9A-xin-cheng-shi-%EF%BC%8C-xin-gong-zuo-%EF%BC%8C-xin-xing-qu-%EF%BC%8C-he-geng-yuan-de-yi-di-lian.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/49893724">
 <title>2024：新城市，新工作，新兴趣，和更远的异地恋</title>
 
@@ -145,6 +145,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

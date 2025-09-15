@@ -14,7 +14,7 @@
 <meta property="og:title" content="607-615 独闯日本全记录">
 <meta property="og:description" content="这是一次比较临时规划的日本行，也是我的首次日本行。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.quitw.org/post/607-615%20-du-chuang-ri-ben-quan-ji-lu.html">
+<meta property="og:url" content="/post/607-615%20-du-chuang-ri-ben-quan-ji-lu.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/49893724">
 <title>607-615 独闯日本全记录</title>
 
@@ -885,6 +885,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

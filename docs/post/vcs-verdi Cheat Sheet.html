@@ -136,7 +136,7 @@ quit
 [4] [VCS覆盖率使用详解（基础、合并、查看、分析） - 知乎](https://zhuanlan.zhihu.com/p/620471082)
 [5] [VCS -- fgp 仿真加速 - Thisway2014 - 博客园](https://www.cnblogs.com/thisway2014/p/16783601.html)。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.quitw.org/post/vcs-verdi%20Cheat%20Sheet.html">
+<meta property="og:url" content="/post/vcs-verdi%20Cheat%20Sheet.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/49893724">
 <title>vcs/verdi Cheat Sheet</title>
 <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
@@ -319,6 +319,7 @@ cmButton=document.getElementById("cmButton");
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

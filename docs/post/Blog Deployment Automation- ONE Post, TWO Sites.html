@@ -154,7 +154,7 @@ Check [docker compose file](https://github.com/purple4pur/docker_compose/blob/ma
 
 This a my first time to try to connect all these services to do sequential jobs in such a workflow, and the results please me so well. Docker and the router Traefik actually make them much simpler and portable. I'm happy to take all-in-docker and continually having more fun with it.。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.quitw.org/post/Blog%20Deployment%20Automation-%20ONE%20Post%2C%20TWO%20Sites.html">
+<meta property="og:url" content="/post/Blog%20Deployment%20Automation-%20ONE%20Post%2C%20TWO%20Sites.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/49893724">
 <title>Blog Deployment Automation: ONE Post, TWO Sites</title>
 
@@ -338,6 +338,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

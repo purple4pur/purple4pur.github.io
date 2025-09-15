@@ -228,7 +228,7 @@ a[->1] ##1 b |=> c; // BAD and not necessary
 
 For more detailed use guides please refer to [Ben's article](https://systemverilog.us/vf/goto_conseq.pdf) .。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.quitw.org/post/goto%20Repetition%20%28%5B--n%5D%29%20in%20SVA.html">
+<meta property="og:url" content="/post/goto%20Repetition%20%28%5B--n%5D%29%20in%20SVA.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/49893724">
 <title>goto Repetition ([->n]) in SVA</title>
 <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
@@ -421,6 +421,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");
