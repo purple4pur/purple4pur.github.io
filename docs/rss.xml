@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>/</link></image><lastBuildDate>Tue, 16 Sep 2025 09:54:39 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>VPS 续命一年</title><link>https://blog.quitw.org/post/VPS%20-xu-ming-yi-nian.html</link><description>也是给本小🐔续命上了。</description><guid isPermaLink="true">https://blog.quitw.org/post/VPS%20-xu-ming-yi-nian.html</guid><pubDate>Sun, 14 Sep 2025 15:57:45 +0000</pubDate></item><item><title>How to Pull from/Push to Current Repository in Github Actions</title><link>https://blog.quitw.org/post/How%20to%20Pull%20from-Push%20to%20Current%20Repository%20in%20Github%20Actions.html</link><description>### Pull from current repository
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>/</link></image><lastBuildDate>Tue, 16 Sep 2025 09:55:23 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>VPS 续命一年</title><link>https://blog.quitw.org/post/VPS%20-xu-ming-yi-nian.html</link><description>也是给本小🐔续命上了。</description><guid isPermaLink="true">https://blog.quitw.org/post/VPS%20-xu-ming-yi-nian.html</guid><pubDate>Sun, 14 Sep 2025 15:57:45 +0000</pubDate></item><item><title>How to Pull from/Push to Current Repository in Github Actions</title><link>https://blog.quitw.org/post/How%20to%20Pull%20from-Push%20to%20Current%20Repository%20in%20Github%20Actions.html</link><description>### Pull from current repository
 
 By default the runner has full read permission on current repository (using built-in GITHUB_TOKEN), regardless of private or not.
 
@@ -1295,38 +1295,38 @@ git config --global --list&#13;
            --local  --get&#13;
                     --set   user.email 'xxx@yyy.zzz'&#13;
                     --unset&#13;
-```。</description><guid isPermaLink="true">https://blog.quitw.org/post/Example%20Git%20Config%20File.html</guid><pubDate>Tue, 05 Nov 2024 14:57:56 +0000</pubDate></item><item><title>2024 年各类 Live 及展会参战记录</title><link>https://blog.quitw.org/post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu.html</link><description>### Live&#13;
-&#13;
-| No. | 日期  | Live                                                                                                                                    | 场地      | 主题     | 城市 | 票价       |&#13;
-| --- | ---   | ---                                                                                                                                     | ---       | ---      | ---  | ---        |&#13;
-| 1   | 6/10  | STARLINK METEOR 1st Live                                                                                                                | Livehouse | ACG 摇滚 | 上海 | 88         |&#13;
-| 2   | 6/22  | 「多厨狂喜」白金交响乐团二次元交响音乐会                                                                                                | 音乐厅    | ACG 交响 | 上海 | 288        |&#13;
-| 3   | 6/23  | 花之礼赞《奏响吧，和音社！》经典动漫交响音乐会                                                                                          | 音乐厅    | ACG 交响 | 上海 | 180        |&#13;
-| 4   | 6/30  | Star2U Macro Idol Festival Vol.14                                                                                                       | Livehouse | 地偶     | 上海 | 128        |&#13;
-| 5   | 7/12  | 「夜³歌症候群」三夜 Only                                                                                                                | Livehouse | ACG 摇滚 | 上海 | 99         |&#13;
-| 6   | 7/20  | CrossingX意次元 音乐番 Only                                                                                                             | Livehouse | ACG 摇滚 | 上海 | 78         |&#13;
-| 7   | 7/21  | Star2U 跨次元嘉年华 Vol.12.5 邦邦 Only                                                                                                  | Livehouse | ACG 摇滚 | 上海 | 108        |&#13;
-| 8   | 7/26  | fhana China Live Tour 2024                                                                                                              | Livehouse | 日音     | 上海 | 380        |&#13;
-| 9   | 8/11  | 漫音季 2024 夏                                                                                                                          | Livehouse | ACG 摇滚 | 上海 | 0 (中奖票) |&#13;
-| 10  | 8/17  | 跨越国境的旋律 大和田雅洋x和音社交响吹奏音乐会                                                                                          | 音乐厅    | ACG 交响 | 上海 | 232        |&#13;
-| 11  | 8/18  | 幻奏盛宴 2024 上海场                                                                                                                    | 音乐厅    | ACG 交响 | 上海 | 289        |&#13;
-| 12  | 8/24  | 《不眨眼》H△G 1st Live in Shanghai                                                                                                      | Livehouse | 日音     | 上海 | 480        |&#13;
-| 13  | 9/7   | 和音社录制现场旁听 (原演出取消)                                                                                                         | 音乐厅    | ACG 交响 | 上海 | 0    |&#13;
-| 14  | 9/8   | Tie-Up Anirock Live 2.0                                                                                                                 | Livehouse | ACG 摇滚 | 上海 | 88         |&#13;
-| 15  | 10/7  | 极光纪 Polar Ray 5th                                                                                                                    | Livehouse | ACG 摇滚 | 上海 | 88         |&#13;
-| 16  | 10/12 | 《次元共鸣》ACG 乐队番主题演唱会                                                                                                        | Livehouse | ACG 摇滚 | 上海 | 160        |&#13;
-| 17  | 11/3  | 「多厨狂喜」白金交响乐团二次元交响音乐会                                                                                                | 音乐厅    | ACG 交响 | 上海 | 288        |&#13;
-| 18  | 11/10 | [「声」H△G 1st Live in Guangzhou](https://blog.quitw.org/post/H%E2%96%B3G%201st%20Live%20in%20Guangzhou%20-can-zhan-xiao-ji.html) | Livehouse | 日音     | 广州 | 480        |&#13;
-| 19  | 11/16 | milet Asia Tour 2024                                                                                                                    | 演艺馆    | 日音     | 上海 | 880        |&#13;
-| 20  | 11/24 | 泽野弘之 LIVE [nZk] 2024                                                                                                                | 体育馆    | 日音     | 上海 | 880        |&#13;
-| 21  | 12/14 | 玖玖的奇妙冒险 帝玖管弦乐团 2024 交响音乐会                                                                                             | 音乐厅    | ACG 交响 | 上海 | 580        |&#13;
-| 22  | 12/15 | 「旧友 \| 新声」陈致逸作品音乐会 2024                                                                                                   | 剧场      | 配乐交响 | 上海 | 480        |&#13;
-&#13;
-### 展会&#13;
-&#13;
-| No. | 日期  | 展会                             | 城市 | 票价 |&#13;
-| --- | ---   | ---                              | ---  | ---  |&#13;
-| 1   | 7/27  | Chinajoy 2024                    | 上海 | 188  |&#13;
+```。</description><guid isPermaLink="true">https://blog.quitw.org/post/Example%20Git%20Config%20File.html</guid><pubDate>Tue, 05 Nov 2024 14:57:56 +0000</pubDate></item><item><title>2024 年各类 Live 及展会参战记录</title><link>https://blog.quitw.org/post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu.html</link><description>### Live
+
+| No. | 日期  | Live                                                                                                                                    | 场地      | 主题     | 城市 | 票价       |
+| --- | ---   | ---                                                                                                                                     | ---       | ---      | ---  | ---        |
+| 1   | 6/10  | STARLINK METEOR 1st Live                                                                                                                | Livehouse | ACG 摇滚 | 上海 | 88         |
+| 2   | 6/22  | 「多厨狂喜」白金交响乐团二次元交响音乐会                                                                                                | 音乐厅    | ACG 交响 | 上海 | 288        |
+| 3   | 6/23  | 花之礼赞《奏响吧，和音社！》经典动漫交响音乐会                                                                                          | 音乐厅    | ACG 交响 | 上海 | 180        |
+| 4   | 6/30  | Star2U Macro Idol Festival Vol.14                                                                                                       | Livehouse | 地偶     | 上海 | 128        |
+| 5   | 7/12  | 「夜³歌症候群」三夜 Only                                                                                                                | Livehouse | ACG 摇滚 | 上海 | 99         |
+| 6   | 7/20  | CrossingX意次元 音乐番 Only                                                                                                             | Livehouse | ACG 摇滚 | 上海 | 78         |
+| 7   | 7/21  | Star2U 跨次元嘉年华 Vol.12.5 邦邦 Only                                                                                                  | Livehouse | ACG 摇滚 | 上海 | 108        |
+| 8   | 7/26  | fhana China Live Tour 2024                                                                                                              | Livehouse | 日音     | 上海 | 380        |
+| 9   | 8/11  | 漫音季 2024 夏                                                                                                                          | Livehouse | ACG 摇滚 | 上海 | 0 (中奖票) |
+| 10  | 8/17  | 跨越国境的旋律 大和田雅洋x和音社交响吹奏音乐会                                                                                          | 音乐厅    | ACG 交响 | 上海 | 232        |
+| 11  | 8/18  | 幻奏盛宴 2024 上海场                                                                                                                    | 音乐厅    | ACG 交响 | 上海 | 289        |
+| 12  | 8/24  | 《不眨眼》H△G 1st Live in Shanghai                                                                                                      | Livehouse | 日音     | 上海 | 480        |
+| 13  | 9/7   | 和音社录制现场旁听 (原演出取消)                                                                                                         | 音乐厅    | ACG 交响 | 上海 | 0    |
+| 14  | 9/8   | Tie-Up Anirock Live 2.0                                                                                                                 | Livehouse | ACG 摇滚 | 上海 | 88         |
+| 15  | 10/7  | 极光纪 Polar Ray 5th                                                                                                                    | Livehouse | ACG 摇滚 | 上海 | 88         |
+| 16  | 10/12 | 《次元共鸣》ACG 乐队番主题演唱会                                                                                                        | Livehouse | ACG 摇滚 | 上海 | 160        |
+| 17  | 11/3  | 「多厨狂喜」白金交响乐团二次元交响音乐会                                                                                                | 音乐厅    | ACG 交响 | 上海 | 288        |
+| 18  | 11/10 | [「声」H△G 1st Live in Guangzhou](/post/H%E2%96%B3G%201st%20Live%20in%20Guangzhou%20-can-zhan-xiao-ji.html) | Livehouse | 日音     | 广州 | 480        |
+| 19  | 11/16 | milet Asia Tour 2024                                                                                                                    | 演艺馆    | 日音     | 上海 | 880        |
+| 20  | 11/24 | 泽野弘之 LIVE [nZk] 2024                                                                                                                | 体育馆    | 日音     | 上海 | 880        |
+| 21  | 12/14 | 玖玖的奇妙冒险 帝玖管弦乐团 2024 交响音乐会                                                                                             | 音乐厅    | ACG 交响 | 上海 | 580        |
+| 22  | 12/15 | 「旧友 \| 新声」陈致逸作品音乐会 2024                                                                                                   | 剧场      | 配乐交响 | 上海 | 480        |
+
+### 展会
+
+| No. | 日期  | 展会                             | 城市 | 票价 |
+| --- | ---   | ---                              | ---  | ---  |
+| 1   | 7/27  | Chinajoy 2024                    | 上海 | 188  |
 | 2   | 11/30 | 创作连锁 2024 日厂 Vocaloid Only | 上海 | 139  |。</description><guid isPermaLink="true">https://blog.quitw.org/post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu.html</guid><pubDate>Sun, 03 Nov 2024 14:27:38 +0000</pubDate></item><item><title>A Practical Guide to Git Submodule</title><link>https://blog.quitw.org/post/A%20Practical%20Guide%20to%20Git%20Submodule.html</link><description>## Clone a Repository With Its Submodules&#13;
 &#13;
 If is a first-time clone:&#13;
