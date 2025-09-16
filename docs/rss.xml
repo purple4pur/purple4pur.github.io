@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>/</link></image><lastBuildDate>Mon, 15 Sep 2025 18:43:31 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>VPS 续命一年</title><link>/post/VPS%20-xu-ming-yi-nian.html</link><description>也是给本小🐔续命上了。</description><guid isPermaLink="true">/post/VPS%20-xu-ming-yi-nian.html</guid><pubDate>Sun, 14 Sep 2025 15:57:45 +0000</pubDate></item><item><title>How to Pull from/Push to Current Repository in Github Actions</title><link>/post/How%20to%20Pull%20from-Push%20to%20Current%20Repository%20in%20Github%20Actions.html</link><description>### Pull from current repository
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>/</link></image><lastBuildDate>Tue, 16 Sep 2025 06:40:33 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>VPS 续命一年</title><link>//post/VPS%20-xu-ming-yi-nian.html</link><description>也是给本小🐔续命上了。</description><guid isPermaLink="true">//post/VPS%20-xu-ming-yi-nian.html</guid><pubDate>Sun, 14 Sep 2025 15:57:45 +0000</pubDate></item><item><title>How to Pull from/Push to Current Repository in Github Actions</title><link>//post/How%20to%20Pull%20from-Push%20to%20Current%20Repository%20in%20Github%20Actions.html</link><description>### Pull from current repository
 
 By default the runner has full read permission on current repository (using built-in GITHUB_TOKEN), regardless of private or not.
 
@@ -30,7 +30,7 @@ jobs:
           git add .
           git commit -m 'updated by github-actions[bot]'
           git push
-```。</description><guid isPermaLink="true">/post/How%20to%20Pull%20from-Push%20to%20Current%20Repository%20in%20Github%20Actions.html</guid><pubDate>Sat, 13 Sep 2025 07:03:28 +0000</pubDate></item><item><title>607-615 独闯日本全记录</title><link>/post/607-615%20-du-chuang-ri-ben-quan-ji-lu.html</link><description>这是一次比较临时规划的日本行，也是我的首次日本行。</description><guid isPermaLink="true">/post/607-615%20-du-chuang-ri-ben-quan-ji-lu.html</guid><pubDate>Fri, 18 Jul 2025 11:16:53 +0000</pubDate></item><item><title>一路走好</title><link>/post/yi-lu-zou-hao.html</link><description>外公，一路走好！。</description><guid isPermaLink="true">/post/yi-lu-zou-hao.html</guid><pubDate>Wed, 07 May 2025 15:39:51 +0000</pubDate></item><item><title>YOASOBI Asia Tour in Shanghai Day1 参战回想</title><link>/post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html</link><description>Live 日是 2025/2/15，这篇回想迟到了一个月，但整场演出都恍如昨日。</description><guid isPermaLink="true">/post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html</guid><pubDate>Sat, 22 Mar 2025 18:46:37 +0000</pubDate></item><item><title>Loop With fork-join_none and Automatic Variables</title><link>/post/Loop%20With%20fork-join_none%20and%20Automatic%20Variables.html</link><description>### Background
+```。</description><guid isPermaLink="true">//post/How%20to%20Pull%20from-Push%20to%20Current%20Repository%20in%20Github%20Actions.html</guid><pubDate>Sat, 13 Sep 2025 07:03:28 +0000</pubDate></item><item><title>607-615 独闯日本全记录</title><link>//post/607-615%20-du-chuang-ri-ben-quan-ji-lu.html</link><description>这是一次比较临时规划的日本行，也是我的首次日本行。</description><guid isPermaLink="true">//post/607-615%20-du-chuang-ri-ben-quan-ji-lu.html</guid><pubDate>Fri, 18 Jul 2025 11:16:53 +0000</pubDate></item><item><title>一路走好</title><link>//post/yi-lu-zou-hao.html</link><description>外公，一路走好！。</description><guid isPermaLink="true">//post/yi-lu-zou-hao.html</guid><pubDate>Wed, 07 May 2025 15:39:51 +0000</pubDate></item><item><title>YOASOBI Asia Tour in Shanghai Day1 参战回想</title><link>//post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html</link><description>Live 日是 2025/2/15，这篇回想迟到了一个月，但整场演出都恍如昨日。</description><guid isPermaLink="true">//post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html</guid><pubDate>Sat, 22 Mar 2025 18:46:37 +0000</pubDate></item><item><title>Loop With fork-join_none and Automatic Variables</title><link>//post/Loop%20With%20fork-join_none%20and%20Automatic%20Variables.html</link><description>### Background
 
 Very often, we may want to start an individual thread with `fork` block in a loop. And also very often, if we use looped variables in `fork` block, things may not work as expected. In the following example, we will see `do_something()` is always applying to the last looped node in `nodes` array.
 
@@ -96,7 +96,7 @@ The gap here is the default lifetime is different from other languages like C, a
 
 ### Read more
 
-- [[Automatic variables in fork - SystemVerilog - Verification Academy]](https://verificationacademy.com/forums/t/automatic-variables-in-fork/31041)。</description><guid isPermaLink="true">/post/Loop%20With%20fork-join_none%20and%20Automatic%20Variables.html</guid><pubDate>Wed, 05 Mar 2025 09:17:33 +0000</pubDate></item><item><title>Why My Webdav Playback Is Broken: Cloudflare's in the Middle</title><link>/post/Why%20My%20Webdav%20Playback%20Is%20Broken-%20Cloudflare%27s%20in%20the%20Middle.html</link><description>The title basically tells everything, which I finally figured it out after an unintentional file uploading.
+- [[Automatic variables in fork - SystemVerilog - Verification Academy]](https://verificationacademy.com/forums/t/automatic-variables-in-fork/31041)。</description><guid isPermaLink="true">//post/Loop%20With%20fork-join_none%20and%20Automatic%20Variables.html</guid><pubDate>Wed, 05 Mar 2025 09:17:33 +0000</pubDate></item><item><title>Why My Webdav Playback Is Broken: Cloudflare's in the Middle</title><link>//post/Why%20My%20Webdav%20Playback%20Is%20Broken-%20Cloudflare%27s%20in%20the%20Middle.html</link><description>The title basically tells everything, which I finally figured it out after an unintentional file uploading.
 
 I run a frp server on the VPS to expose the Webdav hosted on my local laptop. As usual I put a Cloudflare proxy on DNS. That's the background.
 
@@ -104,7 +104,7 @@ It worked actually very fine and all functions seemed to be good. But the video 
 
 Recently I tried to upload a 140MB file through Webdav to my laptop, but it always failed after an around 100MB transaction and got a **413 Request Entity Too Large** HTTP error. This error was given by [Cloudflare](https://developers.cloudflare.com/support/troubleshooting/http-status-codes/4xx-client-error/#413-payload-too-large-rfc7231), and till then I knew about the 100MB limitation for the first time.
 
-After I switched my DNS setting to no proxy, the file uploading issue was gone, so as the video playback one.。</description><guid isPermaLink="true">/post/Why%20My%20Webdav%20Playback%20Is%20Broken-%20Cloudflare%27s%20in%20the%20Middle.html</guid><pubDate>Thu, 23 Jan 2025 16:30:57 +0000</pubDate></item><item><title>我的笔记本 CPU 风扇，死了</title><link>/post/wo-de-bi-ji-ben-%20CPU%20-feng-shan-%EF%BC%8C-si-le.html</link><description>这一天究竟是到了：笔记本电脑不再发出拖拉机一般巨大的噪音，回到了久违的安静，但这让我更害怕。</description><guid isPermaLink="true">/post/wo-de-bi-ji-ben-%20CPU%20-feng-shan-%EF%BC%8C-si-le.html</guid><pubDate>Fri, 17 Jan 2025 17:29:37 +0000</pubDate></item><item><title>2025 年 Live 及各类活动参战记录</title><link>/post/2025%20-nian-%20Live%20-ji-ge-lei-huo-dong-can-zhan-ji-lu.html</link><description>### Live
+After I switched my DNS setting to no proxy, the file uploading issue was gone, so as the video playback one.。</description><guid isPermaLink="true">//post/Why%20My%20Webdav%20Playback%20Is%20Broken-%20Cloudflare%27s%20in%20the%20Middle.html</guid><pubDate>Thu, 23 Jan 2025 16:30:57 +0000</pubDate></item><item><title>我的笔记本 CPU 风扇，死了</title><link>//post/wo-de-bi-ji-ben-%20CPU%20-feng-shan-%EF%BC%8C-si-le.html</link><description>这一天究竟是到了：笔记本电脑不再发出拖拉机一般巨大的噪音，回到了久违的安静，但这让我更害怕。</description><guid isPermaLink="true">//post/wo-de-bi-ji-ben-%20CPU%20-feng-shan-%EF%BC%8C-si-le.html</guid><pubDate>Fri, 17 Jan 2025 17:29:37 +0000</pubDate></item><item><title>2025 年 Live 及各类活动参战记录</title><link>//post/2025%20-nian-%20Live%20-ji-ge-lei-huo-dong-can-zhan-ji-lu.html</link><description>### Live
 
 | No. | 日期 | Live | 城市 | 场馆 | 门票 | 物贩 | 备注 |
 |---|---|---|---|---|---|---|---|
@@ -147,7 +147,7 @@ After I switched my DNS setting to no proxy, the file uploading issue was gone, 
 | 37 | 9/21 | 初星大運動会 Day2 | 东京 | 代々木競技場 | 565 | TBA | |
 | 38 | 10/25 | 【夢語り Yume-gatari】あたらよ | 广州 | 声音共和 | 0 | TBA | 蓝蓝神抢手 (380) |
 | 39 | 11/8 | 多田葵 2025 Tour | 上海 | VAS ear | 380 | TBA | |
-| 40 | 11/22 | 【秋の予兆】りりあ。</description><guid isPermaLink="true">/post/2025%20-nian-%20Live%20-ji-ge-lei-huo-dong-can-zhan-ji-lu.html</guid><pubDate>Sun, 12 Jan 2025 15:44:16 +0000</pubDate></item><item><title>2024：新城市，新工作，新兴趣，和更远的异地恋</title><link>/post/2024%EF%BC%9A-xin-cheng-shi-%EF%BC%8C-xin-gong-zuo-%EF%BC%8C-xin-xing-qu-%EF%BC%8C-he-geng-yuan-de-yi-di-lian.html</link><description>其实往年年末也有想着写一篇自己的年终总结，但究竟还是因为懒（主要因素）和平台的考虑，难产于动笔之前。</description><guid isPermaLink="true">/post/2024%EF%BC%9A-xin-cheng-shi-%EF%BC%8C-xin-gong-zuo-%EF%BC%8C-xin-xing-qu-%EF%BC%8C-he-geng-yuan-de-yi-di-lian.html</guid><pubDate>Mon, 30 Dec 2024 06:40:42 +0000</pubDate></item><item><title>Trick the Client: Using a Custom Http Proxy</title><link>/post/Trick%20the%20Client-%20Using%20a%20Custom%20Http%20Proxy.html</link><description>**DISCLAIMER: This project is for study only, and does nothing with to-server requests. Use with caution and at your own risk.**&#13;
+| 40 | 11/22 | 【秋の予兆】りりあ。</description><guid isPermaLink="true">//post/2025%20-nian-%20Live%20-ji-ge-lei-huo-dong-can-zhan-ji-lu.html</guid><pubDate>Sun, 12 Jan 2025 15:44:16 +0000</pubDate></item><item><title>2024：新城市，新工作，新兴趣，和更远的异地恋</title><link>//post/2024%EF%BC%9A-xin-cheng-shi-%EF%BC%8C-xin-gong-zuo-%EF%BC%8C-xin-xing-qu-%EF%BC%8C-he-geng-yuan-de-yi-di-lian.html</link><description>其实往年年末也有想着写一篇自己的年终总结，但究竟还是因为懒（主要因素）和平台的考虑，难产于动笔之前。</description><guid isPermaLink="true">//post/2024%EF%BC%9A-xin-cheng-shi-%EF%BC%8C-xin-gong-zuo-%EF%BC%8C-xin-xing-qu-%EF%BC%8C-he-geng-yuan-de-yi-di-lian.html</guid><pubDate>Mon, 30 Dec 2024 06:40:42 +0000</pubDate></item><item><title>Trick the Client: Using a Custom Http Proxy</title><link>//post/Trick%20the%20Client-%20Using%20a%20Custom%20Http%20Proxy.html</link><description>**DISCLAIMER: This project is for study only, and does nothing with to-server requests. Use with caution and at your own risk.**&#13;
 &#13;
 ### Background&#13;
 &#13;
@@ -261,7 +261,7 @@ Well, when I found that special bit, I was asking more options that the client c
 &#13;
 So I'm planing some further steps from here, including bringing back a monitor-only mode, finding more interesting bytes in the traffic, and one more step: can I do some server side jobs? Now I'm so curious if it's possible to implement the friend ranking in the relay side.&#13;
 &#13;
-Will see later (if any)!。</description><guid isPermaLink="true">/post/Trick%20the%20Client-%20Using%20a%20Custom%20Http%20Proxy.html</guid><pubDate>Thu, 19 Dec 2024 14:51:28 +0000</pubDate></item><item><title>Blog Deployment Automation: ONE Post, TWO Sites</title><link>/post/Blog%20Deployment%20Automation-%20ONE%20Post%2C%20TWO%20Sites.html</link><description>### Background&#13;
+Will see later (if any)!。</description><guid isPermaLink="true">//post/Trick%20the%20Client-%20Using%20a%20Custom%20Http%20Proxy.html</guid><pubDate>Thu, 19 Dec 2024 14:51:28 +0000</pubDate></item><item><title>Blog Deployment Automation: ONE Post, TWO Sites</title><link>//post/Blog%20Deployment%20Automation-%20ONE%20Post%2C%20TWO%20Sites.html</link><description>### Background&#13;
 &#13;
 Before this post, I was hosting this blog on github.io only, which is quite enough for internet access. But GitHub and github.io are facing connection issues in mainland China these days. What I'm trying to achieve is to deploy the blog to my server as well, which provides relatively easy access for viewers in China, and a customized URL.&#13;
 &#13;
@@ -331,7 +331,7 @@ Check [docker compose file](https://github.com/purple4pur/docker_compose/blob/ma
 &#13;
 ### Conclusion&#13;
 &#13;
-This a my first time to try to connect all these services to do sequential jobs in such a workflow, and the results please me so well. Docker and the router Traefik actually make them much simpler and portable. I'm happy to take all-in-docker and continually having more fun with it.。</description><guid isPermaLink="true">/post/Blog%20Deployment%20Automation-%20ONE%20Post%2C%20TWO%20Sites.html</guid><pubDate>Thu, 12 Dec 2024 14:28:42 +0000</pubDate></item><item><title>Traefik Config Snippets</title><link>/post/Traefik%20Config%20Snippets.html</link><description>&gt; Apply to `traefik:v3.2`&#13;
+This a my first time to try to connect all these services to do sequential jobs in such a workflow, and the results please me so well. Docker and the router Traefik actually make them much simpler and portable. I'm happy to take all-in-docker and continually having more fun with it.。</description><guid isPermaLink="true">//post/Blog%20Deployment%20Automation-%20ONE%20Post%2C%20TWO%20Sites.html</guid><pubDate>Thu, 12 Dec 2024 14:28:42 +0000</pubDate></item><item><title>Traefik Config Snippets</title><link>//post/Traefik%20Config%20Snippets.html</link><description>&gt; Apply to `traefik:v3.2`&#13;
 &#13;
 ### Example traefik `compose.yaml`&#13;
 &#13;
@@ -418,7 +418,7 @@ Redirect `dashboard.hostname.com...` to `https://hostname.com/dashboard...`:&#13
 &#13;
 ```sh&#13;
 htpasswd -n USERNAME&#13;
-```。</description><guid isPermaLink="true">/post/Traefik%20Config%20Snippets.html</guid><pubDate>Wed, 11 Dec 2024 14:58:11 +0000</pubDate></item><item><title>Allow Non-superuser to Handle One's Application Container: Finding the Solution</title><link>/post/Allow%20Non-superuser%20to%20Handle%20One%27s%20Application%20Container-%20Finding%20the%20Solution.html</link><description>### Background&#13;
+```。</description><guid isPermaLink="true">//post/Traefik%20Config%20Snippets.html</guid><pubDate>Wed, 11 Dec 2024 14:58:11 +0000</pubDate></item><item><title>Allow Non-superuser to Handle One's Application Container: Finding the Solution</title><link>//post/Allow%20Non-superuser%20to%20Handle%20One%27s%20Application%20Container-%20Finding%20the%20Solution.html</link><description>### Background&#13;
 &#13;
 A friend of mine is hosting a QQ bot [(Miao-Yunzai)](https://github.com/yoimiya-kokomi/Miao-Yunzai) on my VPS, and let's call him friendR here. Recently I'm switching the bot to my new VPS, and trying to host as much as possible services in docker in order to keep the host machine clean.&#13;
 &#13;
@@ -514,7 +514,7 @@ all: $(patsubst %.c,%,$(wildcard *.c))&#13;
 &#13;
 After a few days of work finally it's solved. Providing a command wrapper in binary seems the only safe way to support this kinda crazy goal: letting non-superuser to manipulate docker while keep any other thing non-privileged.&#13;
 &#13;
-It's hard to say this is a elegant solution but it works and, not too ugly I think? This can also be a useful reference whenever there's a similar scenario.。</description><guid isPermaLink="true">/post/Allow%20Non-superuser%20to%20Handle%20One%27s%20Application%20Container-%20Finding%20the%20Solution.html</guid><pubDate>Thu, 05 Dec 2024 08:42:00 +0000</pubDate></item><item><title>Linux File Permissions</title><link>/post/Linux%20File%20Permissions.html</link><description>### Quick reference&#13;
+It's hard to say this is a elegant solution but it works and, not too ugly I think? This can also be a useful reference whenever there's a similar scenario.。</description><guid isPermaLink="true">//post/Allow%20Non-superuser%20to%20Handle%20One%27s%20Application%20Container-%20Finding%20the%20Solution.html</guid><pubDate>Thu, 05 Dec 2024 08:42:00 +0000</pubDate></item><item><title>Linux File Permissions</title><link>//post/Linux%20File%20Permissions.html</link><description>### Quick reference&#13;
 &#13;
 ```&#13;
 | type | [u]ser  | [g]roup | [o]thers |&#13;
@@ -563,7 +563,7 @@ Not allowed to be removed.&#13;
 &#13;
 - [[File permissions and attributes - ArchWiki]](https://wiki.archlinux.org/title/File_permissions_and_attributes)&#13;
 - [[setuid - Wikipedia]](https://en.wikipedia.org/wiki/Setuid)&#13;
-- [[Sticky bit - Wikipedia]](https://en.wikipedia.org/wiki/Sticky_bit)。</description><guid isPermaLink="true">/post/Linux%20File%20Permissions.html</guid><pubDate>Thu, 21 Nov 2024 17:04:10 +0000</pubDate></item><item><title>Welcome, My New VPS!</title><link>/post/Welcome%2C%20My%20New%20VPS%21.html</link><description>### General info&#13;
+- [[Sticky bit - Wikipedia]](https://en.wikipedia.org/wiki/Sticky_bit)。</description><guid isPermaLink="true">//post/Linux%20File%20Permissions.html</guid><pubDate>Thu, 21 Nov 2024 17:04:10 +0000</pubDate></item><item><title>Welcome, My New VPS!</title><link>//post/Welcome%2C%20My%20New%20VPS%21.html</link><description>### General info&#13;
 &#13;
 - Vendor: Tencent Cloud&#13;
 - 地域和可用区: 东京 | 东京一区&#13;
@@ -847,7 +847,7 @@ vim .bashrc&#13;
 source .bashrc&#13;
 ```&#13;
 &#13;
-- Good to go!。</description><guid isPermaLink="true">/post/Welcome%2C%20My%20New%20VPS%21.html</guid><pubDate>Mon, 18 Nov 2024 17:42:17 +0000</pubDate></item><item><title>Docker CLI Cheat Sheet</title><link>/post/Docker%20CLI%20Cheat%20Sheet.html</link><description>### Dockerfile
+- Good to go!。</description><guid isPermaLink="true">//post/Welcome%2C%20My%20New%20VPS%21.html</guid><pubDate>Mon, 18 Nov 2024 17:42:17 +0000</pubDate></item><item><title>Docker CLI Cheat Sheet</title><link>//post/Docker%20CLI%20Cheat%20Sheet.html</link><description>### Dockerfile
 
 - [[Docker 101]](https://dockerlabs.collabnix.com/workshop/docker/)
 - [[Dockerfile reference]](https://docs.docker.com/reference/dockerfile/)
@@ -1001,7 +1001,7 @@ docker compose logs [-f] [-n N] [SERVICE]   # print/follow stdout in service
 docker compose run SERVICE CMD              # run a one-time command in a new service, not the running one
 docker compose rm [OPTIONS] [SERVICE]       # remove stopped service from ps
                   -s                        # stop and remove
-```。</description><guid isPermaLink="true">/post/Docker%20CLI%20Cheat%20Sheet.html</guid><pubDate>Mon, 18 Nov 2024 17:17:14 +0000</pubDate></item><item><title>Installing CLI Tools I Use on Debian/Linux</title><link>/post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html</link><description>### git&#13;
+```。</description><guid isPermaLink="true">//post/Docker%20CLI%20Cheat%20Sheet.html</guid><pubDate>Mon, 18 Nov 2024 17:17:14 +0000</pubDate></item><item><title>Installing CLI Tools I Use on Debian/Linux</title><link>//post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html</link><description>### git&#13;
 &#13;
 ```sh&#13;
 (root) apt update&#13;
@@ -1083,7 +1083,7 @@ sudo docker run hello-world&#13;
 # Add user to docker group to grant him privileges&#13;
 # WARNING: Do with caution! docker group has the same permissions of root!&#13;
 sudo usermod -aG docker USERNAME&#13;
-```。</description><guid isPermaLink="true">/post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html</guid><pubDate>Sun, 17 Nov 2024 17:09:19 +0000</pubDate></item><item><title>goto Repetition ([-&gt;n]) in SVA</title><link>/post/goto%20Repetition%20%28%5B--n%5D%29%20in%20SVA.html</link><description>This article is basically a dev memo of [Ben Cohen's amazing tutorial on this topic](https://systemverilog.us/vf/goto_conseq.pdf) , followed by a practical live demo in my work.&#13;
+```。</description><guid isPermaLink="true">//post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html</guid><pubDate>Sun, 17 Nov 2024 17:09:19 +0000</pubDate></item><item><title>goto Repetition ([-&gt;n]) in SVA</title><link>//post/goto%20Repetition%20%28%5B--n%5D%29%20in%20SVA.html</link><description>This article is basically a dev memo of [Ben Cohen's amazing tutorial on this topic](https://systemverilog.us/vf/goto_conseq.pdf) , followed by a practical live demo in my work.&#13;
 &#13;
 ### Basic usage and live demo&#13;
 &#13;
@@ -1190,11 +1190,11 @@ NEVER use it in the 1st term of antecedent. Because it will start tons of unnece
 a[-&gt;1] ##1 b |=&gt; c; // BAD and not necessary&#13;
 ```&#13;
 &#13;
-For more detailed use guides please refer to [Ben's article](https://systemverilog.us/vf/goto_conseq.pdf) .。</description><guid isPermaLink="true">/post/goto%20Repetition%20%28%5B--n%5D%29%20in%20SVA.html</guid><pubDate>Fri, 15 Nov 2024 07:07:51 +0000</pubDate></item><item><title>H△G 1st Live in Guangzhou 参战小记</title><link>/post/H%E2%96%B3G%201st%20Live%20in%20Guangzhou%20-can-zhan-xiao-ji.html</link><description>### 我和 H△G&#13;
+For more detailed use guides please refer to [Ben's article](https://systemverilog.us/vf/goto_conseq.pdf) .。</description><guid isPermaLink="true">//post/goto%20Repetition%20%28%5B--n%5D%29%20in%20SVA.html</guid><pubDate>Fri, 15 Nov 2024 07:07:51 +0000</pubDate></item><item><title>H△G 1st Live in Guangzhou 参战小记</title><link>//post/H%E2%96%B3G%201st%20Live%20in%20Guangzhou%20-can-zhan-xiao-ji.html</link><description>### 我和 H△G&#13;
 &#13;
-我最早对 H△G 有印象最早应该是在 osu! 里听到了他们的《カラフル》，但也并没有特别关注，处于一个听日音相当杂食的状态。</description><guid isPermaLink="true">/post/H%E2%96%B3G%201st%20Live%20in%20Guangzhou%20-can-zhan-xiao-ji.html</guid><pubDate>Tue, 12 Nov 2024 16:58:47 +0000</pubDate></item><item><title>避免沟通漏斗，传递完整的信息</title><link>/post/bi-mian-gou-tong-lou-dou-%EF%BC%8C-chuan-di-wan-zheng-de-xin-xi.html</link><description>### 何谓「漏斗」&#13;
+我最早对 H△G 有印象最早应该是在 osu! 里听到了他们的《カラフル》，但也并没有特别关注，处于一个听日音相当杂食的状态。</description><guid isPermaLink="true">//post/H%E2%96%B3G%201st%20Live%20in%20Guangzhou%20-can-zhan-xiao-ji.html</guid><pubDate>Tue, 12 Nov 2024 16:58:47 +0000</pubDate></item><item><title>避免沟通漏斗，传递完整的信息</title><link>//post/bi-mian-gou-tong-lou-dou-%EF%BC%8C-chuan-di-wan-zheng-de-xin-xi.html</link><description>### 何谓「漏斗」&#13;
 &#13;
-「沟通漏斗」是一个很形象的概念，形容这样一种场景：A 把一件事告诉给 B，但由于双方的理解偏差或其他原因，导致 B 只接收到 80% 的原意，同样的事情继续发生在 B 告诉 C、C 告诉 D 上，结果整个沟通链上这件事的原意损失得越来越多，如同一个漏斗般。</description><guid isPermaLink="true">/post/bi-mian-gou-tong-lou-dou-%EF%BC%8C-chuan-di-wan-zheng-de-xin-xi.html</guid><pubDate>Sat, 09 Nov 2024 05:42:48 +0000</pubDate></item><item><title>AXI4 Address Break Down</title><link>/post/AXI4%20Address%20Break%20Down.html</link><description>### Must know
+「沟通漏斗」是一个很形象的概念，形容这样一种场景：A 把一件事告诉给 B，但由于双方的理解偏差或其他原因，导致 B 只接收到 80% 的原意，同样的事情继续发生在 B 告诉 C、C 告诉 D 上，结果整个沟通链上这件事的原意损失得越来越多，如同一个漏斗般。</description><guid isPermaLink="true">//post/bi-mian-gou-tong-lou-dou-%EF%BC%8C-chuan-di-wan-zheng-de-xin-xi.html</guid><pubDate>Sat, 09 Nov 2024 05:42:48 +0000</pubDate></item><item><title>AXI4 Address Break Down</title><link>//post/AXI4%20Address%20Break%20Down.html</link><description>### Must know
 
 - Unit of address is **Byte**.
     - 0x00 maps to a 1-byte space in memory.
@@ -1266,7 +1266,7 @@ endfunction
 
 ### Appendix: AXI Spec
 
-[[AMBA AXI Protocol Specification]](https://developer.arm.com/documentation/ihi0022/latest/)。</description><guid isPermaLink="true">/post/AXI4%20Address%20Break%20Down.html</guid><pubDate>Fri, 08 Nov 2024 10:00:46 +0000</pubDate></item><item><title>Example Git Config File</title><link>/post/Example%20Git%20Config%20File.html</link><description>## File Path&#13;
+[[AMBA AXI Protocol Specification]](https://developer.arm.com/documentation/ihi0022/latest/)。</description><guid isPermaLink="true">//post/AXI4%20Address%20Break%20Down.html</guid><pubDate>Fri, 08 Nov 2024 10:00:46 +0000</pubDate></item><item><title>Example Git Config File</title><link>//post/Example%20Git%20Config%20File.html</link><description>## File Path&#13;
 &#13;
 * Linux: `~/.gitconfig`&#13;
 * Windows: `C:/Users/&lt;user&gt;/.gitconfig`&#13;
@@ -1295,7 +1295,7 @@ git config --global --list&#13;
            --local  --get&#13;
                     --set   user.email 'xxx@yyy.zzz'&#13;
                     --unset&#13;
-```。</description><guid isPermaLink="true">/post/Example%20Git%20Config%20File.html</guid><pubDate>Tue, 05 Nov 2024 14:57:56 +0000</pubDate></item><item><title>2024 年各类 Live 及展会参战记录</title><link>/post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu.html</link><description>### Live&#13;
+```。</description><guid isPermaLink="true">//post/Example%20Git%20Config%20File.html</guid><pubDate>Tue, 05 Nov 2024 14:57:56 +0000</pubDate></item><item><title>2024 年各类 Live 及展会参战记录</title><link>//post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu.html</link><description>### Live&#13;
 &#13;
 | No. | 日期  | Live                                                                                                                                    | 场地      | 主题     | 城市 | 票价       |&#13;
 | --- | ---   | ---                                                                                                                                     | ---       | ---      | ---  | ---        |&#13;
@@ -1327,7 +1327,7 @@ git config --global --list&#13;
 | No. | 日期  | 展会                             | 城市 | 票价 |&#13;
 | --- | ---   | ---                              | ---  | ---  |&#13;
 | 1   | 7/27  | Chinajoy 2024                    | 上海 | 188  |&#13;
-| 2   | 11/30 | 创作连锁 2024 日厂 Vocaloid Only | 上海 | 139  |。</description><guid isPermaLink="true">/post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu.html</guid><pubDate>Sun, 03 Nov 2024 14:27:38 +0000</pubDate></item><item><title>A Practical Guide to Git Submodule</title><link>/post/A%20Practical%20Guide%20to%20Git%20Submodule.html</link><description>## Clone a Repository With Its Submodules&#13;
+| 2   | 11/30 | 创作连锁 2024 日厂 Vocaloid Only | 上海 | 139  |。</description><guid isPermaLink="true">//post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu.html</guid><pubDate>Sun, 03 Nov 2024 14:27:38 +0000</pubDate></item><item><title>A Practical Guide to Git Submodule</title><link>//post/A%20Practical%20Guide%20to%20Git%20Submodule.html</link><description>## Clone a Repository With Its Submodules&#13;
 &#13;
 If is a first-time clone:&#13;
 &#13;
@@ -1472,7 +1472,7 @@ Checkout the recorded hash of submodules. Some options:&#13;
 ### `git submodule foreach &lt;command&gt;`&#13;
 &#13;
 Run `&lt;command&gt;` within each submodule. Example: `git submodule foreach git pull` .&#13;
-。</description><guid isPermaLink="true">/post/A%20Practical%20Guide%20to%20Git%20Submodule.html</guid><pubDate>Sat, 02 Nov 2024 07:06:15 +0000</pubDate></item><item><title>一种更平衡听歌和上分的 maimai 选歌策略</title><link>/post/yi-zhong-geng-ping-heng-ting-ge-he-shang-fen-de-%20maimai%20-xuan-ge-ce-lve.html</link><description>我打 maimai 的背景情况是不太勤，很多歌都尚无成绩，同时又还有些上分空间。</description><guid isPermaLink="true">/post/yi-zhong-geng-ping-heng-ting-ge-he-shang-fen-de-%20maimai%20-xuan-ge-ce-lve.html</guid><pubDate>Thu, 31 Oct 2024 15:46:28 +0000</pubDate></item><item><title>ROG Falchion(魔导士) RX Low Profile 键盘使用体验</title><link>/post/ROG%20Falchion%28-mo-dao-shi-%29%20RX%20Low%20Profile%20-jian-pan-shi-yong-ti-yan.html</link><description>双十一于京东购入，实付 1179 元，于 10 月 15 日晚上拿到手，持续使用至本文发布时（约两周）。</description><guid isPermaLink="true">/post/ROG%20Falchion%28-mo-dao-shi-%29%20RX%20Low%20Profile%20-jian-pan-shi-yong-ti-yan.html</guid><pubDate>Mon, 28 Oct 2024 17:29:41 +0000</pubDate></item><item><title>Git Sparse Checkout</title><link>/post/Git%20Sparse%20Checkout.html</link><description>## What Is Sparse Checkout?&#13;
+。</description><guid isPermaLink="true">//post/A%20Practical%20Guide%20to%20Git%20Submodule.html</guid><pubDate>Sat, 02 Nov 2024 07:06:15 +0000</pubDate></item><item><title>一种更平衡听歌和上分的 maimai 选歌策略</title><link>//post/yi-zhong-geng-ping-heng-ting-ge-he-shang-fen-de-%20maimai%20-xuan-ge-ce-lve.html</link><description>我打 maimai 的背景情况是不太勤，很多歌都尚无成绩，同时又还有些上分空间。</description><guid isPermaLink="true">//post/yi-zhong-geng-ping-heng-ting-ge-he-shang-fen-de-%20maimai%20-xuan-ge-ce-lve.html</guid><pubDate>Thu, 31 Oct 2024 15:46:28 +0000</pubDate></item><item><title>ROG Falchion(魔导士) RX Low Profile 键盘使用体验</title><link>//post/ROG%20Falchion%28-mo-dao-shi-%29%20RX%20Low%20Profile%20-jian-pan-shi-yong-ti-yan.html</link><description>双十一于京东购入，实付 1179 元，于 10 月 15 日晚上拿到手，持续使用至本文发布时（约两周）。</description><guid isPermaLink="true">//post/ROG%20Falchion%28-mo-dao-shi-%29%20RX%20Low%20Profile%20-jian-pan-shi-yong-ti-yan.html</guid><pubDate>Mon, 28 Oct 2024 17:29:41 +0000</pubDate></item><item><title>Git Sparse Checkout</title><link>//post/Git%20Sparse%20Checkout.html</link><description>## What Is Sparse Checkout?&#13;
 &#13;
 Checkout only part of the entire repository. Focus on files you need.&#13;
 &#13;
@@ -1543,7 +1543,7 @@ git sparse-checkout set [&lt;...&gt;]&#13;
 git checkout&#13;
 ```&#13;
 &#13;
-[Reference](https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/#sparse-checkout-and-partial-clones)。</description><guid isPermaLink="true">/post/Git%20Sparse%20Checkout.html</guid><pubDate>Sat, 26 Oct 2024 15:17:05 +0000</pubDate></item><item><title>爱好是一种能让自己开心的习惯</title><link>/post/ai-hao-shi-yi-zhong-neng-rang-zi-ji-kai-xin-de-xi-guan.html</link><description>最近在回想我的爱好，在过去的十年里其实改变了不少。</description><guid isPermaLink="true">/post/ai-hao-shi-yi-zhong-neng-rang-zi-ji-kai-xin-de-xi-guan.html</guid><pubDate>Fri, 25 Oct 2024 09:35:28 +0000</pubDate></item><item><title>vcs/verdi Cheat Sheet</title><link>/post/vcs-verdi%20Cheat%20Sheet.html</link><description>## vcs&#13;
+[Reference](https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/#sparse-checkout-and-partial-clones)。</description><guid isPermaLink="true">//post/Git%20Sparse%20Checkout.html</guid><pubDate>Sat, 26 Oct 2024 15:17:05 +0000</pubDate></item><item><title>爱好是一种能让自己开心的习惯</title><link>//post/ai-hao-shi-yi-zhong-neng-rang-zi-ji-kai-xin-de-xi-guan.html</link><description>最近在回想我的爱好，在过去的十年里其实改变了不少。</description><guid isPermaLink="true">//post/ai-hao-shi-yi-zhong-neng-rang-zi-ji-kai-xin-de-xi-guan.html</guid><pubDate>Fri, 25 Oct 2024 09:35:28 +0000</pubDate></item><item><title>vcs/verdi Cheat Sheet</title><link>//post/vcs-verdi%20Cheat%20Sheet.html</link><description>## vcs&#13;
 &#13;
 ```bash&#13;
 -full64 +v2k -sverilog              # 固定起手（v2k 指 Verilog-2001）&#13;
@@ -1604,8 +1604,8 @@ quit&#13;
 [2] [Synopsys VCS 编译时，启用debug选项_XtremeDV的博客-CSDN博客](https://blog.csdn.net/zhajio/article/details/88839838)&#13;
 [3] [vcs覆盖率选项_weixin_39662684的博客-CSDN博客](https://blog.csdn.net/weixin_39662684/article/details/108255556)&#13;
 [4] [VCS覆盖率使用详解（基础、合并、查看、分析） - 知乎](https://zhuanlan.zhihu.com/p/620471082)&#13;
-[5] [VCS -- fgp 仿真加速 - Thisway2014 - 博客园](https://www.cnblogs.com/thisway2014/p/16783601.html)。</description><guid isPermaLink="true">/post/vcs-verdi%20Cheat%20Sheet.html</guid><pubDate>Thu, 24 Oct 2024 16:04:25 +0000</pubDate></item><item><title>Hello Gmeek!</title><link>/post/Hello%20Gmeek%21.html</link><description>Hello Gmeek, welcome back my blog!&#13;
+[5] [VCS -- fgp 仿真加速 - Thisway2014 - 博客园](https://www.cnblogs.com/thisway2014/p/16783601.html)。</description><guid isPermaLink="true">//post/vcs-verdi%20Cheat%20Sheet.html</guid><pubDate>Thu, 24 Oct 2024 16:04:25 +0000</pubDate></item><item><title>Hello Gmeek!</title><link>//post/Hello%20Gmeek%21.html</link><description>Hello Gmeek, welcome back my blog!&#13;
 &#13;
 I knew this project from V2EX months ago and thinking wow that is exactly what I want: a simple enough place to write down anything without handling deployment, page style, server, etc. Now it's here.&#13;
 &#13;
-See you soon in the next coming post.。</description><guid isPermaLink="true">/post/Hello%20Gmeek%21.html</guid><pubDate>Wed, 23 Oct 2024 15:32:56 +0000</pubDate></item></channel></rss>
+See you soon in the next coming post.。</description><guid isPermaLink="true">//post/Hello%20Gmeek%21.html</guid><pubDate>Wed, 23 Oct 2024 15:32:56 +0000</pubDate></item></channel></rss>
