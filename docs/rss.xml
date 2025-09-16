@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>/</link></image><lastBuildDate>Tue, 16 Sep 2025 09:55:23 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>VPS 续命一年</title><link>https://blog.quitw.org/post/VPS%20-xu-ming-yi-nian.html</link><description>也是给本小🐔续命上了。</description><guid isPermaLink="true">https://blog.quitw.org/post/VPS%20-xu-ming-yi-nian.html</guid><pubDate>Sun, 14 Sep 2025 15:57:45 +0000</pubDate></item><item><title>How to Pull from/Push to Current Repository in Github Actions</title><link>https://blog.quitw.org/post/How%20to%20Pull%20from-Push%20to%20Current%20Repository%20in%20Github%20Actions.html</link><description>### Pull from current repository
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas: the Blog</title><link>/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas: the Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>/</link></image><lastBuildDate>Tue, 16 Sep 2025 09:56:07 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas: the Blog</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas: the Blog</webMaster><item><title>VPS 续命一年</title><link>https://blog.quitw.org/post/VPS%20-xu-ming-yi-nian.html</link><description>也是给本小🐔续命上了。</description><guid isPermaLink="true">https://blog.quitw.org/post/VPS%20-xu-ming-yi-nian.html</guid><pubDate>Sun, 14 Sep 2025 15:57:45 +0000</pubDate></item><item><title>How to Pull from/Push to Current Repository in Github Actions</title><link>https://blog.quitw.org/post/How%20to%20Pull%20from-Push%20to%20Current%20Repository%20in%20Github%20Actions.html</link><description>### Pull from current repository
 
 By default the runner has full read permission on current repository (using built-in GITHUB_TOKEN), regardless of private or not.
 
@@ -111,7 +111,7 @@ After I switched my DNS setting to no proxy, the file uploading issue was gone, 
 | 1 | 1/11 | 【禁电夜】四夜 Only 不插电 Cover | 上海 | 上滨荟 | 68 | 130 | |
 | 2 | 1/12 | 日音龙卷 \~律动幻想\~ | 上海 | THE BOXX | 0 | 0 | 中奖票 |
 | 3 | 1/19 | 和音社 RE:HARMONIC NOVAE 首演 | 上海 | 林肯爵士乐 | 220 | 0 | |
-| 4 | 2/15 | [YOASOBI Asia Tour 超现实 Day1](https://blog.quitw.org/post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html) | 上海 | 梅奔文化中心 | 2360 | 888 | 1180 x2 |
+| 4 | 2/15 | [YOASOBI Asia Tour 超现实 Day1](/post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html) | 上海 | 梅奔文化中心 | 2360 | 888 | 1180 x2 |
 | 5 | 2/23 | 【夜:歌症候群】四夜 Only | 上海 | THE BOXX | 169 | 0 | 双人票 |
 | 6 | 2/27 | こはならむ China Tour | 上海 | 摩登天空 | 180 | 90 | |
 | 7 | 3/1 | 2.5 次漫延时 Jump into ACG | 杭州 | 蛙厂 RMMF | 59 | 0 | |
@@ -127,7 +127,7 @@ After I switched my DNS setting to no proxy, the file uploading issue was gone, 
 | 17 | 5/17 | Utopia Festival Day1 | 上海 | 上海赛车场 | 580 | 0 | |
 | 18 | 5/25 | 【多厨狂喜】白金交响音乐会 | 深圳 | 南山文体中心 | 520 | 0 | 双人票 |
 | 19 | 6/1 | 极光纪 6th | 上海 | Cream Club | 84 | 0 | |
-| 20 | 6/7 | [森羅万象 6th ワンマン](https://blog.quitw.org/post/607-615%20-du-chuang-ri-ben-quan-ji-lu.html) | 东京 | 赤羽 ReNY alpha | 237 | 393 | |
+| 20 | 6/7 | [森羅万象 6th ワンマン](/post/607-615%20-du-chuang-ri-ben-quan-ji-lu.html) | 东京 | 赤羽 ReNY alpha | 237 | 393 | |
 | 21 | 6/28 | METEOR/石斛兰 路演 | 上海 | 百联 ZX 中庭 | 0 | 0 | |
 | 22 | 6/29 | 【青】HAG 3rd China Tour | 上海 | 摩登天空 | 480 | 0 | |
 | 23 | 7/5 | 光与影的赋格 | 上海 | Cream Club | 88 | 0 | |
