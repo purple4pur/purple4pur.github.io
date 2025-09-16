@@ -48,6 +48,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 .postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
 .title-right{display:flex;margin:auto 0 0 auto;}
 .title-right .circle{padding: 14px 16px;margin-right:8px;}
+.Label{color: #fff;margin-left:4px;}
+.listLabels{white-space:nowrap;display:flex;}
+.listLabels object{max-height:16px;max-width:24px;}
 #postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
 #postBody hr{height:2px;}
 #cmButton{height:48px;margin-top:48px;}
@@ -89,6 +92,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
+<div class="listLabels">
+    <span class="Label LabelTime" style="background-color:#0969da">2025-01-24</span>
+    <span class="Label LabelName" style="background-color:#303030"><object><a style="color:#fff" href="/tag.html#Dev">Dev</a></object></span>
+</div>
 <div class="markdown-body" id="postBody"><p>The title basically tells everything, which I finally figured it out after an unintentional file uploading.</p>
 <p>I run a frp server on the VPS to expose the Webdav hosted on my local laptop. As usual I put a Cloudflare proxy on DNS. That's the background.</p>
 <p>It worked actually very fine and all functions seemed to be good. But the video playback was so laggy that most of the time I even could not start playing. I thought the problem was the poor network between my laptop and the VPS in Tokyo.</p>

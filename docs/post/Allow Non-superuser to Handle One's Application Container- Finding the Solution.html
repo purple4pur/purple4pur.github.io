@@ -224,6 +224,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 .postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
 .title-right{display:flex;margin:auto 0 0 auto;}
 .title-right .circle{padding: 14px 16px;margin-right:8px;}
+.Label{color: #fff;margin-left:4px;}
+.listLabels{white-space:nowrap;display:flex;}
+.listLabels object{max-height:16px;max-width:24px;}
 #postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
 #postBody hr{height:2px;}
 #cmButton{height:48px;margin-top:48px;}
@@ -275,6 +278,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
+<div class="listLabels">
+    <span class="Label LabelTime" style="background-color:#bc4c00">2024-12-05</span>
+    <span class="Label LabelName" style="background-color:#303030"><object><a style="color:#fff" href="/tag.html#Dev">Dev</a></object></span><span class="Label LabelName" style="background-color:#185886"><object><a style="color:#fff" href="/tag.html#Linux">Linux</a></object></span><span class="Label LabelName" style="background-color:#1d63ed"><object><a style="color:#fff" href="/tag.html#Docker">Docker</a></object></span>
+</div>
 <div class="markdown-body" id="postBody"><h3>Background</h3>
 <p>A friend of mine is hosting a QQ bot <a href="https://github.com/yoimiya-kokomi/Miao-Yunzai">(Miao-Yunzai)</a> on my VPS, and let's call him friendR here. Recently I'm switching the bot to my new VPS, and trying to host as much as possible services in docker in order to keep the host machine clean.</p>
 <p>After some experiments I can use my modified Dockerfile and compose file to invoke the bot in container as I want. The next challenge is to allow friendR to up/down the bot container and run <code class="notranslate">npm run app</code> in it, because he might restart the bot anytime he want and does not need my involvement.</p>

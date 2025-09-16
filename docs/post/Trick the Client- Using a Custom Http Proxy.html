@@ -260,6 +260,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 .postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
 .title-right{display:flex;margin:auto 0 0 auto;}
 .title-right .circle{padding: 14px 16px;margin-right:8px;}
+.Label{color: #fff;margin-left:4px;}
+.listLabels{white-space:nowrap;display:flex;}
+.listLabels object{max-height:16px;max-width:24px;}
 #postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
 #postBody hr{height:2px;}
 #cmButton{height:48px;margin-top:48px;}
@@ -311,6 +314,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
+<div class="listLabels">
+    <span class="Label LabelTime" style="background-color:#bc4c00">2024-12-19</span>
+    <span class="Label LabelName" style="background-color:#303030"><object><a style="color:#fff" href="/tag.html#Dev">Dev</a></object></span><span class="Label LabelName" style="background-color:#79d4fd"><object><a style="color:#fff" href="/tag.html#Go">Go</a></object></span><span class="Label LabelName" style="background-color:#009639"><object><a style="color:#fff" href="/tag.html#Nginx">Nginx</a></object></span>
+</div>
 <div class="markdown-body" id="postBody"><p><strong>DISCLAIMER: This project is for study only, and does nothing with to-server requests. Use with caution and at your own risk.</strong></p>
 <h3>Background</h3>
 <p>I really enjoy playing a game, which handles almost everything on client side, and its server side is for ranking, replays, online matches, etc. As always, the server has a bad network connection for players in mainland China like me. So I was thinking if I could setup a relay server on my VPS, to provide a better connection of the game.</p>
