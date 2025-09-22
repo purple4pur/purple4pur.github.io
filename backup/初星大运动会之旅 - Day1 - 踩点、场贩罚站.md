@@ -1,4 +1,4 @@
-[后篇 >>](/post/chu-xing-da-yun-dong-hui-zhi-lv-%20-%20Day1%20-%20-cai-dian-%E3%80%81-chang-fan-fa-zhan.html)
+[后篇 >>](/post/chu-xing-da-yun-dong-hui-zhi-lv-%20-%20Day2%20-%20-yuan-meng-xue-ma-xian-di-%EF%BC%81.html)
 
 浦东机场出发现场值机的时候差点出问题。捷星的免费行李额只有登机行李一共 7kg，我是真没想到我的行李箱加挎包直接就称出 13.1kg。在值机柜台跟 staff 说要不先放我进去，我登机前收拾一下，staff 说他能睁一只眼闭一只眼放，要是乘务员称出来超重就只能扔了。好在最后提心吊胆地还是顺利登机了，值机后再没有称过重。
 
