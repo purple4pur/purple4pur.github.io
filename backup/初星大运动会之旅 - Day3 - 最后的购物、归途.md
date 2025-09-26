@@ -1,4 +1,4 @@
-[<< 前篇](/post/chu-xing-da-yun-dong-hui-zhi-lv-%20-%20Day2%20-%20-yuan-meng-xue-ma-xian-di-%EF%BC%81.html)
+[<< 前篇](/post/chu-xing-da-yun-dong-hui-zhi-lv-%20-%20Day2%20-%20-yuan-meng-xue-ma-xian-di-%EF%BC%81.html) | [后篇 >>](/post/chu-xing-da-yun-dong-hui-zhi-lv-%20-%20-zhi-chu-tong-ji.html)
 
 早上八点半，总算吃上了东横 INN 自带的免费早餐，总体一般般，对于想蹭一顿早餐的我来说一点毛病没有。
 
