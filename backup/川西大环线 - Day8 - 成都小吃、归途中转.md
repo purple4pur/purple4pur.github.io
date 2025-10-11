@@ -1,5 +1,5 @@
 <!-- ##{"timestamp":1760111999}## -->
-[<< 前篇](#) | [后篇 >>](/post/chuan-xi-da-huan-xian-%20-%20Day%20Bonus%20-%20-zai-jian-ji-nan.html)
+[<< 前篇](/post/chuan-xi-da-huan-xian-%20-%20Day7%20-%20-si-gu-niang-shan-、-huo-guo-、-chuan-xi-jie-shu.html) | [后篇 >>](/post/chuan-xi-da-huan-xian-%20-%20Day%20Bonus%20-%20-zai-jian-ji-nan.html)
 
 早上醒来先赶在 saki 名古屋活动结束前 p 了一把，还好一次抽活动硬币就把最后的五份 saki 碎片抽出来了，极限白嫖完活动 saki 碎片，爽了。
 
