@@ -1,4 +1,4 @@
-[<< 前篇](/post/chu-xing-da-yun-dong-hui-zhi-lv-%20-%20Day1%20-%20-cai-dian-%E3%80%81-chang-fan-fa-zhan.html) | [后篇 >>](/post/chu-xing-da-yun-dong-hui-zhi-lv-%20-%20Day3%20-%20-zui-hou-de-gou-wu-%E3%80%81-gui-tu.html)
+[<< Day1](/post/chu-xing-da-yun-dong-hui-zhi-lv-%20-%20Day1%20-%20-cai-dian-%E3%80%81-chang-fan-fa-zhan.html) | [Day3 >>](/post/chu-xing-da-yun-dong-hui-zhi-lv-%20-%20Day3%20-%20-zui-hou-de-gou-wu-%E3%80%81-gui-tu.html)
 
 早上连着按掉了两个闹钟，一直睡到了中午十二点，前一天晚上几乎一点没睡真的太累了。
 
