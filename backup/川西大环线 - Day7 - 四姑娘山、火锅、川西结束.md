@@ -1,4 +1,4 @@
-[<< 前篇](#) | [后篇 >>](/post/chuan-xi-da-huan-xian-%20-%20Day8%20-%20-cheng-du-xiao-chi-、-gui-tu-zhong-zhuan.html)
+[<< Day6](#) | [Day8 >>](/post/chuan-xi-da-huan-xian-%20-%20Day8%20-%20-cheng-du-xiao-chi-、-gui-tu-zhong-zhuan.html)
 
 昨晚换了房间之后睡得还行，而且今天我们出发可以自己决定时间。昨天木子叫我们八点前就出发，我们今天八点半左右才到餐厅集合吃早餐，不赶时间能睡够真是舒服。
 
