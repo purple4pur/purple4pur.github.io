@@ -1,3 +1,5 @@
+[<< 2024 Live 全记录](/post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu.html)
+
 ### 我和 H△G
 
 我最早对 H△G 有印象最早应该是在 osu! 里听到了他们的《カラフル》，但也并没有特别关注，处于一个听日音相当杂食的状态。
