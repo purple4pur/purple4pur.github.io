@@ -90,7 +90,7 @@ ClientAliveCountMax 30
 
 ### 安装软件
 
-以前我整理过一篇个人必备的软件和安装方法，[链接在此](/post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html)，后来我发现很多开源软件我从 github release 装比从官方源装要方便和快得多，于是这类软件基本都转用 [bin](https://github.com/marcosnils/bin) 了。不得不说 bin 确实是个好工具，我以前写了个 python 版的 Scoop，刚实现最基本的安装卸载功能就发现 bin 已经完美覆盖我的使用场景了。
+以前我整理过一篇个人必备的软件和安装方法，[链接在此](/post/14.html)，后来我发现很多开源软件我从 github release 装比从官方源装要方便和快得多，于是这类软件基本都转用 [bin](https://github.com/marcosnils/bin) 了。不得不说 bin 确实是个好工具，我以前写了个 python 版的 Scoop，刚实现最基本的安装卸载功能就发现 bin 已经完美覆盖我的使用场景了。
 
 以前在服务器上我都是把 bin 装在 `$HOME/bin` 里，这次我突然意识到其实完全可以装在 `/usr/local/bin` 里让所有人都能用，所以我先用 root 装了这些软件：
 
@@ -108,7 +108,7 @@ Path                          Version  URL                            Status
 
 docker 还是得用 apt 安装，参考 [Install using the apt repository](https://docs.docker.com/engine/install/debian/#install-using-the-repository)。注意装完之后可以把自己的 username 加到 docker group：`usermod -aG docker purple4pur`。dockerd 的代理需要单独设置，参考 [Daemon proxy configuration](https://docs.docker.com/engine/daemon/proxy/)。
 
-chezmoi 用来快速同步我的 dotfiles，后续就跟设置 VPS 的部分一样了，可以参考文章 [Welcome, My New VPS!](/post/Welcome%2C%20My%20New%20VPS%21.html)。
+chezmoi 用来快速同步我的 dotfiles，后续就跟设置 VPS 的部分一样了，可以参考文章 [Welcome, My New VPS!](/post/16.html)。
 
 至此所有配置已完成！
 

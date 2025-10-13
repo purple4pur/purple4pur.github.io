@@ -151,7 +151,7 @@ ClientAliveCountMax 30
 <p>最后重启 sshd <code class="notranslate">systemctl restart sshd</code>，这样就配置好了，测试没问题即可拔掉键盘鼠标和 HDMI，只剩一根电源线。</p>
 <p>到此最基本的配置就结束了，已经解决了最为关键的网络和 ssh，下一步是作为用户安装一些我常用的软件。</p>
 <h3>安装软件</h3>
-<p>以前我整理过一篇个人必备的软件和安装方法，<a href="/post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html">链接在此</a>，后来我发现很多开源软件我从 github release 装比从官方源装要方便和快得多，于是这类软件基本都转用 <a href="https://github.com/marcosnils/bin">bin</a> 了。不得不说 bin 确实是个好工具，我以前写了个 python 版的 Scoop，刚实现最基本的安装卸载功能就发现 bin 已经完美覆盖我的使用场景了。</p>
+<p>以前我整理过一篇个人必备的软件和安装方法，<a href="/post/14.html">链接在此</a>，后来我发现很多开源软件我从 github release 装比从官方源装要方便和快得多，于是这类软件基本都转用 <a href="https://github.com/marcosnils/bin">bin</a> 了。不得不说 bin 确实是个好工具，我以前写了个 python 版的 Scoop，刚实现最基本的安装卸载功能就发现 bin 已经完美覆盖我的使用场景了。</p>
 <p>以前在服务器上我都是把 bin 装在 <code class="notranslate">$HOME/bin</code> 里，这次我突然意识到其实完全可以装在 <code class="notranslate">/usr/local/bin</code> 里让所有人都能用，所以我先用 root 装了这些软件：</p>
 <pre class="notranslate"><code class="notranslate">Path                          Version  URL                            Status
 /usr/local/bin/bin            v0.23.1  github.com/marcosnils/bin      OK
@@ -163,7 +163,7 @@ ClientAliveCountMax 30
 </code></pre>
 <p>这里有个小问题是装好的二进制的权限都是 <code class="notranslate">rwxr--r--</code>，为了让所有人都能用还得 <code class="notranslate">chmod +x /usr/local/bin/*</code>，感觉非常不优雅。</p>
 <p>docker 还是得用 apt 安装，参考 <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository" rel="nofollow">Install using the apt repository</a>。注意装完之后可以把自己的 username 加到 docker group：<code class="notranslate">usermod -aG docker purple4pur</code>。dockerd 的代理需要单独设置，参考 <a href="https://docs.docker.com/engine/daemon/proxy/" rel="nofollow">Daemon proxy configuration</a>。</p>
-<p>chezmoi 用来快速同步我的 dotfiles，后续就跟设置 VPS 的部分一样了，可以参考文章 <a href="/post/Welcome%2C%20My%20New%20VPS%21.html">Welcome, My New VPS!</a>。</p>
+<p>chezmoi 用来快速同步我的 dotfiles，后续就跟设置 VPS 的部分一样了，可以参考文章 <a href="/post/16.html">Welcome, My New VPS!</a>。</p>
 <p>至此所有配置已完成！</p>
 <h3>后记</h3>
 <p>Mac mini 装 Debian 我计划了半天，然后执行了半天，总体来说顺利得有点出乎预料。对比安装 Windows，可能因为我选择了不装桌面环境，所以完全没有遇到很麻烦的驱动问题，真正花了时间处理的驱动其实就一个 Wifi。</p>
