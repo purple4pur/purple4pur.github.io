@@ -1,4 +1,4 @@
-[<< 2024 Live 全记录](/post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu.html)
+[<< 2024 Live 全记录](/post/8.html)
 
 ### 我和 H△G
 
@@ -14,7 +14,7 @@
 
 ### 积极备战
 
-得益于粉丝群的各位，各种 Live 的相关信息都很及时。广州场的完整歌单主办方已提前释出，我在 Apple Music 拉了一个 [歌单](https://music.apple.com/jp/playlist/hag-1st-live-in-guangzhou/pl.u-JPAZE6PsLjYXxxM)，大约提前一周开始备战，时不时就打开歌单过一轮。
+得益于粉丝群的各位，各种 Live 的相关信息都很及时。广州场的完整歌单主办方已提前释出，我在 Apple Music 拉了一个 [歌单](https://music.apple.com/jp/playlist/hag-1st-live-in-guangzhou-day2-set-list/pl.u-JPAZE6PsLjYXxxM)，大约提前一周开始备战，时不时就打开歌单过一轮。
 
 由于时间关系，本次歌单里我重点备战了两首歌。一首正是在上海场没听到的《from Y to Y》，之前就已基本会唱 80%。另一首是同样很触动我感情的《星見る頃を過ぎても》，只来得及速成两段副歌。终归还是有点日语苦手，学得太慢了，稍微有些许可惜。
 
@@ -38,7 +38,7 @@ H△G 的现场演出相当精彩，保持了日本艺人一贯的高现场水�
 
 ### 附：Day2 (2024/11/10) Set List
 
-[[Playlist on Apple Music JP]](https://music.apple.com/jp/playlist/hag-1st-live-in-guangzhou/pl.u-JPAZE6PsLjYXxxM)
+[[Playlist on Apple Music JP]](https://music.apple.com/jp/playlist/hag-1st-live-in-guangzhou-day2-set-list/pl.u-JPAZE6PsLjYXxxM)
 
 1. [地球最後の告白を](https://music.apple.com/jp/song/%E5%9C%B0%E7%90%83%E6%9C%80%E5%BE%8C%E3%81%AE%E5%91%8A%E7%99%BD%E3%82%92/1442967185)
 2. [カラフル](https://music.apple.com/jp/song/%E3%82%AB%E3%83%A9%E3%83%95%E3%83%AB-best-album-version/1637417568)
