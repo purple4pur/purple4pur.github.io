@@ -262,7 +262,7 @@ getent group njupt
 
 - Install tools:
 
-[[Installing CLI Tools I Use on Debian/Linux]](/post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html)
+[[Installing CLI Tools I Use on Debian/Linux]](/post/14.html)
 
 - Initialize dotfiles:
 
