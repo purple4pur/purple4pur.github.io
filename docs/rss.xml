@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>/</link></image><lastBuildDate>Mon, 13 Oct 2025 18:35:56 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>【分歧路口，前途漫漫】鸡狗对邦 Day2 参战回想</title><link>https://blog.quitw.org/post/47.html</link><description>[&lt;&lt; 2025 活动全记录](/post/23.html)
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>/</link><description>Make it simple. Keep it simple.</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/49893724</url><title>avatar</title><link>/</link></image><lastBuildDate>Mon, 13 Oct 2025 18:38:50 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>【分歧路口，前途漫漫】鸡狗对邦 Day2 参战回想</title><link>https://blog.quitw.org/post/47.html</link><description>[&lt;&lt; 2025 活动全记录](/post/23.html)
 
 艰难三开才抢到 Day2 480 山顶票，感谢猫眼不卡人机验证不强行退出提交订单页面，在三开两分钟后竟然赢了，不赖。</description><guid isPermaLink="true">https://blog.quitw.org/post/47.html</guid><pubDate>Sun, 12 Oct 2025 19:25:14 +0000</pubDate></item><item><title>川西大环线 | Day8+1 | 再见济南</title><link>https://blog.quitw.org/post/46.html</link><description>[&lt;&lt; Day8](/post/45.html)
 
@@ -129,7 +129,7 @@ It worked actually very fine and all functions seemed to be good. But the video 
 
 Recently I tried to upload a 140MB file through Webdav to my laptop, but it always failed after an around 100MB transaction and got a **413 Request Entity Too Large** HTTP error. This error was given by [Cloudflare](https://developers.cloudflare.com/support/troubleshooting/http-status-codes/4xx-client-error/#413-payload-too-large-rfc7231), and till then I knew about the 100MB limitation for the first time.
 
-After I switched my DNS setting to no proxy, the file uploading issue was gone, so as the video playback one.。</description><guid isPermaLink="true">https://blog.quitw.org/post/25.html</guid><pubDate>Thu, 23 Jan 2025 16:30:57 +0000</pubDate></item><item><title>我的笔记本 CPU 风扇，死了</title><link>https://blog.quitw.org/post/24.html</link><description>这一天究竟是到了：笔记本电脑不再发出拖拉机一般巨大的噪音，回到了久违的安静，但这让我更害怕。</description><guid isPermaLink="true">https://blog.quitw.org/post/24.html</guid><pubDate>Fri, 17 Jan 2025 17:29:37 +0000</pubDate></item><item><title>2025 年 Live 及各类活动参战记录</title><link>https://blog.quitw.org/post/23.html</link><description>[&lt;&lt; 2024](/post/2024%20-nian-ge-lei-%20Live%20-ji-zhan-hui-can-zhan-ji-lu.html)
+After I switched my DNS setting to no proxy, the file uploading issue was gone, so as the video playback one.。</description><guid isPermaLink="true">https://blog.quitw.org/post/25.html</guid><pubDate>Thu, 23 Jan 2025 16:30:57 +0000</pubDate></item><item><title>我的笔记本 CPU 风扇，死了</title><link>https://blog.quitw.org/post/24.html</link><description>这一天究竟是到了：笔记本电脑不再发出拖拉机一般巨大的噪音，回到了久违的安静，但这让我更害怕。</description><guid isPermaLink="true">https://blog.quitw.org/post/24.html</guid><pubDate>Fri, 17 Jan 2025 17:29:37 +0000</pubDate></item><item><title>2025 年 Live 及各类活动参战记录</title><link>https://blog.quitw.org/post/23.html</link><description>[&lt;&lt; 2024](/post/8.html)
 
 ### Live
 
@@ -138,7 +138,7 @@ After I switched my DNS setting to no proxy, the file uploading issue was gone, 
 | 1 | 1/11 | 【禁电夜】四夜 Only 不插电 Cover | 上海 | 上滨荟 | 68 | 130 | |
 | 2 | 1/12 | 日音龙卷 \~律动幻想\~ | 上海 | THE BOXX | 0 | 0 | 中奖票 |
 | 3 | 1/19 | 和音社 RE:HARMONIC NOVAE 首演 | 上海 | 林肯爵士乐 | 220 | 0 | |
-| 4 | 2/15 | [YOASOBI Asia Tour 超现实 Day1](/post/YOASOBI%20Asia%20Tour%20in%20Shanghai%20Day1%20-can-zhan-hui-xiang.html) | 上海 | 梅奔文化中心 | 2360 | 888 | 1180 x2 |
+| 4 | 2/15 | [YOASOBI Asia Tour 超现实 Day1](/post/27.html) | 上海 | 梅奔文化中心 | 2360 | 888 | 1180 x2 |
 | 5 | 2/23 | 【夜:歌症候群】四夜 Only | 上海 | THE BOXX | 169 | 0 | 双人票 |
 | 6 | 2/27 | こはならむ China Tour | 上海 | 摩登天空 | 180 | 90 | |
 | 7 | 3/1 | 2.5 次漫延时 Jump into ACG | 杭州 | 蛙厂 RMMF | 59 | 0 | |
@@ -154,7 +154,7 @@ After I switched my DNS setting to no proxy, the file uploading issue was gone, 
 | 17 | 5/17 | Utopia Festival Day1 | 上海 | 上海赛车场 | 580 | 0 | |
 | 18 | 5/25 | 【多厨狂喜】白金交响音乐会 | 深圳 | 南山文体中心 | 520 | 0 | 双人票 |
 | 19 | 6/1 | 极光纪 6th | 上海 | Cream Club | 84 | 0 | |
-| 20 | 6/7 | [森羅万象 6th ワンマン](/post/607-615%20-du-chuang-ri-ben-quan-ji-lu.html) | 东京 | 赤羽 ReNY alpha | 237 | 393 | |
+| 20 | 6/7 | [森羅万象 6th ワンマン](/post/29.html) | 东京 | 赤羽 ReNY alpha | 237 | 393 | |
 | 21 | 6/28 | METEOR/石斛兰 路演 | 上海 | 百联 ZX 中庭 | 0 | 0 | |
 | 22 | 6/29 | 【青】HAG 3rd China Tour | 上海 | 摩登天空 | 480 | 0 | |
 | 23 | 7/5 | 光与影的赋格 | 上海 | Cream Club | 88 | 0 | |
@@ -171,8 +171,8 @@ After I switched my DNS setting to no proxy, the file uploading issue was gone, 
 | 34 | 8/23 | 【Shiny High-Five!!】Poppin'Party | 上海 | 东方体育中心 | 680 | 0 | 蓝蓝神抢手 |
 | 35 | 8/24 | 【星梦畅想】和音社 x 偶像 | 上海 | 久事商城剧院 | 230 | 0 | |
 | 36 | 9/12 | やなぎなぎ color palette | 上海 | 万南梦想剧场 | 380 | 350 | |
-| 37 | 9/21 | [初星大運動会 Day2](/post/chu-xing-da-yun-dong-hui-zhi-lv-%20-%20Day2%20-%20-yuan-meng-xue-ma-xian-di-%EF%BC%81.html) | 东京 | 代々木競技場 | 565 | 992 | |
-| 38 | 10/12 | [【分歧路口，前途漫漫】MyGO!!!!! x AveMujica Day2](/post/【-fen-qi-lu-kou-，-qian-tu-man-man-】-ji-gou-dui-bang-%20Day2%20-can-zhan-hui-xiang.html) | 上海 | 梅奔文化中心 | 480 | 0 | |
+| 37 | 9/21 | [初星大運動会 Day2](/post/34.html) | 东京 | 代々木競技場 | 565 | 992 | |
+| 38 | 10/12 | [【分歧路口，前途漫漫】MyGO!!!!! x AveMujica Day2](/post/47.html) | 上海 | 梅奔文化中心 | 480 | 0 | |
 | 39 | 10/25 | 【夢語り Yume-gatari】あたらよ | 广州 | 声音共和 | 0 | TBA | 蓝蓝神抢手 (380) |
 | 40 | 11/8 | 多田葵 2025 Tour | 上海 | VAS ear | 380 | TBA | |
 | 41 | 11/22 | 【秋の予兆】りりあ。</description><guid isPermaLink="true">https://blog.quitw.org/post/23.html</guid><pubDate>Sun, 12 Jan 2025 15:44:16 +0000</pubDate></item><item><title>2024：新城市，新工作，新兴趣，和更远的异地恋</title><link>https://blog.quitw.org/post/22.html</link><description>其实往年年末也有想着写一篇自己的年终总结，但究竟还是因为懒（主要因素）和平台的考虑，难产于动笔之前。</description><guid isPermaLink="true">https://blog.quitw.org/post/22.html</guid><pubDate>Mon, 30 Dec 2024 06:40:42 +0000</pubDate></item><item><title>Trick the Client: Using a Custom Http Proxy</title><link>https://blog.quitw.org/post/21.html</link><description>**DISCLAIMER: This project is for study only, and does nothing with to-server requests. Use with caution and at your own risk.**&#13;
