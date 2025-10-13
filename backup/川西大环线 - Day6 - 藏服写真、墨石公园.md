@@ -1,4 +1,4 @@
-[<< Day5](#) | [Day7 >>](/post/chuan-xi-da-huan-xian-%20-%20Day7%20-%20-si-gu-niang-shan-、-huo-guo-、-chuan-xi-jie-shu.html)
+[<< Day5](/post/42.html) | [Day7 >>](/post/44.html)
 
 又是六点半起床的一天，小困。到大堂的时候酒店的早餐差点还没做好，不过拿出来很精致，是每人一份像定食一样的木质方格餐盘，里面是三个像早茶的糕点、酸萝卜、鸡蛋和一碗南瓜粥。味道没有很惊艳，不过肯定是最有特色的一份早餐。
 
