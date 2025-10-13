@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/49893724"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="### 前言
+
+这台 Mac mini 已在我家服役多年，当初家里买了它之后，还不太懂电脑的我不知怎么摸索着给装上了 Windows，这可能还真得感谢 bootcamp 做得如此小白友好。">
+<meta property="og:title" content="复活老古董 Mac mini (2014) - 安装 Debian 13 记录">
+<meta property="og:description" content="### 前言
+
+这台 Mac mini 已在我家服役多年，当初家里买了它之后，还不太懂电脑的我不知怎么摸索着给装上了 Windows，这可能还真得感谢 bootcamp 做得如此小白友好。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.quitw.org/post/37.html">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/49893724">
+<title>复活老古董 Mac mini (2014) - 安装 Debian 13 记录</title>
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+.Label{color: #fff;margin-left:4px;}
+.listLabels{margin-bottom:12px;white-space:nowrap;display:flex;}
+.listLabels object{max-height:16px;max-width:24px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+.markdown-body table{margin:auto;margin-bottom:16px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">复活老古董 Mac mini (2014) - 安装 Debian 13 记录</h1>
+<div class="title-right">
+    <a href="/" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/purple4pur/purple4pur.github.io/issues/37" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="listLabels">
+    <span class="Label LabelTime" style="background-color:#0969da">2025-10-02</span>
+    <span class="Label LabelName" style="background-color:#303030"><object><a style="color:#fff" href="/tag.html#Dev">Dev</a></object></span><span class="Label LabelName" style="background-color:#185886"><object><a style="color:#fff" href="/tag.html#Linux">Linux</a></object></span>
+</div>
+<div class="markdown-body" id="postBody"><h3>前言</h3>
+<p>这台 Mac mini 已在我家服役多年，当初家里买了它之后，还不太懂电脑的我不知怎么摸索着给装上了 Windows，这可能还真得感谢 bootcamp 做得如此小白友好。作为当时家里性能最好的电脑，又碰上好不容易可以放开玩电脑的我，它陪伴了我注册 Steam，帮助我通关了人生中的第一部 3A 单机《虐杀原形 2》。直到 2017 年我装了家里的台式，这台 Mac mini 也就逐渐转为备用机，再到慢慢退役。</p>
+<p>最近一两年家里客厅的几台 PC 又时不时出现各种小问题，所以这台 Mac 仍然在作为备用机服役。最近几个月终于稳定下来的，客厅唯一在用的 PC 变成了我的一台老笔记本电脑。我这次国庆回家的时候，Mac 已经完全闲置了。正好我也知道它无论是启动 Windows 11 还是 macOS 都卡顿无比（我感觉是机械硬盘的问题），于是我就萌生了把它装上 Linux 的想法，不要桌面环境，以后就当成个 home lab 来用。</p>
+<h3>前期准备</h3>
+<p>先简单搜了下，这样的操作是有先例的，这样我才继续下一步准备。另外开工前以防万一，还是分别启动了两个系统检查有没有要备份的数据。</p>
+<ul>
+<li><a href="https://www.debian.org/distrib/netinst" rel="nofollow">Debain 13 ISO (netinst)</a></li>
+</ul>
+<p>我选择的是最小安装镜像，不带桌面环境。</p>
+<ul>
+<li>U 盘一个</li>
+</ul>
+<p>家里库存的 U 盘全都太古董了，我前一天在京东随便买了个 64GB 的，今天刚好到。</p>
+<ul>
+<li><a href="https://github.com/ventoy/Ventoy">Ventoy</a></li>
+</ul>
+<p>最好用的启动盘制作器没有之一。用 Ventoy 格式化好 U 盘之后，把 ISO 放进 exFAT 分区就完事了。</p>
+<h3>安装</h3>
+<p>插上 U 盘，开机后按住 Alt/Cmd 直到看到启动选项。选择启动插入的 U 盘（带 EFI 字样的），进入 Ventoy 界面，选择已经放入的 Debian ISO，注意这里要选择用 grub2 mode，如果用 normal mode 会报 "Not a secure boot platform 14"。</p>
+<p>加载 Debian ISO 之后，我选择了不要 GUI 的安装模式，这样安装过程就全部是 TUI，其实效果也相当好了。一步步执行下去，有两个地方要留意下：</p>
+<p>选择安装分区 - 其中有一个选择是需不需要 setup LVM，反正我查了下是在物理盘上又加了一层抽象，可以让分区跨物理盘，说是对个人用户来说没啥用。</p>
+<p>设置 DHCP - 安装过程我是一直插着网线的，但在这一步自动设置失败了，还好不影响后续的安装，可以选择跳过这一步。但因为后续安装都缺少网络连接，所以只会安装 ISO 自带的最小系统和软件，在安装完成后我配置的一些环节可能也跟这里设置失败有关。</p>
+<p>总之整个安装还是相当顺利的，几乎没有什么停顿 Debian 就装好了，下一步即可进入系统。</p>
+<h3>登录 Debian 并配置网络和 ssh</h3>
+<p>安装过程中除了 root 还引导创建了一个 user，但因为还在最早期的系统配置，我就先用 root 登录了。</p>
+<p>第一个问题自然是先连上有线网。首先 <code class="notranslate">ip l</code> 可以看到有线网卡是可以识别到的，网卡名是 <code class="notranslate">enp3s0f0</code>。根据 <a href="https://wiki.debian.org/NetworkConfiguration" rel="nofollow">NetworkConfiguration</a>，需要手动编辑 <code class="notranslate">/etc/network/interfaces</code>，还只能用 nano，对的这会儿系统里还没有 vim 哈哈：</p>
+<pre class="notranslate"><code class="notranslate">auto enp3s0f0
+allow-hotplug enp3s0f0
+iface enp3s0f0 inet dhcp
+</code></pre>
+<p>这样就把网卡配置为 ipv4 DHCP 了。保存文件后 <code class="notranslate">systemctl restart networking</code>，可能会花一两分钟，然后 <code class="notranslate">routel</code> 就能看到通过 DHCP 获取的 ipv4 地址了，此时已连接上有线网。</p>
+<p>第二个问题是 apt 竟然没有自带源，打开 <code class="notranslate">/etc/apt/sources.list</code> 后发现里面只有一个已经注释掉的 cdrom 源，并没有任何官方在线源，猜测可能跟安装过程中没有网络有关。根据 <a href="https://www.debian.org/doc/manuals/debian-reference/ch02.en.html#_debian_archive_basics" rel="nofollow">Debian archive basics</a> 填入官方源后就可以正常使用 apt 了：</p>
+<pre class="notranslate"><code class="notranslate">deb http://deb.debian.org/debian/ trixie main non-free-firmware contrib non-free
+deb-src http://deb.debian.org/debian/ trixie main non-free-firmware contrib non-free
+
+deb http://security.debian.org/debian-security trixie-security main non-free-firmware contrib non-free
+deb-src http://security.debian.org/debian-security trixie-security main non-free-firmware contrib non-free
+</code></pre>
+<p>这里还有个大陆网络问题，我在家的话其他设备就直接走我手机上的代理。Debian 这边配一下 <code class="notranslate">http_proxy</code> 大部分软件就能认：</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">export</span> http_proxy=http://192.168.50.254:2334
+<span class="pl-k">export</span> https_proxy=http://192.168.50.254:2334</pre></div>
+<p>下一步是要解决 Wifi 问题，因为网线我是临时从旁边 PC 上拔过来的，不是长久之计。<code class="notranslate">ip l</code> 找不到无线网卡，通过 <code class="notranslate">lspci -k</code> 可以看到无线网卡型号是 Broadcom BCM4360。根据 <a href="https://wiki.debian.org/wl" rel="nofollow">wl</a> 安装驱动：</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">apt-get install linux-image-<span class="pl-s"><span class="pl-pds">$(</span>uname -r<span class="pl-k">|</span>sed <span class="pl-s"><span class="pl-pds">'</span>s,[^-]*-[^-]*-,,<span class="pl-pds">'</span></span><span class="pl-pds">)</span></span> linux-headers-<span class="pl-s"><span class="pl-pds">$(</span>uname -r<span class="pl-k">|</span>sed <span class="pl-s"><span class="pl-pds">'</span>s,[^-]*-[^-]*-,,<span class="pl-pds">'</span></span><span class="pl-pds">)</span></span> broadcom-sta-dkms
+dpkg-reconfigure broadcom-sta-dkms
+modprobe -r b44 b43 b43legacy ssb brcmsmac bcma
+modprobe wl</pre></div>
+<p>安装完成后就能识别到无线网卡了。我在这里卡了很久，尝试过网上说的很多方法，最后我发现关键点在于 <code class="notranslate">broadcom-sta-dkms</code> 已经代替有些旧方法提到的 <code class="notranslate">bcmwl-kernel-source</code> 等包了，以及最重要的，一定要运行 <code class="notranslate">dpkg-reconfigure broadcom-sta-dkms</code> 来编译生成需要的 <code class="notranslate">wl</code> 驱动。这一步在参考网页上列为 Optional，但在我这个情况里其实是 Required。</p>
+<p>识别到无线网卡后用 Network manager 连接 Wifi，首先需要 <code class="notranslate">apt install network-manager</code>，然后参考 <a href="https://manpages.debian.org/trixie/network-manager/nmcli-examples.7.en.html" rel="nofollow">nmcli-examples</a>，连接过程非常傻瓜式。</p>
+<p>下一步开 ssh server 解放物理机的屏幕和键盘，对的怎么你连 ssh server 都没有预装。根据 <a href="https://wiki.debian.org/SSH" rel="nofollow">SSH</a>，先安装 server <code class="notranslate">apt install openssh-server</code>，然后根据需要改 <code class="notranslate">/etc/ssh/sshd_config</code>：</p>
+<pre class="notranslate"><code class="notranslate">PermitRootLogin yes
+ClientAliveInterval 120
+ClientAliveCountMax 30
+</code></pre>
+<p>最后重启 sshd <code class="notranslate">systemctl restart sshd</code>，这样就配置好了，测试没问题即可拔掉键盘鼠标和 HDMI，只剩一根电源线。</p>
+<p>到此最基本的配置就结束了，已经解决了最为关键的网络和 ssh，下一步是作为用户安装一些我常用的软件。</p>
+<h3>安装软件</h3>
+<p>以前我整理过一篇个人必备的软件和安装方法，<a href="/post/Installing%20CLI%20Tools%20I%20Use%20on%20Debian-Linux.html">链接在此</a>，后来我发现很多开源软件我从 github release 装比从官方源装要方便和快得多，于是这类软件基本都转用 <a href="https://github.com/marcosnils/bin">bin</a> 了。不得不说 bin 确实是个好工具，我以前写了个 python 版的 Scoop，刚实现最基本的安装卸载功能就发现 bin 已经完美覆盖我的使用场景了。</p>
+<p>以前在服务器上我都是把 bin 装在 <code class="notranslate">$HOME/bin</code> 里，这次我突然意识到其实完全可以装在 <code class="notranslate">/usr/local/bin</code> 里让所有人都能用，所以我先用 root 装了这些软件：</p>
+<pre class="notranslate"><code class="notranslate">Path                          Version  URL                            Status
+/usr/local/bin/bin            v0.23.1  github.com/marcosnils/bin      OK
+/usr/local/bin/nvim.appimage  v0.11.4  github.com/neovim/neovim       OK
+/usr/local/bin/chezmoi        v2.65.2  github.com/twpayne/chezmoi     OK
+/usr/local/bin/starship       v1.23.0  github.com/starship/starship   OK
+/usr/local/bin/fd             v10.3.0  github.com/sharkdp/fd          OK
+/usr/local/bin/rg             14.1.1   github.com/BurntSushi/ripgrep  OK
+</code></pre>
+<p>这里有个小问题是装好的二进制的权限都是 <code class="notranslate">rwxr--r--</code>，为了让所有人都能用还得 <code class="notranslate">chmod +x /usr/local/bin/*</code>，感觉非常不优雅。</p>
+<p>docker 还是得用 apt 安装，参考 <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository" rel="nofollow">Install using the apt repository</a>。注意装完之后可以把自己的 username 加到 docker group：<code class="notranslate">usermod -aG docker purple4pur</code>。dockerd 的代理需要单独设置，参考 <a href="https://docs.docker.com/engine/daemon/proxy/" rel="nofollow">Daemon proxy configuration</a>。</p>
+<p>chezmoi 用来快速同步我的 dotfiles，后续就跟设置 VPS 的部分一样了，可以参考文章 <a href="/post/Welcome%2C%20My%20New%20VPS%21.html">Welcome, My New VPS!</a>。</p>
+<p>至此所有配置已完成！</p>
+<h3>后记</h3>
+<p>Mac mini 装 Debian 我计划了半天，然后执行了半天，总体来说顺利得有点出乎预料。对比安装 Windows，可能因为我选择了不装桌面环境，所以完全没有遇到很麻烦的驱动问题，真正花了时间处理的驱动其实就一个 Wifi。</p>
+<p>后续其实我也没想好真的拿它来做什么，可能会先配好 frp 出公网吧，这样我在上海的时候也能操作了。</p></div>
+<div style="font-size:small;margin-top:8px;float:right;">Published under (CC-BY-SA). Feel free to comment or share :)</div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="/">Purple4pur's Canvas</a></div>
+<div id="footer2">
+    <span id="runday"></span>
+    <span><a href="/sitemap.txt" target="_blank">Sitemap</a> • </span>
+    <span><a href="https://github.com/purple4pur/purple4pur.github.io" target="_blank">Source Code</a> • </span>
+    <span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("10/23/2024"!=""){
+    var startSite=new Date("10/23/2024");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","purple4pur/purple4pur.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
+
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
+
+</script>
+<script defer src='https://cloud.umami.is/script.js' data-website-id='cfd90545-def3-4dd7-ba67-2f9fb7be4165'></script><script defer src='https://app.rybbit.io/api/script.js' data-site-id='1687'></script><script src='//instant.page/5.2.0' type='module' integrity='sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z'></script>
+
+</html>
