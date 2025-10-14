@@ -1,4 +1,4 @@
-[<< 2025 活动全记录](/post/2025%20-nian-%20Live%20-ji-ge-lei-huo-dong-can-zhan-ji-lu.html)
+[<< 2025 活动全记录](/post/23.html)
 
 Live 日是 2025/2/15，这篇回想迟到了一个月，但整场演出都恍如昨日。
 
