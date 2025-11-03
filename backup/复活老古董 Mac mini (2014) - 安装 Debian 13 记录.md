@@ -117,3 +117,149 @@ chezmoi 用来快速同步我的 dotfiles，后续就跟设置 VPS 的部分一�
 Mac mini 装 Debian 我计划了半天，然后执行了半天，总体来说顺利得有点出乎预料。对比安装 Windows，可能因为我选择了不装桌面环境，所以完全没有遇到很麻烦的驱动问题，真正花了时间处理的驱动其实就一个 Wifi。
 
 后续其实我也没想好真的拿它来做什么，可能会先配好 frp 出公网吧，这样我在上海的时候也能操作了。
+
+---
+
+更新 [goecs](https://github.com/oneclickvirt/ecs) 测试报告。看得出来这真是老古董了，硬盘读写速度相当幽默，我之前猜测硬盘是电脑无比卡顿的原因，现在算是验证了。
+
+<details><summary>展开测试报告</summary>
+<p>
+
+```
+-------------------------------------VPS融合怪测试-------------------------------------
+版本：v0.1.89
+测评频道: https://t.me/+UHVoo2U4VyA5NTQ1
+Go项目地址：https://github.com/oneclickvirt/ecs
+Shell项目地址：https://github.com/spiritLHLS/ecs
+--------------------------------------系统基础信息--------------------------------------
+ CPU 型号            : Intel(R) Core(TM) i5-4278U CPU @ 2.60GHz
+ CPU 数量            : 4 Physical CPU(s)
+ CPU 缓存            : L1: 128 KB / L2: 512 KB / L3: 3 MB
+ GPU 型号            : Haswell-ULT Integrated Graphics Controller
+ AES-NI              : ✔️ Enabled
+ VM-x/AMD-V/Hyper-V  : ✔️ Enabled
+ 内存                : 624.75 MB / 7.64 GB
+ 气球驱动            : ❌ Undetected
+ 内核页合并          : ❌ Undetected
+ 虚拟内存 Swap       : 0.00 MB / 7.88 GB
+ 硬盘空间            : 12.68 GB / 907.12 GB [1.4%%] /dev/sda2 - /
+ 启动盘路径          : /dev/sda2
+ 系统                : debian 13.1 [x86_64]
+ 内核                : 6.12.48+deb13-amd64
+ 系统在线时间        : 7 days, 06 hours, 07 minutes
+ 时区                : CST
+ 负载                : 0.00 / 0.00 / 0.00
+ 虚拟化架构          : Dedicated (No visible signage)
+ NAT类型             : Port Restricted Cone
+ TCP加速方式         : cubic
+ IPV4 ASN            : AS4134 Chinanet
+ IPV4 Location       : Guangzhou / Guangdong / China
+ IPV6 ASN            : AS4134 Chinatelecom IPv6 address for fixed broadband
+ IPV6 Location       : Shenzhen / Guangdong / CN
+ IPv6 子网掩码       : /128
+--------------------------------CPU测试-通过sysbench测试--------------------------------
+1 线程测试(单核)得分: 778.66
+4 线程测试(多核)得分: 2212.60
+---------------------------------内存测试-通过stream测试----------------------------------
+Function    Best Rate MB/s  Avg time     Min time     Max time
+Copy:           18643.9     0.008596     0.008582     0.008637
+Scale:          11888.0     0.013481     0.013459     0.013522
+Add:            13210.8     0.018198     0.018167     0.018305
+Triad:          12965.4     0.018554     0.018511     0.018588
+-----------------------------------硬盘测试-通过fio测试-----------------------------------
+测试路径         块大小       读测试(IOPS)            写测试(IOPS)            总和(IOPS)
+/root             4k        333.00 KB/s(83)         350.00 KB/s(87)         683.00 KB/s(170)
+/root             64k       4.68 MB/s(73)           4.97 MB/s(77)           9.64 MB/s(150)
+/root             512k      16.59 MB/s(32)          17.92 MB/s(35)          34.51 MB/s(67)
+/root             1m        22.08 MB/s(21)          24.38 MB/s(23)          46.46 MB/s(44)
+/                 4k        412.00 KB/s(103)        434.00 KB/s(108)        846.00 KB/s(211)
+/                 64k       6.06 MB/s(94)           6.39 MB/s(99)           12.45 MB/s(193)
+/                 512k      19.39 MB/s(37)          21.07 MB/s(41)          40.47 MB/s(78)
+/                 1m        23.61 MB/s(23)          25.71 MB/s(25)          49.32 MB/s(48)
+--------------------------------------IP质量检测--------------------------------------
+以下为各数据库编号，输出结果后将自带数据库来源对应的编号
+ipinfo数据库  [0] | scamalytics数据库 [1] | virustotal数据库   [2] | abuseipdb数据库   [3] | ip2location数据库    [4]
+ip-api数据库  [5] | ipwhois数据库     [6] | ipregistry数据库   [7] | ipdata数据库      [8] | db-ip数据库          [9]
+ipapiis数据库 [A] | ipapicom数据库    [B] | bigdatacloud数据库 [C] | dkly数据库        [D] | ipqualityscore数据库 [E]
+IPV4:
+安全得分:
+声誉(越高越好): 0 [2]
+信任得分(越高越好): 0 [8]
+VPN得分(越低越好): 0 [8]
+代理得分(越低越好): 0 [8]
+社区投票-无害: 0 [2]
+社区投票-恶意: 0 [2]
+威胁得分(越低越好): 0 [8]
+欺诈得分(越低越好): 83 [E]
+滥用得分(越低越好): 0 [3]
+威胁级别: low [9]
+黑名单记录统计:(有多少黑名单网站有记录):
+无害记录数: 0 [2]  恶意记录数: 0 [2]  可疑记录数: 0 [2]  无记录数: 95 [2]
+安全信息:
+使用类型: business [8] FixedLineISP [3] unknown [C] isp [0 7] corporate [9]
+公司类型: isp [0 7]
+是否云提供商: No [7]
+是否数据中心: No [0 5 8 C]
+是否移动设备: Yes [E] No [5 C]
+是否代理: Yes [E] No [0 4 5 7 8 9 C]
+是否VPN: No [0 7 C E]
+是否Tor: No [0 3 7 8 C E]
+是否Tor出口: No [7]
+是否网络爬虫: No [9 E]
+是否匿名: No [7 8]
+是否攻击者: No [7 8]
+是否滥用者: Yes [E] No [7 8 C]
+是否威胁: No [7 8 C]
+是否中继: No [0 7 8 C]
+是否Bogon: No [7 8 C]
+是否机器人: No [E]
+DNS-黑名单: 314(Total_Check) 0(Clean) 0(Blacklisted) 1(Other)
+IPV6:
+安全得分:
+滥用得分(越低越好): 0 [3]
+安全信息:
+使用类型: FixedLineISP [3]
+是否Tor: No [3]
+DNS-黑名单: 314(Total_Check) 0(Clean) 0(Blacklisted) 314(Other)
+--------------------------------------邮件端口检测--------------------------------------
+Platform  SMTP  SMTPS POP3  POP3S IMAP  IMAPS
+LocalPort ✔     ✔     ✔     ✔     ✔     ✔
+QQ        ✔     ✔     ✔     ✘     ✔     ✘
+163       ✔     ✔     ✔     ✘     ✔     ✘
+Sohu      ✔     ✔     ✔     ✘     ✔     ✘
+Yandex    ✔     ✔     ✔     ✘     ✔     ✘
+Gmail     ✔     ✔     ✘     ✘     ✘     ✘
+Outlook   ✔     ✘     ✔     ✘     ✔     ✘
+Office365 ✔     ✘     ✔     ✘     ✔     ✘
+Yahoo     ✔     ✔     ✘     ✘     ✘     ✘
+MailCOM   ✔     ✔     ✔     ✘     ✔     ✘
+MailRU    ✔     ✔     ✘     ✘     ✔     ✘
+AOL       ✔     ✔     ✘     ✘     ✘     ✘
+GMX       ✔     ✔     ✔     ✘     ✔     ✘
+Sina      ✔     ✔     ✔     ✘     ✔     ✘
+Apple     ✘     ✔     ✘     ✘     ✘     ✘
+FastMail  ✘     ✔     ✘     ✘     ✘     ✘
+ProtonMail✘     ✘     ✘     ✘     ✘     ✘
+MXRoute   ✔     ✘     ✔     ✘     ✔     ✘
+Namecrane ✔     ✔     ✔     ✘     ✔     ✘
+XYAMail   ✘     ✘     ✘     ✘     ✘     ✘
+ZohoMail  ✘     ✔     ✘     ✘     ✘     ✘
+Inbox_eu  ✔     ✔     ✔     ✘     ✘     ✘
+Free_fr   ✘     ✔     ✔     ✘     ✔     ✘
+--------------------------------------就近节点测速--------------------------------------
+位置            上传速度        下载速度        延迟            丢包率
+Speedtest.net   4.64 Mbps       4.38 Mbps       18.548113ms     8.76% (Sent: 354/Dup: 0/Max: 387)
+日本东京        23.91 Mbps      140.89 Mbps     58.945568ms     N/A
+洛杉矶          26.27 Mbps      146.14 Mbps     172.712802ms    N/A
+联通上海5G      19.21 Mbps      146.26 Mbps     32.293796ms     N/A
+电信Suzhou5G    25.26 Mbps      149.18 Mbps     23.112468ms     N/A
+电信上海        20.63 Mbps      148.42 Mbps     24.420606ms     N/A
+移动Suzhou      22.75 Mbps      1.83 Mbps       58.674959ms     N/A
+----------------------------------------------------------------------------------
+花费          : 13 分 12 秒
+时间          : Tue Oct 28 16:55:40 CST 2025
+----------------------------------------------------------------------------------
+```
+
+</p>
+</details> 
