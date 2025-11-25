@@ -10,9 +10,13 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="placeholder。">
+<meta name="description" content="### 背景
+
+今天早上八点，我正在睡梦中，突然被我妈打来的视频通话叫醒。">
 <meta property="og:title" content="「连不上 Wi-Fi 了」回顾一次紧急网络问题排查">
-<meta property="og:description" content="placeholder。">
+<meta property="og:description" content="### 背景
+
+今天早上八点，我正在睡梦中，突然被我妈打来的视频通话叫醒。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.quitw.org/post/52.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/49893724">
@@ -81,7 +85,31 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="Label LabelTime" style="background-color:#0969da">2025-11-25</span>
     <span class="Label LabelName" style="background-color:#303030"><object><a style="color:#fff" href="/tag.html#Dev">Dev</a></object></span>
 </div>
-<div class="markdown-body" id="postBody"><p>placeholder</p></div>
+<div class="markdown-body" id="postBody"><h3>背景</h3>
+<p>今天早上八点，我正在睡梦中，突然被我妈打来的视频通话叫醒。她的笔记本电脑打不开 PDF 阅读器了，也连不上家里的 Wi-Fi，她已经捣鼓 1h 但没解决，因为马上就要出门用电脑了，于是紧急求助于我。</p>
+<h3>现象</h3>
+<p>根据她给我演示，笔记本电脑和网络有以下现象：</p>
+<ul>
+<li>她常用的「迅捷 PDF 编辑器」双击打开没反应</li>
+<li>连接家里的 Wi-Fi 失败，无论 2.4G/5G，但：</li>
+<li>家里其他设备连接家里 Wi-Fi 均无问题</li>
+<li>连接她 iPhone 的热点可以连上，但浏览网页部分资源加载不出来</li>
+</ul>
+<h3>尝试解决</h3>
+<p>首先我先尝试重启大法，但她说已经重启好几次了，不行。同时我也 ssh 到 homelab 确认了家里的网络是没问题的。</p>
+<p>接着我想，既然还能连上手机热点还有网，那我就开 Rustdesk 远程看看吧。然而 Rustdesk 却提示远程电脑不在线，在视频通话中可以看到笔记本电脑连不上我的中继服务器。</p>
+<p>此时我有点一筹莫展了，在想难道是硬件问题，这可不好办。就在这时的聊天中，她提供了另一个重要线索。</p>
+<h3>「昨天连不上打印机，找人来修了」</h3>
+<p>昨天她在其他办公点，一时连不上打印机，只好找了师傅上门来修。师傅调试了很久，应该也没能很好解决，最后的方案给她留了一个网页快捷方式，能在浏览器打开打印机控制页面。我一看这个网页 URL 是 192.168.xx.xx，一个局域网地址，突然反应过来会不会是师傅改了 IP 配置。</p>
+<h3>再次尝试解决</h3>
+<p>打开网络属性，一眼就豁然开朗了。IPv4 被配置为手动，写死了地址、掩码和网关，这跟路由器分配的信息不匹配，自然是连接不上的。</p>
+<p>把 IP 分配改回 DHCP 后，所有问题都解决了。</p>
+<p>此时再看为什么 PDF 编辑器打不开，是因为迅捷在启动的时候会联网检查会员登录信息，但由于没有有效的网络连接，这一步直接阻塞住窗口正常打开了，相当幽默。</p>
+<p>不过我也没想明白为什么还能连上 iPhone 热点，甚至还有一点网。我的猜测是走了 IPv6，因为 IPv6 仍然是自动获取 IP，而且刚好运营商、手机和热点都打开了 IPv6。</p>
+<p>最终视频通话 17 分钟，总算把没网的问题完全解决，顺便把我整个人都整精神了。</p>
+<h3>回顾</h3>
+<p>事后回顾，我的调试思路明显有个大问题，网络问题竟然不先看 IP 和其他网卡配置。假如在初步已知条件下第一时间打开硬件属性检查，立刻就会发现问题了。硬件问题的可能性存在，但几率太小了，尤其是本机还是今年六月刚换的新机器。</p>
+<p>另外上门师傅的操作我感觉也很神，他这么改在那时是能用，但明显换一个网络环境就全部爆炸，也不知师傅是否完全放弃了笔记本电脑会带来带去这种场景。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">Published under (CC-BY-SA). Feel free to comment or share :)</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
