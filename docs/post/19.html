@@ -74,7 +74,8 @@ Redirect `dashboard.hostname.com...` to `https://hostname.com/dashboard...`:
       # define redirectregex
       traefik.http.middlewares.MIDDLEWARE_X.redirectregex.regex: '^(?:https?:\\/\\/)?dashboard\\.hostname\\.com(.*)'
       traefik.http.middlewares.MIDDLEWARE_X.redirectregex.replacement: 'https://hostname.com/dashboard$${1}'
-      ...
+      traefik.http.middlewares.MIDDLEWARE_X.redirectregex.permanent: true/false # code 301/302
+      ... # common router attributes, must have
       # use redirectregex
       traefik.http.routers.ROUTER_X.service: 'noop@internal' # avoid auto linking this middleware to other services
       traefik.http.routers.ROUTER_X.middlewares: 'MIDDLEWARE_X'
@@ -163,7 +164,8 @@ Redirect `dashboard.hostname.com...` to `https://hostname.com/dashboard...`:
       # define redirectregex
       traefik.http.middlewares.MIDDLEWARE_X.redirectregex.regex: '^(?:https?:\\/\\/)?dashboard\\.hostname\\.com(.*)'
       traefik.http.middlewares.MIDDLEWARE_X.redirectregex.replacement: 'https://hostname.com/dashboard$${1}'
-      ...
+      traefik.http.middlewares.MIDDLEWARE_X.redirectregex.permanent: true/false # code 301/302
+      ... # common router attributes, must have
       # use redirectregex
       traefik.http.routers.ROUTER_X.service: 'noop@internal' # avoid auto linking this middleware to other services
       traefik.http.routers.ROUTER_X.middlewares: 'MIDDLEWARE_X'
@@ -317,7 +319,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
       <span class="pl-c"><span class="pl-c">#</span> define redirectregex</span>
       <span class="pl-ent">traefik.http.middlewares.MIDDLEWARE_X.redirectregex.regex</span>: <span class="pl-s"><span class="pl-pds">"</span>^(?:https?:<span class="pl-cce">\\</span>/<span class="pl-cce">\\</span>/)?dashboard<span class="pl-cce">\\</span>.hostname<span class="pl-cce">\\</span>.com(.*)<span class="pl-pds">"</span></span>
       <span class="pl-ent">traefik.http.middlewares.MIDDLEWARE_X.redirectregex.replacement</span>: <span class="pl-s"><span class="pl-pds">"</span>https://hostname.com/dashboard$${1}<span class="pl-pds">"</span></span>
-      <span class="pl-s">...</span>
+      <span class="pl-ent">traefik.http.middlewares.MIDDLEWARE_X.redirectregex.permanent</span>: <span class="pl-s">true/false </span><span class="pl-c"><span class="pl-c">#</span> code 301/302</span>
+      <span class="pl-s">... </span><span class="pl-c"><span class="pl-c">#</span> common router attributes, must have</span>
       <span class="pl-c"><span class="pl-c">#</span> use redirectregex</span>
       <span class="pl-ent">traefik.http.routers.ROUTER_X.service</span>: <span class="pl-s"><span class="pl-pds">"</span>noop@internal<span class="pl-pds">"</span></span> <span class="pl-c"><span class="pl-c">#</span> avoid auto linking this middleware to other services</span>
       <span class="pl-ent">traefik.http.routers.ROUTER_X.middlewares</span>: <span class="pl-s"><span class="pl-pds">"</span>MIDDLEWARE_X<span class="pl-pds">"</span></span></pre></div>

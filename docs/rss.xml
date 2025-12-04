@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>/</link><description>Make it simple. Keep it simple. // 记录折腾，记录生活。</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://static.quitw.org/img/miku.jpg</url><title>avatar</title><link>/</link></image><lastBuildDate>Wed, 03 Dec 2025 17:52:18 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>你有这么强大的表达式进入 FFmpeg Filter</title><link>https://blog.quitw.org/post/55.html</link><description>最近在用 FFmpeg 批量转视频编码到 AV1，牺牲画质来换取低码率文件，以满足我走超小水管还能流畅播放 Homelab 上的视频的需求。</description><guid isPermaLink="true">https://blog.quitw.org/post/55.html</guid><pubDate>Wed, 03 Dec 2025 17:51:51 +0000</pubDate></item><item><title>咱妈呼的一口气，日音人的一场龙卷风</title><link>https://blog.quitw.org/post/54.html</link><description>[&lt;&lt; 2025 活动全记录](/post/23.html)
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>/</link><description>Make it simple. Keep it simple. // 记录折腾，记录生活。</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://static.quitw.org/img/miku.jpg</url><title>avatar</title><link>/</link></image><lastBuildDate>Thu, 04 Dec 2025 18:40:51 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>你有这么强大的表达式进入 FFmpeg Filter</title><link>https://blog.quitw.org/post/55.html</link><description>最近在用 FFmpeg 批量转视频编码到 AV1，牺牲画质来换取低码率文件，以满足我走超小水管还能流畅播放 Homelab 上的视频的需求。</description><guid isPermaLink="true">https://blog.quitw.org/post/55.html</guid><pubDate>Wed, 03 Dec 2025 17:51:51 +0000</pubDate></item><item><title>咱妈呼的一口气，日音人的一场龙卷风</title><link>https://blog.quitw.org/post/54.html</link><description>[&lt;&lt; 2025 活动全记录](/post/23.html)
 
 本文仅简单记录最近国内日音和日音人的一些状况。</description><guid isPermaLink="true">https://blog.quitw.org/post/54.html</guid><pubDate>Fri, 28 Nov 2025 18:53:11 +0000</pubDate></item><item><title>网站增加一个 Landing Page</title><link>https://blog.quitw.org/post/53.html</link><description>地址：&lt;https://quitw.org/&gt;
 
@@ -394,93 +394,94 @@ Check [docker compose file](https://github.com/purple4pur/docker_compose/blob/ma
 &#13;
 ### Conclusion&#13;
 &#13;
-This a my first time to try to connect all these services to do sequential jobs in such a workflow, and the results please me so well. Docker and the router Traefik actually make them much simpler and portable. I'm happy to take all-in-docker and continually having more fun with it.。</description><guid isPermaLink="true">https://blog.quitw.org/post/20.html</guid><pubDate>Thu, 12 Dec 2024 14:28:42 +0000</pubDate></item><item><title>Traefik Config Snippets</title><link>https://blog.quitw.org/post/19.html</link><description>&gt; Apply to `traefik:v3.2`&#13;
-&#13;
-### Example traefik `compose.yaml`&#13;
-&#13;
-See [purple4pur/docker_compose](https://github.com/purple4pur/docker_compose/blob/master/traefik/compose.yaml) .&#13;
-&#13;
-### Example `traefik.yaml`&#13;
-&#13;
-```yaml&#13;
-log:&#13;
-  level: 'WARN'&#13;
-api:&#13;
-  dashboard: true&#13;
-providers:&#13;
-  docker:&#13;
-    endpoint: 'unix:///var/run/docker.sock'&#13;
-    exposedbydefault: false&#13;
-entryPoints:&#13;
-  web:&#13;
-    address: ':80'&#13;
-  websecure:&#13;
-    address: ':443'&#13;
-certificatesResolvers:&#13;
-  cloudflare:&#13;
-    acme:&#13;
-      email: 'email@example.com'&#13;
-      storage: '/letsencrypt/acme_cloudflare.json'&#13;
-      dnsChallenge:&#13;
-        provider: 'cloudflare'&#13;
-        resolvers:&#13;
-          - '8.8.8.8:53'&#13;
-          - '1.1.1.1:53'&#13;
-  myresolver:&#13;
-    acme:&#13;
-      email: 'email@example.com'&#13;
-      storage: '/letsencrypt/acme.json'&#13;
-      httpChallenge:&#13;
-        entryPoint: 'web'&#13;
-```&#13;
-&#13;
-### Route a https URL to an internal service on :8080&#13;
-&#13;
-```yaml&#13;
-    ...&#13;
-    labels:&#13;
-      traefik.enable: true&#13;
-      traefik.http.services.SERVICE_X.loadbalancer.server.port: '8080'&#13;
-      traefik.http.routers.ROUTER_X.rule: '...'&#13;
-      traefik.http.routers.ROUTER_X.entrypoints: 'websecure'&#13;
-      traefik.http.routers.ROUTER_X.tls.certresolver: 'cloudflare'&#13;
-      traefik.http.routers.ROUTER_X.service: 'SERVICE_X'&#13;
-```&#13;
-&#13;
-### middleware: redirectregex&#13;
-&#13;
-Redirect `dashboard.hostname.com...` to `https://hostname.com/dashboard...`:&#13;
-&#13;
-```yaml&#13;
-    ...&#13;
-    labels:&#13;
-      ...&#13;
-      # define redirectregex&#13;
-      traefik.http.middlewares.MIDDLEWARE_X.redirectregex.regex: '^(?:https?:\\/\\/)?dashboard\\.hostname\\.com(.*)'&#13;
-      traefik.http.middlewares.MIDDLEWARE_X.redirectregex.replacement: 'https://hostname.com/dashboard$${1}'&#13;
-      ...&#13;
-      # use redirectregex&#13;
-      traefik.http.routers.ROUTER_X.service: 'noop@internal' # avoid auto linking this middleware to other services&#13;
-      traefik.http.routers.ROUTER_X.middlewares: 'MIDDLEWARE_X'&#13;
-```&#13;
-&#13;
-### middleware: basicAuth&#13;
-&#13;
-```yaml&#13;
-    ...&#13;
-    labels:&#13;
-      ...&#13;
-      # define basicAuth&#13;
-      traefik.http.middlewares.MIDDLEWARE_X.basicAuth.users: 'test:$apr1$7ij1g6q3$WiPOcMX6m/gWCC3kKP9kh0'&#13;
-      ...&#13;
-      # use basicAuth&#13;
-      traefik.http.routers.ROUTER_X.middlewares: 'MIDDLEWARE_X'&#13;
-```&#13;
-&#13;
-, where `users` field is Apache salted MD5 generated by `htpasswd`:&#13;
-&#13;
-```sh&#13;
-htpasswd -n USERNAME&#13;
+This a my first time to try to connect all these services to do sequential jobs in such a workflow, and the results please me so well. Docker and the router Traefik actually make them much simpler and portable. I'm happy to take all-in-docker and continually having more fun with it.。</description><guid isPermaLink="true">https://blog.quitw.org/post/20.html</guid><pubDate>Thu, 12 Dec 2024 14:28:42 +0000</pubDate></item><item><title>Traefik Config Snippets</title><link>https://blog.quitw.org/post/19.html</link><description>&gt; Apply to `traefik:v3.2`
+
+### Example traefik `compose.yaml`
+
+See [purple4pur/docker_compose](https://github.com/purple4pur/docker_compose/blob/master/traefik/compose.yaml) .
+
+### Example `traefik.yaml`
+
+```yaml
+log:
+  level: 'WARN'
+api:
+  dashboard: true
+providers:
+  docker:
+    endpoint: 'unix:///var/run/docker.sock'
+    exposedbydefault: false
+entryPoints:
+  web:
+    address: ':80'
+  websecure:
+    address: ':443'
+certificatesResolvers:
+  cloudflare:
+    acme:
+      email: 'email@example.com'
+      storage: '/letsencrypt/acme_cloudflare.json'
+      dnsChallenge:
+        provider: 'cloudflare'
+        resolvers:
+          - '8.8.8.8:53'
+          - '1.1.1.1:53'
+  myresolver:
+    acme:
+      email: 'email@example.com'
+      storage: '/letsencrypt/acme.json'
+      httpChallenge:
+        entryPoint: 'web'
+```
+
+### Route a https URL to an internal service on :8080
+
+```yaml
+    ...
+    labels:
+      traefik.enable: true
+      traefik.http.services.SERVICE_X.loadbalancer.server.port: '8080'
+      traefik.http.routers.ROUTER_X.rule: '...'
+      traefik.http.routers.ROUTER_X.entrypoints: 'websecure'
+      traefik.http.routers.ROUTER_X.tls.certresolver: 'cloudflare'
+      traefik.http.routers.ROUTER_X.service: 'SERVICE_X'
+```
+
+### middleware: redirectregex
+
+Redirect `dashboard.hostname.com...` to `https://hostname.com/dashboard...`:
+
+```yaml
+    ...
+    labels:
+      ...
+      # define redirectregex
+      traefik.http.middlewares.MIDDLEWARE_X.redirectregex.regex: '^(?:https?:\\/\\/)?dashboard\\.hostname\\.com(.*)'
+      traefik.http.middlewares.MIDDLEWARE_X.redirectregex.replacement: 'https://hostname.com/dashboard$${1}'
+      traefik.http.middlewares.MIDDLEWARE_X.redirectregex.permanent: true/false # code 301/302
+      ... # common router attributes, must have
+      # use redirectregex
+      traefik.http.routers.ROUTER_X.service: 'noop@internal' # avoid auto linking this middleware to other services
+      traefik.http.routers.ROUTER_X.middlewares: 'MIDDLEWARE_X'
+```
+
+### middleware: basicAuth
+
+```yaml
+    ...
+    labels:
+      ...
+      # define basicAuth
+      traefik.http.middlewares.MIDDLEWARE_X.basicAuth.users: 'test:$apr1$7ij1g6q3$WiPOcMX6m/gWCC3kKP9kh0'
+      ...
+      # use basicAuth
+      traefik.http.routers.ROUTER_X.middlewares: 'MIDDLEWARE_X'
+```
+
+, where `users` field is Apache salted MD5 generated by `htpasswd`:
+
+```sh
+htpasswd -n USERNAME
 ```。</description><guid isPermaLink="true">https://blog.quitw.org/post/19.html</guid><pubDate>Wed, 11 Dec 2024 14:58:11 +0000</pubDate></item><item><title>Allow Non-superuser to Handle One's Application Container: Finding the Solution</title><link>https://blog.quitw.org/post/18.html</link><description>### Background&#13;
 &#13;
 A friend of mine is hosting a QQ bot [(Miao-Yunzai)](https://github.com/yoimiya-kokomi/Miao-Yunzai) on my VPS, and let's call him friendR here. Recently I'm switching the bot to my new VPS, and trying to host as much as possible services in docker in order to keep the host machine clean.&#13;

@@ -62,7 +62,8 @@ Redirect `dashboard.hostname.com...` to `https://hostname.com/dashboard...`:
       # define redirectregex
       traefik.http.middlewares.MIDDLEWARE_X.redirectregex.regex: "^(?:https?:\\/\\/)?dashboard\\.hostname\\.com(.*)"
       traefik.http.middlewares.MIDDLEWARE_X.redirectregex.replacement: "https://hostname.com/dashboard$${1}"
-      ...
+      traefik.http.middlewares.MIDDLEWARE_X.redirectregex.permanent: true/false # code 301/302
+      ... # common router attributes, must have
       # use redirectregex
       traefik.http.routers.ROUTER_X.service: "noop@internal" # avoid auto linking this middleware to other services
       traefik.http.routers.ROUTER_X.middlewares: "MIDDLEWARE_X"
