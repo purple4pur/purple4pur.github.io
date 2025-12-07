@@ -96,3 +96,9 @@ jobs:
           curl -X POST "${{ secrets.ACTION_URL }}" -d '${{ secrets.ACTION_PAYLOAD }}' -o resp.json
           jq '{output: .logEntry.output, exitCode: .logEntry.exitCode}' resp.json
           [[ "$(jq -r '.logEntry.exitCode' resp.json)" == 0 ]]
+      - name: Purge Cloudflare Cache
+        run: |
+          curl https://api.cloudflare.com/client/v4/zones/{{ vars.CF_ZONE_ID }}/purge_cache \
+              -H 'Content-Type: application/json' \
+              -H "Authorization: Bearer {{ secrets.CF_API_TOKEN }}" \
+              -d '{"hosts": ["{{ vars.BLOG_HOST }}"]}'
