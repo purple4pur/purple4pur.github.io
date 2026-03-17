@@ -1,5 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>/</link><description>Make it simple. Keep it simple. // 记录折腾，记录生活。</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://static.quitw.org/img/miku.jpg</url><title>avatar</title><link>/</link></image><lastBuildDate>Sat, 31 Jan 2026 19:23:47 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>架子鼓演奏《憂、燦々》的视频制作幕后 - 视频变速与同步</title><link>https://blog.quitw.org/post/62.html</link><description>关联视频：[【架子鼓】ヨルシカ - 憂、燦々[90bpm] ](https://www.bilibili.com/video/BV1c16JBREM6)
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>/</link><description>Make it simple. Keep it simple. // 记录折腾，记录生活。</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://static.quitw.org/img/miku.jpg</url><title>avatar</title><link>/</link></image><lastBuildDate>Tue, 17 Mar 2026 17:21:48 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>可能是最「轻量」的 Coding CLI 使用方法</title><link>https://blog.quitw.org/post/63.html</link><description>核心出装：**Docker + qwen-coder Free Tier**
+
+在项目根目录里用一行 docker 命令即可启动：
+
+```sh
+docker run \
+    --rm \
+    -it \
+    -v .qwen:/root/.qwen \
+    -v .:/ws \
+    -w /ws \
+    ghcr.io/qwenlm/qwen-code:0.12
+```
+
+可以根据开发需要把 port expose 加上（`-p 8080:5173`），然后配合 ssh port forwarding 即可轻易实现在本机访问开发机的 dev server。</description><guid isPermaLink="true">https://blog.quitw.org/post/63.html</guid><pubDate>Tue, 17 Mar 2026 17:21:15 +0000</pubDate></item><item><title>架子鼓演奏《憂、燦々》的视频制作幕后 - 视频变速与同步</title><link>https://blog.quitw.org/post/62.html</link><description>关联视频：[【架子鼓】ヨルシカ - 憂、燦々[90bpm] ](https://www.bilibili.com/video/BV1c16JBREM6)
 
 视频制作中碰到最棘手的问题是谱面视频和演奏视频如何同步。</description><guid isPermaLink="true">https://blog.quitw.org/post/62.html</guid><pubDate>Sat, 31 Jan 2026 19:23:18 +0000</pubDate></item><item><title>TaskQueue - 极简的任务队列管理</title><link>https://blog.quitw.org/post/61.html</link><description>先放链接：&lt;https://github.com/purple4pur/taskqueue&gt;
 
