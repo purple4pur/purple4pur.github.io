@@ -1,4 +1,4 @@
-核心出装：**Docker + qwen-coder Free Tier**
+核心出装：**Docker + qwen-code Free Tier**
 
 在项目根目录里用一行 docker 命令即可启动：
 
