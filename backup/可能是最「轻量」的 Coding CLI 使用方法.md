@@ -1,4 +1,4 @@
-核心出装：**Docker + qwen-code Free Tier**
+核心出装：**Docker + Qwen Code (Free Tier)**
 
 在项目根目录里用一行 docker 命令即可启动：
 
@@ -32,7 +32,7 @@ function qwen {
 }
 ```
 
-Qwen 提供了一定的免费额度，进入 CLI 后访问链接登陆即可，无需配置 API。免费额度每日刷新，详见 [身份验证-Qwen OAuth](https://qwenlm.github.io/qwen-code-docs/zh/users/configuration/auth/)：
+Qwen Code 提供了一定的免费额度，进入 CLI 后访问链接登陆即可，无需配置 API。免费额度每日刷新，详见 [身份验证-Qwen OAuth](https://qwenlm.github.io/qwen-code-docs/zh/users/configuration/auth/)：
 
 > 费用与配额：完全免费，配额为每分钟 60 次请求，每天 1,000 次请求。
 
@@ -69,3 +69,5 @@ docker run \
 # Upgrade
 docker pull ghcr.io/anomalyco/opencode
 ```
+
+Image 体积很小，但启动后更占内存。同样有免费额度，同时支持一些新模型的试用，例如 Xiaomi MiMo-V2-Pro 。
