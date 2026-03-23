@@ -16,7 +16,7 @@ docker run \
 docker pull ghcr.io/qwenlm/qwen-code:0.12
 ```
 
-可以根据开发需要把 port expose 加上（`-p 8080:5173`），然后配合 ssh port forwarding 即可轻易实现在本机访问开发机的 dev server。
+可以根据开发需要加上 port expose (`-p 8080:5173`)，然后配合 ssh port forwarding (`-L 8080:localhost:8080`) 即可轻易实现在本机访问开发机的 dev server。
 
 还可以把这行命令包装成 bash function 放在 .bashrc 里，作为一个快速开始相当便捷：
 

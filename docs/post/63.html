@@ -28,7 +28,7 @@ docker run \
 docker pull ghcr.io/qwenlm/qwen-code:0.12
 ```
 
-可以根据开发需要把 port expose 加上（`-p 8080:5173`），然后配合 ssh port forwarding 即可轻易实现在本机访问开发机的 dev server。">
+可以根据开发需要加上 port expose (`-p 8080:5173`)，然后配合 ssh port forwarding (`-L 8080:localhost:8080`) 即可轻易实现在本机访问开发机的 dev server。">
 <meta property="og:title" content="可能是最「轻量」的 Coding CLI 使用方法">
 <meta property="og:description" content="核心出装：**Docker + Qwen Code (Free Tier)**
 
@@ -48,7 +48,7 @@ docker run \
 docker pull ghcr.io/qwenlm/qwen-code:0.12
 ```
 
-可以根据开发需要把 port expose 加上（`-p 8080:5173`），然后配合 ssh port forwarding 即可轻易实现在本机访问开发机的 dev server。">
+可以根据开发需要加上 port expose (`-p 8080:5173`)，然后配合 ssh port forwarding (`-L 8080:localhost:8080`) 即可轻易实现在本机访问开发机的 dev server。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.quitw.org/post/63.html">
 <meta property="og:image" content="https://static.quitw.org/img/miku.jpg">
@@ -140,7 +140,7 @@ docker run \
 
 <span class="pl-c"><span class="pl-c">#</span> Upgrade</span>
 docker pull ghcr.io/qwenlm/qwen-code:0.12</pre></div>
-<p>可以根据开发需要把 port expose 加上（<code class="notranslate">-p 8080:5173</code>），然后配合 ssh port forwarding 即可轻易实现在本机访问开发机的 dev server。</p>
+<p>可以根据开发需要加上 port expose (<code class="notranslate">-p 8080:5173</code>)，然后配合 ssh port forwarding (<code class="notranslate">-L 8080:localhost:8080</code>) 即可轻易实现在本机访问开发机的 dev server。</p>
 <p>还可以把这行命令包装成 bash function 放在 .bashrc 里，作为一个快速开始相当便捷：</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">qwen</span> {
     <span class="pl-k">local</span> CMD
