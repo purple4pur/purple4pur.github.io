@@ -3,13 +3,17 @@
 在项目根目录里用一行 docker 命令即可启动：
 
 ```sh
+# Quick start
 docker run \
-    --rm \
-    -it \
+    --rm -it \
     -v .qwen:/root/.qwen \
     -v .:/ws \
     -w /ws \
+    --pull always \
     ghcr.io/qwenlm/qwen-code:0.12
+
+# Upgrade
+docker pull ghcr.io/qwenlm/qwen-code:0.12
 ```
 
 可以根据开发需要把 port expose 加上（`-p 8080:5173`），然后配合 ssh port forwarding 即可轻易实现在本机访问开发机的 dev server。
@@ -23,11 +27,11 @@ function qwen {
         local CMD="qwen $@"
     fi
     docker run \
-        --rm \
-        -it \
+        --rm -it \
         -v .qwen:/root/.qwen \
         -v .:/ws \
         -w /ws \
+        --pull always \
         ghcr.io/qwenlm/qwen-code:0.12 $CMD
 }
 ```
@@ -35,8 +39,6 @@ function qwen {
 Qwen Code 提供了一定的免费额度，进入 CLI 后访问链接登陆即可，无需配置 API。免费额度每日刷新，详见 [身份验证-Qwen OAuth](https://qwenlm.github.io/qwen-code-docs/zh/users/configuration/auth/)：
 
 > 费用与配额：完全免费，配额为每分钟 60 次请求，每天 1,000 次请求。
-
-启动 Qwen 后如果提示有升级，可以退出来手动拉取最新版：`docker pull ghcr.io/qwenlm/qwen-code:0.12` 。
 
 ---
 
@@ -59,11 +61,12 @@ OpenCode 版本：
 ```sh
 # Quick start
 docker run \
-    -it --rm \
+    --rm -it \
     -v .share_opencode:/root/.local/share/opencode \
     -v .config_opencode:/root/.config/opencode \
     -v .:/ws \
     -w /ws \
+    --pull always \
     ghcr.io/anomalyco/opencode
 
 # Upgrade
