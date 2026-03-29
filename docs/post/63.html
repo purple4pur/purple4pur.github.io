@@ -203,7 +203,7 @@ docker pull ghcr.io/anomalyco/opencode</pre></div>
     <span><a href="https://github.com/purple4pur/purple4pur.github.io" target="_blank">Source Code</a> • </span>
     <span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a> - <a href="https://github.com/purple4pur/Gmeek" target="_blank">forked</a></span>
 </div>
-<div id="footer3">Build @ 2026-03-23T00:23:24+08:00</div>
+<div id="footer3">Build @ 2026-03-30T00:28:57+08:00</div>
 
 <script>
 var now=new Date();
@@ -252,7 +252,11 @@ console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
-
+cmButton=document.getElementById("cmButton");
+    span=document.createElement("span");
+    span.setAttribute("class","Counter");
+    span.innerHTML="1";
+    cmButton.appendChild(span);
 
 
 function openComments(){
