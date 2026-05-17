@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>/</link><description>Make it simple. Keep it simple. // 记录折腾，记录生活。</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://static.quitw.org/img/miku.jpg</url><title>avatar</title><link>/</link></image><lastBuildDate>Thu, 07 May 2026 10:21:35 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>2026 年出行轨迹记录</title><link>https://blog.quitw.org/post/65.html</link><description>[&lt;&lt; 2025](/post/57.html)
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>/</link><description>Make it simple. Keep it simple. // 记录折腾，记录生活。</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://static.quitw.org/img/miku.jpg</url><title>avatar</title><link>/</link></image><lastBuildDate>Sun, 17 May 2026 11:30:51 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>2026 年出行轨迹记录</title><link>https://blog.quitw.org/post/65.html</link><description>[&lt;&lt; 2025](/post/57.html)
 
 记录本年度所有的飞行和跨市铁路行程。</description><guid isPermaLink="true">https://blog.quitw.org/post/65.html</guid><pubDate>Sat, 04 Apr 2026 18:57:53 +0000</pubDate></item><item><title>2026 年参战活动一览</title><link>https://blog.quitw.org/post/64.html</link><description>[&lt;&lt; 2025](/post/23.html)
 
@@ -1126,88 +1126,133 @@ docker compose logs [-f] [-n N] [SERVICE]   # print/follow stdout in service
 docker compose run SERVICE CMD              # run a one-time command in a new service, not the running one
 docker compose rm [OPTIONS] [SERVICE]       # remove stopped service from ps
                   -s                        # stop and remove
-```。</description><guid isPermaLink="true">https://blog.quitw.org/post/15.html</guid><pubDate>Mon, 18 Nov 2024 17:17:14 +0000</pubDate></item><item><title>Installing CLI Tools I Use on Debian/Linux</title><link>https://blog.quitw.org/post/14.html</link><description>### git&#13;
-&#13;
-```sh&#13;
-(root) apt update&#13;
-(root) apt install git&#13;
-```&#13;
-&#13;
-### chezmoi&#13;
-&#13;
-[[Official installation guide]](https://www.chezmoi.io/install/#one-line-binary-install)&#13;
-&#13;
-```sh&#13;
-sh -c '$(curl -fsLS get.chezmoi.io)' # install to $HOME/bin&#13;
-```&#13;
-&#13;
-### starship&#13;
-&#13;
-[[Official installation guide]](https://starship.rs/guide/#step-1-install-starship)&#13;
-&#13;
-```sh&#13;
-(root) curl -sS https://starship.rs/install.sh | sh # install to /usr/local/bin&#13;
-```&#13;
-&#13;
-### neovim&#13;
-&#13;
-[[Official installation guide]](https://github.com/neovim/neovim/blob/master/INSTALL.md#pre-built-archives-1)&#13;
-&#13;
-```sh&#13;
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz&#13;
-mkdir $HOME/opt&#13;
-rm $HOME/opt/nvim-linux64 -rf # remove old version&#13;
-tar -C $HOME/opt -xzf nvim-linux64.tar.gz # install to $HOME/opt/nvim-linux64/bin&#13;
-rm nvim-linux64.tar.gz&#13;
-```&#13;
-&#13;
-### fd&#13;
-&#13;
-[[Github]](https://github.com/sharkdp/fd)&#13;
-&#13;
-```sh&#13;
-(root) apt update&#13;
-(root) apt install fd-find&#13;
-(root) ln -sf /usr/bin/fdfind /usr/bin/fd&#13;
-```&#13;
-&#13;
-### rg&#13;
-&#13;
-[[Github]](https://github.com/BurntSushi/ripgrep)&#13;
-&#13;
-```sh&#13;
-(root) apt update&#13;
-(root) apt install ripgrep&#13;
-```&#13;
-&#13;
-### docker&#13;
-&#13;
-[[Official installation guide]](https://docs.docker.com/engine/install/debian/#install-using-the-repository)&#13;
-&#13;
-```sh&#13;
-# Add Docker's official GPG key:&#13;
-sudo apt-get update&#13;
-sudo apt-get install ca-certificates curl&#13;
-sudo install -m 0755 -d /etc/apt/keyrings&#13;
-sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc&#13;
-sudo chmod a+r /etc/apt/keyrings/docker.asc&#13;
-&#13;
-# Add the repository to Apt sources:&#13;
-echo \&#13;
-  'deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \&#13;
-  $(. /etc/os-release &amp;&amp; echo '$VERSION_CODENAME') stable' | \&#13;
-  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null&#13;
-sudo apt-get update&#13;
-&#13;
-# Install&#13;
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin&#13;
-&#13;
-# Hello world&#13;
-sudo docker run hello-world&#13;
-&#13;
-# Add user to docker group to grant him privileges&#13;
-# WARNING: Do with caution! docker group has the same permissions of root!&#13;
-sudo usermod -aG docker USERNAME&#13;
+```。</description><guid isPermaLink="true">https://blog.quitw.org/post/15.html</guid><pubDate>Mon, 18 Nov 2024 17:17:14 +0000</pubDate></item><item><title>Installing CLI Tools I Use on Debian/Linux</title><link>https://blog.quitw.org/post/14.html</link><description>### Renew in 2026
+
+1. Install `bin` from &lt;https://github.com/marcosnils/bin/releases/latest&gt;
+
+```bash
+# Download bootstrap
+cd ~ &amp;&amp; mkdir bin
+curl -LO &lt;asset_url&gt;
+chmod +x &lt;executable&gt;
+
+# Install &amp; manage itself
+./&lt;executable&gt; install https://github.com/marcosnils/bin
+
+# Cleanup
+rm &lt;executable&gt;
+
+# Prepand ~/bin to $PATH
+# DIY
+```
+
+2. Install binaries
+
+```bash
+bin i &lt;url&gt;
+
+Path                            Version   URL                                                        Status
+/usr/local/bin/bin              v0.26.0   https://github.com/marcosnils/bin/releases/tag/v0.26.0     OK
+/usr/local/bin/btop             v1.4.7    https://github.com/aristocratos/btop                       OK
+/usr/local/bin/chezmoi          v2.70.3   https://github.com/twpayne/chezmoi/releases/tag/v2.70.3    OK
+/usr/local/bin/dust             v1.2.4    https://github.com/bootandy/dust                           OK
+/usr/local/bin/fd               v10.4.2   https://github.com/sharkdp/fd/releases/tag/v10.4.2         OK
+/usr/local/bin/frpc             v0.68.1   https://github.com/fatedier/frp/releases/tag/v0.68.1       OK
+/usr/local/bin/goecs            v0.1.129  https://github.com/oneclickvirt/ecs/releases/tag/v0.1.129  OK
+/usr/local/bin/lazygit          v0.61.1   https://github.com/jesseduffield/lazygit                   OK
+/usr/local/bin/mihomo-v3-go123  v1.19.25  https://github.com/MetaCubeX/mihomo/releases/tag/v1.19.25  OK
+/usr/local/bin/moor             v2.13.2   https://github.com/walles/moor/releases/tag/v2.13.2        OK
+/usr/local/bin/nvim.appimage    v0.12.2   https://github.com/neovim/neovim/releases/tag/v0.12.2      OK
+/usr/local/bin/rg               15.1.0    https://github.com/BurntSushi/ripgrep/releases/tag/15.1.0  OK
+/usr/local/bin/riff             3.6.1     github.com/walles/riff                                     OK
+/usr/local/bin/starship         v1.25.1   https://github.com/starship/starship/releases/tag/v1.25.1  OK
+/usr/local/bin/uv               0.11.14   https://github.com/astral-sh/uv                            OK
+```
+
+---
+
+### git
+
+```sh
+(root) apt update
+(root) apt install git
+```
+
+### chezmoi
+
+[[Official installation guide]](https://www.chezmoi.io/install/#one-line-binary-install)
+
+```sh
+sh -c '$(curl -fsLS get.chezmoi.io)' # install to $HOME/bin
+```
+
+### starship
+
+[[Official installation guide]](https://starship.rs/guide/#step-1-install-starship)
+
+```sh
+(root) curl -sS https://starship.rs/install.sh | sh # install to /usr/local/bin
+```
+
+### neovim
+
+[[Official installation guide]](https://github.com/neovim/neovim/blob/master/INSTALL.md#pre-built-archives-1)
+
+```sh
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+mkdir $HOME/opt
+rm $HOME/opt/nvim-linux64 -rf # remove old version
+tar -C $HOME/opt -xzf nvim-linux64.tar.gz # install to $HOME/opt/nvim-linux64/bin
+rm nvim-linux64.tar.gz
+```
+
+### fd
+
+[[Github]](https://github.com/sharkdp/fd)
+
+```sh
+(root) apt update
+(root) apt install fd-find
+(root) ln -sf /usr/bin/fdfind /usr/bin/fd
+```
+
+### rg
+
+[[Github]](https://github.com/BurntSushi/ripgrep)
+
+```sh
+(root) apt update
+(root) apt install ripgrep
+```
+
+### docker
+
+[[Official installation guide]](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
+
+```sh
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  'deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+  $(. /etc/os-release &amp;&amp; echo '$VERSION_CODENAME') stable' | \
+  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+sudo apt-get update
+
+# Install
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Hello world
+sudo docker run hello-world
+
+# Add user to docker group to grant him privileges
+# WARNING: Do with caution! docker group has the same permissions of root!
+sudo usermod -aG docker USERNAME
 ```。</description><guid isPermaLink="true">https://blog.quitw.org/post/14.html</guid><pubDate>Sun, 17 Nov 2024 17:09:19 +0000</pubDate></item><item><title>goto Repetition ([-&gt;n]) in SVA</title><link>https://blog.quitw.org/post/13.html</link><description>This article is basically a dev memo of [Ben Cohen's amazing tutorial on this topic](https://systemverilog.us/vf/goto_conseq.pdf) , followed by a practical live demo in my work.&#13;
 &#13;
 ### Basic usage and live demo&#13;
