@@ -23,6 +23,7 @@ rm <executable>
 ```bash
 bin i <url>
 
+# Tools installed as root as an example
 Path                            Version   URL                                                        Status
 /usr/local/bin/bin              v0.26.0   https://github.com/marcosnils/bin/releases/tag/v0.26.0     OK
 /usr/local/bin/btop             v1.4.7    https://github.com/aristocratos/btop                       OK
@@ -39,6 +40,12 @@ Path                            Version   URL                                   
 /usr/local/bin/riff             3.6.1     github.com/walles/riff                                     OK
 /usr/local/bin/starship         v1.25.1   https://github.com/starship/starship/releases/tag/v1.25.1  OK
 /usr/local/bin/uv               0.11.14   https://github.com/astral-sh/uv                            OK
+
+# Make binaries executable for everyone (when installed as root)
+bin | rg '^/' | cut -d' ' -f1 | xargs chmod +x
+
+# Set GitHub PAT to resolve access limits
+export GITHUB_AUTH_TOKEN=github_pat_xyz
 ```
 
 ---
