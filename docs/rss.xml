@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>/</link><description>Make it simple. Keep it simple. // 记录折腾，记录生活。</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://static.quitw.org/img/miku.jpg</url><title>avatar</title><link>/</link></image><lastBuildDate>Sun, 17 May 2026 11:40:09 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>2026 年出行轨迹记录</title><link>https://blog.quitw.org/post/65.html</link><description>[&lt;&lt; 2025](/post/57.html)
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Purple4pur's Canvas</title><link>/</link><description>Make it simple. Keep it simple. // 记录折腾，记录生活。</description><copyright>Purple4pur's Canvas</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://static.quitw.org/img/miku.jpg</url><title>avatar</title><link>/</link></image><lastBuildDate>Thu, 21 May 2026 09:24:27 +0000</lastBuildDate><managingEditor>Purple4pur's Canvas</managingEditor><ttl>60</ttl><webMaster>Purple4pur's Canvas</webMaster><item><title>2026 年出行轨迹记录</title><link>https://blog.quitw.org/post/65.html</link><description>[&lt;&lt; 2025](/post/57.html)
 
 记录本年度所有的飞行和跨市铁路行程。</description><guid isPermaLink="true">https://blog.quitw.org/post/65.html</guid><pubDate>Sat, 04 Apr 2026 18:57:53 +0000</pubDate></item><item><title>2026 年参战活动一览</title><link>https://blog.quitw.org/post/64.html</link><description>[&lt;&lt; 2025](/post/23.html)
 
@@ -1155,7 +1155,8 @@ bin i &lt;url&gt;
 Path                            Version   URL                                                        Status
 /usr/local/bin/bin              v0.26.0   https://github.com/marcosnils/bin/releases/tag/v0.26.0     OK
 /usr/local/bin/btop             v1.4.7    https://github.com/aristocratos/btop                       OK
-/usr/local/bin/chezmoi          v2.70.3   https://github.com/twpayne/chezmoi/releases/tag/v2.70.3    OK
+/usr/local/bin/chezmoi          v2.70.4   https://github.com/twpayne/chezmoi/releases/tag/v2.70.4    OK
+/usr/local/bin/clifm            v1.27.1   https://github.com/leo-arch/clifm                          OK
 /usr/local/bin/dust             v1.2.4    https://github.com/bootandy/dust                           OK
 /usr/local/bin/fd               v10.4.2   https://github.com/sharkdp/fd/releases/tag/v10.4.2         OK
 /usr/local/bin/frpc             v0.68.1   https://github.com/fatedier/frp/releases/tag/v0.68.1       OK
@@ -1167,7 +1168,7 @@ Path                            Version   URL                                   
 /usr/local/bin/rg               15.1.0    https://github.com/BurntSushi/ripgrep/releases/tag/15.1.0  OK
 /usr/local/bin/riff             3.6.1     github.com/walles/riff                                     OK
 /usr/local/bin/starship         v1.25.1   https://github.com/starship/starship/releases/tag/v1.25.1  OK
-/usr/local/bin/uv               0.11.14   https://github.com/astral-sh/uv                            OK
+/usr/local/bin/uv               0.11.15   https://github.com/astral-sh/uv/releases/tag/0.11.15       OK
 
 # Make binaries executable for everyone (when installed as root)
 bin | rg '^/' | cut -d' ' -f1 | xargs chmod +x
