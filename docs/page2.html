@@ -11,30 +11,32 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="Make it simple. Keep it simple. // 记录折腾，记录生活。">
-<meta property="og:title" content="Purple4pur's Canvas">
+<meta property="og:title" content="Purple4pur&#39;s Canvas">
 <meta property="og:description" content="Make it simple. Keep it simple. // 记录折腾，记录生活。">
 <meta property="og:type" content="blog">
 <meta property="og:url" content="https://blog.quitw.org">
 <meta property="og:image" content="https://static.quitw.org/img/miku.jpg">
-<title>Purple4pur's Canvas</title>
+<title>Purple4pur&#39;s Canvas</title>
 
 </head>
 <style>
-body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 24px auto;padding: 40px;font-size: 16px;font-family: system-ui, -apple-system, "Segoe UI", sans-serif;line-height: 1.5;}
 #header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
-#footer {margin-top:64px; text-align: center;font-size: small;}
+#footer {margin-top:64px; text-align: center;font-size: 0.875rem;}
 
 </style>
 
 <style>
-.avatar {transition: 0.8s;width:64px;height:64px;object-fit: cover;}
-.avatar:hover{transform: scale(1.15) rotate(360deg);}
-.title-left a{color:inherit;text-decoration:none;vertical-align: bottom;font-size:40px;font-weight: bold;font-family:Monaco;margin-left:8px;}
+.avatar {transition: transform 0.3s ease;width:64px;height:64px;object-fit: cover;}
+@media (hover:hover){.avatar:hover{transform: scale(1.1);}}
+@media (prefers-reduced-motion: reduce){.avatar{transition:none;}.avatar:hover{transform:none;}}
+.title-left .blogTitle{color:inherit;text-decoration:none;vertical-align: bottom;font-size:40px;font-weight: bold;font-family:Monaco,ui-monospace,monospace;margin:0 0 0 8px;line-height:1.2;}
 .title-right{display:flex;margin:auto 0 0 auto;}
 .title-right button{margin-right:8px;padding:16px;}
 .title-right .circle{padding: 14px 16px;}
 
-.SideNav{min-width: 360px;}
+.SideNav{width:100%;}
+.pagination a,.pagination span{display:inline-flex;align-items:center;justify-content:center;min-width:36px;min-height:36px;}
 .SideNav-icon{margin-right: 16px}
 .SideNav-item .Label{color: #fff;margin-left:4px;}
 .d-flex{min-width:0;}
@@ -43,7 +45,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 .listLabels object{max-height:16px;max-width:24px;}
 
 @media (max-width: 600px) {
-    body {padding: 8px;font-size:15px;}
+    body {padding: 12px;font-size:15px;}
     .avatar {width:40px;height:40px;}
     .title-left a{vertical-align:middle;font-size:20px;}
     .SideNav-item{padding:12px 10px;}
@@ -55,320 +57,325 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 
 <body>
-    <div id="header">
+    <header id="header">
 <div class="title-left">
-    <img src="https://static.quitw.org/img/miku.jpg" class="avatar circle" id="avatarImg" alt="avatar"><a class="blogTitle">Purple4pur's Canvas</a></div>
+    <img src="https://static.quitw.org/img/miku.jpg" class="avatar circle" id="avatarImg" alt="avatar"><h1 class="blogTitle">Purple4pur&#39;s Canvas</h1></div>
 <div class="title-right">
-    <a href="/tag.html" id="buttonSearch" class="btn btn-invisible circle" title="搜索">
+    <a href="tag.html" id="buttonSearch" class="btn btn-invisible circle" title="搜索">
         <svg class="octicon" width="16" height="16" >
             <path id="pathSearch" fill-rule="evenodd"></path>
         </svg>
     </a>
     
     
-    <a href="/rss.xml" target="_blank" id="buttonRSS" class="btn btn-invisible circle" title="RSS">
+    <a href="rss.xml" target="_blank" id="buttonRSS" class="btn btn-invisible circle" title="RSS">
         <svg class="octicon" width="16" height="16" >
             <path id="pathRSS" fill-rule="evenodd"></path>
         </svg>
     </a>
-    <a class="btn btn-invisible circle" onclick="modeSwitch()" title="切换主题">
+    <button type="button" class="btn btn-invisible circle" onclick="modeSwitch()" title="切换主题">
         <svg class="octicon" width="16" height="16" >
             <path id="themeSwitch" fill-rule="evenodd"></path>
         </svg>
-    </a>
+    </button>
 </div>
-</div>
-    <div id="content">
+</header>
+    <main id="content">
 <div style="margin-bottom: 16px;">Make it simple. Keep it simple. // 记录折腾，记录生活。</div>
 <nav class="SideNav border">
-<a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/44.html">
-    <div class="d-flex flex-items-center">
+<div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/44.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">川西大环线 | Day7 | 四姑娘山、火锅、川西结束</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-10-09</span>
+        <span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-10-09</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/43.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/43.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">川西大环线 | Day6 | 藏服写真、墨石公园</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-10-08</span>
+        <span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-10-08</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/42.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/42.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">川西大环线 | Day5 | 稻城白塔、歌舞晚宴</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-10-07</span>
+        <span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-10-07</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/41.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/41.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">川西大环线 | Day4 | 稻城亚丁、生日 KTV 🎂</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-10-06</span>
+        <span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-10-06</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/40.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/40.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">川西大环线 | Day3 | 新都桥、理塘、亚丁</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-10-05</span>
+        <span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-10-05</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/39.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/39.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">川西大环线 | Day2 | 成都、红海子、格底拉姆、新都桥</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-10-04</span>
+        <span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-10-04</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/38.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/38.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">川西大环线 | Day1 | 成都</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-10-03</span>
+        <span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-10-03</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/37.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/37.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">复活老古董 Mac mini (2014) - 安装 Debian 13 记录</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#303030"><object><a style="color:#fff" href="/tag.html#Dev">Dev</a></object></span><span class="Label LabelName" style="background-color:#185886"><object><a style="color:#fff" href="/tag.html#Linux">Linux</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-10-02</span>
+        <span class="Label LabelName" style="background-color:#303030;color:#fff"><a style="color:inherit" href="tag.html#Dev">Dev</a></span><span class="Label LabelName" style="background-color:#185886;color:#fff"><a style="color:inherit" href="tag.html#Linux">Linux</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-10-02</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/36.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/36.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">初星大运动会之旅 | 支出统计</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-09-26</span>
+        <span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-09-26</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/35.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/35.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">初星大运动会之旅 | Day3 | 最后的购物、归途</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-09-22</span>
+        <span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-09-22</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/34.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/34.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">初星大运动会之旅 | Day2 | 圆梦学马现地！</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span><span class="Label LabelName" style="background-color:#fc7203"><object><a style="color:#fff" href="/tag.html#Live活动">Live活动</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-09-21</span>
+        <span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span><span class="Label LabelName" style="background-color:#fc7203;color:#1f2328"><a style="color:inherit" href="tag.html#Live活动">Live活动</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-09-21</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/33.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/33.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">初星大运动会之旅 | Day1 | 踩点、场贩罚站</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-09-20</span>
+        <span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-09-20</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/32.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/32.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">Blog 样式优化</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#303030"><object><a style="color:#fff" href="/tag.html#Dev">Dev</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-09-17</span>
+        <span class="Label LabelName" style="background-color:#303030;color:#fff"><a style="color:inherit" href="tag.html#Dev">Dev</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-09-17</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/31.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/31.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">VPS 续命一年</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#303030"><object><a style="color:#fff" href="/tag.html#Dev">Dev</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-09-14</span>
+        <span class="Label LabelName" style="background-color:#303030;color:#fff"><a style="color:inherit" href="tag.html#Dev">Dev</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-09-14</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/30.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/30.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">How to Pull from/Push to Current Repository in Github Actions</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#303030"><object><a style="color:#fff" href="/tag.html#Dev">Dev</a></object></span><span class="Label LabelName" style="background-color:#1f2328"><object><a style="color:#fff" href="/tag.html#GitHub">GitHub</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-09-13</span>
+        <span class="Label LabelName" style="background-color:#303030;color:#fff"><a style="color:inherit" href="tag.html#Dev">Dev</a></span><span class="Label LabelName" style="background-color:#1f2328;color:#fff"><a style="color:inherit" href="tag.html#GitHub">GitHub</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-09-13</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/29.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/29.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">607-615 独闯日本全记录</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#1D76DB"><object><a style="color:#fff" href="/tag.html#胡言乱语">胡言乱语</a></object></span><span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span><span class="Label LabelName" style="background-color:#fc7203"><object><a style="color:#fff" href="/tag.html#Live活动">Live活动</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-07-18</span>
+        <span class="Label LabelName" style="background-color:#1D76DB;color:#1f2328"><a style="color:inherit" href="tag.html#胡言乱语">胡言乱语</a></span><span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span><span class="Label LabelName" style="background-color:#fc7203;color:#1f2328"><a style="color:inherit" href="tag.html#Live活动">Live活动</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-07-18</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/28.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/28.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">一路走好</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-05-07</span>
+        <span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-05-07</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/27.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/27.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">YOASOBI Asia Tour in Shanghai Day1 参战回想</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#1D76DB"><object><a style="color:#fff" href="/tag.html#胡言乱语">胡言乱语</a></object></span><span class="Label LabelName" style="background-color:#fc7203"><object><a style="color:#fff" href="/tag.html#Live活动">Live活动</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-03-23</span>
+        <span class="Label LabelName" style="background-color:#1D76DB;color:#1f2328"><a style="color:inherit" href="tag.html#胡言乱语">胡言乱语</a></span><span class="Label LabelName" style="background-color:#fc7203;color:#1f2328"><a style="color:inherit" href="tag.html#Live活动">Live活动</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-03-23</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/26.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/26.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">Loop With fork-join_none and Automatic Variables</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#303030"><object><a style="color:#fff" href="/tag.html#Dev">Dev</a></object></span><span class="Label LabelName" style="background-color:#ff7700"><object><a style="color:#fff" href="/tag.html#Systemverilog">Systemverilog</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-03-05</span>
+        <span class="Label LabelName" style="background-color:#303030;color:#fff"><a style="color:inherit" href="tag.html#Dev">Dev</a></span><span class="Label LabelName" style="background-color:#ff7700;color:#1f2328"><a style="color:inherit" href="tag.html#Systemverilog">Systemverilog</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-03-05</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/25.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/25.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">Why My Webdav Playback Is Broken: Cloudflare&#39;s in the Middle</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#303030"><object><a style="color:#fff" href="/tag.html#Dev">Dev</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-01-24</span>
+        <span class="Label LabelName" style="background-color:#303030;color:#fff"><a style="color:inherit" href="tag.html#Dev">Dev</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-01-24</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/24.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/24.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">我的笔记本 CPU 风扇，死了</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="/tag.html#生活记录">生活记录</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-01-18</span>
+        <span class="Label LabelName" style="background-color:#FBCA04;color:#1f2328"><a style="color:inherit" href="tag.html#生活记录">生活记录</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-01-18</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/23.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/23.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">2025 年 Live 及各类活动参战记录</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#fc7203"><object><a style="color:#fff" href="/tag.html#Live活动">Live活动</a></object></span>
-        <span class="Label LabelTime" style="background-color:#0969da">2025-01-12</span>
+        <span class="Label LabelName" style="background-color:#fc7203;color:#1f2328"><a style="color:inherit" href="tag.html#Live活动">Live活动</a></span>
+        <span class="Label LabelTime" style="background-color:#0969da;color:#fff">2025-01-12</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/22.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/22.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">2024：新城市，新工作，新兴趣，和更远的异地恋</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#1D76DB"><object><a style="color:#fff" href="/tag.html#胡言乱语">胡言乱语</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-12-30</span>
+        <span class="Label LabelName" style="background-color:#1D76DB;color:#1f2328"><a style="color:inherit" href="tag.html#胡言乱语">胡言乱语</a></span>
+        <span class="Label LabelTime" style="background-color:#bc4c00;color:#fff">2024-12-30</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/21.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/21.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">Trick the Client: Using a Custom Http Proxy</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#303030"><object><a style="color:#fff" href="/tag.html#Dev">Dev</a></object></span><span class="Label LabelName" style="background-color:#79d4fd"><object><a style="color:#fff" href="/tag.html#Go">Go</a></object></span><span class="Label LabelName" style="background-color:#009639"><object><a style="color:#fff" href="/tag.html#Nginx">Nginx</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-12-19</span>
+        <span class="Label LabelName" style="background-color:#303030;color:#fff"><a style="color:inherit" href="tag.html#Dev">Dev</a></span><span class="Label LabelName" style="background-color:#79d4fd;color:#1f2328"><a style="color:inherit" href="tag.html#Go">Go</a></span><span class="Label LabelName" style="background-color:#009639;color:#1f2328"><a style="color:inherit" href="tag.html#Nginx">Nginx</a></span>
+        <span class="Label LabelTime" style="background-color:#bc4c00;color:#fff">2024-12-19</span>
     </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="/post/20.html">
-    <div class="d-flex flex-items-center">
+</div><div class="SideNav-item d-flex flex-items-center flex-justify-between">
+    <a class="d-flex flex-items-center" style="color:inherit;text-decoration:none;min-width:0;" href="post/20.html">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">Blog Deployment Automation: ONE Post, TWO Sites</span>
-    </div>
+    </a>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#303030"><object><a style="color:#fff" href="/tag.html#Dev">Dev</a></object></span><span class="Label LabelName" style="background-color:#1f2328"><object><a style="color:#fff" href="/tag.html#GitHub">GitHub</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-12-12</span>
+        <span class="Label LabelName" style="background-color:#303030;color:#fff"><a style="color:inherit" href="tag.html#Dev">Dev</a></span><span class="Label LabelName" style="background-color:#1f2328;color:#fff"><a style="color:inherit" href="tag.html#GitHub">GitHub</a></span>
+        <span class="Label LabelTime" style="background-color:#bc4c00;color:#fff">2024-12-12</span>
     </div>
-</a>
-</nav><nav class="paginate-container" aria-label="Pagination">
-    <div class="pagination"><a class="previous_page" rel="previous" href="/index.html" aria-label="Previous Page">上一页</a><a class="next_page" rel="next" href="/page3.html" aria-label="Next Page">下一页</a></div>
-</nav>
 </div>
-    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="/">Purple4pur's Canvas</a></div>
+</nav><nav class="paginate-container" aria-label="Pagination">
+    <div class="pagination">
+        <a href="index.html">1</a>
+        <span class="current_page" aria-current="page">2</span>
+        <a href="page3.html">3</a>
+        
+    </div>
+</nav>
+</main>
+    <footer id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="index.html">Purple4pur&#39;s Canvas</a></div>
 <div id="footer2">
     <span id="runday"></span>
-    <span><a href="/sitemap.txt" target="_blank">Sitemap</a> • </span>
+    <span><a href="sitemap.txt" target="_blank">Sitemap</a> • </span>
     <span><a href="https://github.com/purple4pur/purple4pur.github.io" target="_blank">Source Code</a> • </span>
-    <span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a> - <a href="https://github.com/purple4pur/Gmeek" target="_blank">forked</a></span>
+    <span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank" rel="noopener noreferrer">Gmeek</a> - <a href="https://github.com/purple4pur/Gmeek" target="_blank" rel="noopener noreferrer">forked</a></span>
 </div>
-<div id="footer3">Build @ 2026-11-01T22:04:38+08:00</div>
+
 
 <script>
 var now=new Date();
@@ -380,10 +387,10 @@ if("10/23/2024"!=""){
     var diffDay=Math.floor(diff/(1000*60*60*24));
     document.getElementById("runday").innerHTML="本站存活 "+diffDay+" 天"+" • ";
 }
-</script></div>
+</script></footer>
 </body>
 <script>
-var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'search': 'M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z', 'rss': 'M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z', 'upload': 'M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z M11.78 4.72a.749.749 0 1 1-1.06 1.06L8.75 3.811V9.5a.75.75 0 0 1-1.5 0V3.811L5.28 5.78a.749.749 0 1 1-1.06-1.06l3.25-3.25a.749.749 0 0 1 1.06 0l3.25 3.25Z', 'post': 'M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z'};
+var IconList={"moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "post": "M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "upload": "M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z M11.78 4.72a.749.749 0 1 1-1.06 1.06L8.75 3.811V9.5a.75.75 0 0 1-1.5 0V3.811L5.28 5.78a.749.749 0 1 1-1.06-1.06l3.25-3.25a.749.749 0 0 1 1.06 0l3.25 3.25Z"};
 var utterancesLoad=0;
 
 let themeSettings={
