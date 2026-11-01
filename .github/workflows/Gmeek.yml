@@ -12,7 +12,7 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -34,36 +34,35 @@ jobs:
 
       - name: Clone source code
         run: |
-          GMEEK_VERSION=$(jq -r ".GMEEK_VERSION" config.json)
+          GMEEK_VERSION=$(jq -r '.GMEEK_VERSION // "last"' config.json)
           git clone https://github.com/purple4pur/Gmeek.git /opt/Gmeek
-          if [ -n "$GMEEK_VERSION" ] && [ "$GMEEK_VERSION" != "last" ]; then
+          if [ -n "$GMEEK_VERSION" ] && [ "$GMEEK_VERSION" != "last" ] && [ "$GMEEK_VERSION" != "null" ]; then
             git -C /opt/Gmeek checkout "$GMEEK_VERSION"
           fi
 
-      - name: Read requirements hash
-        id: requirements
-        run: echo "hash=$(sha256sum /opt/Gmeek/requirements.txt | cut -c1-16)" >> "$GITHUB_OUTPUT"
+      - name: Read uv lock hash
+        id: uvlock
+        run: echo "hash=$(sha256sum /opt/Gmeek/uv.lock | cut -c1-16)" >> "$GITHUB_OUTPUT"
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v6
         with:
-          python-version: '3.14'
+          version: "0.13.6"
 
-      - name: Cache pip
+      - name: Cache uv
         uses: actions/cache@v4
         with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ steps.requirements.outputs.hash }}
+          path: ~/.cache/uv
+          key: ${{ runner.os }}-uv-${{ steps.uvlock.outputs.hash }}
 
       - name: Install dependencies
-        run: |
-          pip install -r /opt/Gmeek/requirements.txt
+        run: uv sync --frozen --project /opt/Gmeek
 
       - name: Generate new html
         run: |
           cp -r ./* /opt/Gmeek/
           cd /opt/Gmeek/
-          python Gmeek.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
+          uv run --frozen python Gmeek.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
           cp -a /opt/Gmeek/docs ${{ github.workspace }}
           cp -a /opt/Gmeek/backup ${{ github.workspace }}
           cp /opt/Gmeek/blogBase.json ${{ github.workspace }}
