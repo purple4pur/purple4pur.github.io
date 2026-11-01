@@ -2,17 +2,28 @@ name: Build and Deploy
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - config.json
   issues:
     types: [opened, edited]
   schedule:
     - cron: "0 16 * * 0"
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
 jobs:
   build:
     name: Generate blog
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     if: ${{ github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule' }}
-    permissions: write-all
+    permissions:
+      contents: write
+      issues: read
+      pages: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,13 +31,6 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-
-      - name: Get config.json
-        run: |
-          echo "====== check config.josn file ======"
-          cat config.json
-          echo "====== check config.josn end  ======"
-          sudo apt-get install jq
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -36,8 +40,10 @@ jobs:
       - name: Clone source code
         run: |
           GMEEK_VERSION=$(jq -r ".GMEEK_VERSION" config.json)
-          git clone https://github.com/purple4pur/Gmeek.git /opt/Gmeek;
-          cd /opt/Gmeek/
+          git clone https://github.com/purple4pur/Gmeek.git /opt/Gmeek
+          if [ -n "$GMEEK_VERSION" ] && [ "$GMEEK_VERSION" != "last" ]; then
+            git -C /opt/Gmeek checkout "$GMEEK_VERSION"
+          fi
 
       - name: Install dependencies
         run: |
@@ -53,14 +59,52 @@ jobs:
           cp -a /opt/Gmeek/backup ${{ github.workspace }}
           cp /opt/Gmeek/blogBase.json ${{ github.workspace }}
 
+      - name: Validate generated site
+        run: |
+          python3 - <<'PY'
+          import glob, json, os, sys
+
+          errors = []
+          config = json.load(open("config.json"))
+          base = json.load(open("blogBase.json"))
+
+          for key in ("title", "homeUrl", "script", "indexScript", "postListJson"):
+              if key not in base:
+                  errors.append("blogBase.json is missing " + key)
+          for key, value in config.items():
+              if base.get(key) != value:
+                  errors.append("blogBase.json does not reflect config.json: " + key)
+
+          posts = {k: v for k, v in base["postListJson"].items() if k.startswith("P")}
+          pages = glob.glob("docs/post/*.html")
+          if len(posts) != len(pages):
+              errors.append("post count mismatch: %d entries, %d html files" % (len(posts), len(pages)))
+          for key, value in posts.items():
+              if not os.path.exists(value["htmlDir"]):
+                  errors.append("missing html for " + key + ": " + value["htmlDir"])
+
+          json.load(open("docs/postList.json"))
+          for path in ("docs/rss.xml", "docs/sitemap.txt", "docs/tag.html"):
+              if not os.path.exists(path):
+                  errors.append("missing " + path)
+
+          if errors:
+              print("\n".join(errors))
+              sys.exit(1)
+          print("site validation passed: %d posts" % len(posts))
+          PY
+
       - name: update html
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -a -m '🎉auto update by Gmeek action' || echo "nothing to commit"
-          git push || echo "nothing to push"
-          sleep 3
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m '🎉auto update by Gmeek action'
+            git push
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -70,6 +114,7 @@ jobs:
   deploy-github:
     name: Deploy blog on github.io
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     needs: build
     permissions:
       contents: write
@@ -89,11 +134,13 @@ jobs:
   deploy-quitw:
     name: Deploy blog on quitw.org
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     needs: build
     steps:
       - name: Refresh server files
         run: |
           curl -fsS --retry 3 --retry-all-errors \
+            --connect-timeout 10 --max-time 120 \
             -X POST "${{ secrets.RUNLET_URL }}" \
             -H "Authorization: Bearer ${{ secrets.RUNLET_TOKEN }}" \
             -o resp.json
@@ -101,7 +148,11 @@ jobs:
           test "$(jq -r '.exit' resp.json)" = "0"
       - name: Purge Cloudflare Cache
         run: |
-          curl https://api.cloudflare.com/client/v4/zones/${{ vars.CF_ZONE_ID }}/purge_cache \
+          curl -fsS --retry 3 --retry-all-errors \
+              --connect-timeout 10 --max-time 60 \
+              https://api.cloudflare.com/client/v4/zones/${{ vars.CF_ZONE_ID }}/purge_cache \
               -H 'Content-Type: application/json' \
               -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
-              -d '{"hosts": ["${{ vars.BLOG_HOST }}"]}'
+              -d '{"hosts": ["${{ vars.BLOG_HOST }}"]}' \
+              -o purge.json
+          jq -e '.success == true' purge.json > /dev/null
