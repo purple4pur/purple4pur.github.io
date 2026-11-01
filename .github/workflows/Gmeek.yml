@@ -6,7 +6,7 @@ on:
     paths:
       - config.json
   issues:
-    types: [opened, edited]
+    types: [opened, edited, closed, reopened, deleted, labeled, unlabeled, pinned, unpinned]
   schedule:
     - cron: "0 16 * * 0"
 
@@ -35,7 +35,9 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.8
+          python-version: '3.14'
+          cache: pip
+          cache-dependency-path: requirements.txt
 
       - name: Clone source code
         run: |
@@ -47,14 +49,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
-          pip install -r /opt/Gmeek/requirements.txt
+          pip install -r requirements.txt
 
       - name: Generate new html
         run: |
           cp -r ./* /opt/Gmeek/
           cd /opt/Gmeek/
-          python Gmeek.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
+          python Gmeek.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
           cp -a /opt/Gmeek/docs ${{ github.workspace }}
           cp -a /opt/Gmeek/backup ${{ github.workspace }}
           cp /opt/Gmeek/blogBase.json ${{ github.workspace }}
