@@ -32,13 +32,6 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.14'
-          cache: pip
-          cache-dependency-path: requirements.txt
-
       - name: Clone source code
         run: |
           GMEEK_VERSION=$(jq -r ".GMEEK_VERSION" config.json)
@@ -47,9 +40,24 @@ jobs:
             git -C /opt/Gmeek checkout "$GMEEK_VERSION"
           fi
 
+      - name: Read requirements hash
+        id: requirements
+        run: echo "hash=$(sha256sum /opt/Gmeek/requirements.txt | cut -c1-16)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ steps.requirements.outputs.hash }}
+
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install -r /opt/Gmeek/requirements.txt
 
       - name: Generate new html
         run: |
